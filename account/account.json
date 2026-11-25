@@ -1,0 +1,44 @@
+{
+    "accounts": [
+        {
+            "accountId": "fba0e951-d096-4578-8c03-5409a4601b3d",
+            "username": "admin",
+            "email": "brice.mcrae1@gmail.com",
+            "password": "123456",
+            "isAdmin": true,
+            "createdAt": "2026-11-19T07:58:06.763Z"
+        },
+        {
+            "accountId": "478a95cd-86ec-4686-88f4-8809d2d8db33",
+            "username": "Brice.ddd",
+            "email": "brice.mcra@gmail.com",
+            "password": "Kitten0908",
+            "isAdmin": false,
+            "createdAt": "2026-11-19T18:56:56.573Z"
+        },
+        {
+            "accountId": "6a1b1534-ec40-4eaa-ad63-8156636e814d",
+            "username": "Brice.",
+            "email": "brice.rae1@gmail.com",
+            "password": "Kitten0908",
+            "isAdmin": false,
+            "createdAt": "2026-11-19T19:02:53.980Z"
+        },
+        {
+            "accountId": "cd966087-ec4f-45aa-adaa-e1a2f943aea4",
+            "username": "Brice.mcrae1@gma",
+            "email": "brice.ae1@gmail.com",
+            "password": "gggggggggg",
+            "isAdmin": false,
+            "createdAt": "2026-11-19T19:32:42.317Z"
+        },
+        {
+            "accountId": "94d665d5-13d5-4f04-a8d0-8cde0f104224",
+            "username": "Brice",
+            "email": "brice@gmail.com",
+            "password": "Kitten0908",
+            "isAdmin": false,
+            "createdAt": "2026-11-19T22:29:16.992Z"
+        }
+    ]
+}

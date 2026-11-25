@@ -1,0 +1,593 @@
+
+    /* =========================================
+    GLOBAL
+    ========================================= */
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        display: block;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        margin: 0;
+        padding: 0;
+
+        font-family: Arial, Helvetica, sans-serif;
+        background: transparent;
+
+        overflow: visible;
+    }
+
+    body {
+        color: #edf3fb;
+    }
+
+    [hidden] {
+        display: none !important;
+    }
+
+
+    /* =========================================
+    CARD HEIGHT ROOT
+    ========================================= */
+
+    #cardContentRoot {
+        display: flow-root;
+
+        width: 100%;
+        height: auto;
+        min-height: 0;
+
+        margin: 0;
+        padding: 0;
+
+        overflow: visible;
+    }
+
+
+    /* =========================================
+    PROJECT CARD
+    ========================================= */
+
+    .project-container {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        min-width: 0;
+
+        height: auto;
+        min-height: 0;
+
+        background: linear-gradient(
+            145deg,
+            #182638,
+            #111b29 55%,
+            #101722
+        );
+
+        border: 1px solid #344a63;
+        border-radius: 15px;
+
+        overflow: hidden;
+
+        box-shadow: 0 8px 24px rgba(0, 0, 0, .24);
+    }
+
+
+    /* =========================================
+    THUMBNAIL
+    ========================================= */
+
+    .project-thumbnail {
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        aspect-ratio: 16 / 9;
+
+        min-height: 150px;
+        max-height: 260px;
+
+        flex: 0 0 auto;
+
+        overflow: hidden;
+
+        background: linear-gradient(
+            135deg,
+            #263d56,
+            #101a28
+        );
+
+        border-bottom: 1px solid #344a63;
+    }
+
+    .project-thumbnail img {
+        display: block;
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+    .thumbnail-placeholder {
+        position: absolute;
+        inset: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 10px;
+
+        color: #91a9c2;
+        text-align: center;
+    }
+
+    .thumbnail-placeholder-icon {
+        font-size: 38px;
+        opacity: .8;
+    }
+
+    .thumbnail-placeholder-text {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+    }
+
+    .project-thumbnail.has-image .thumbnail-placeholder {
+        display: none;
+    }
+
+
+    /* =========================================
+    MAIN CONTENT
+    ========================================= */
+
+    .project-content {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        min-width: 0;
+
+        height: auto;
+
+        padding: 23px;
+        gap: 17px;
+    }
+
+    .project-heading {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .project-title {
+        color: #ffffff;
+        font-size: 25px;
+        font-weight: 750;
+        line-height: 1.3;
+
+        overflow-wrap: anywhere;
+    }
+
+    .project-description {
+        display: block;
+
+        width: 100%;
+
+        color: #c2cedd;
+        font-size: 14px;
+        line-height: 1.8;
+
+        overflow-wrap: anywhere;
+        white-space: pre-wrap;
+    }
+
+
+    /* =========================================
+    VIEW GAME BUTTON
+    ========================================= */
+
+    .view-game-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        min-height: 60px;
+
+        padding: 16px 20px;
+        gap: 12px;
+
+        background: linear-gradient(
+            135deg,
+            #24a148,
+            #08752e
+        );
+
+        border: 1px solid #49d477;
+        border-radius: 10px;
+
+        color: #ffffff;
+
+        font-family: inherit;
+        font-size: 18px;
+        font-weight: 800;
+        letter-spacing: .5px;
+
+        text-align: center;
+
+        box-shadow:
+            0 4px 12px rgba(0, 0, 0, .2),
+            inset 0 1px 0 rgba(255, 255, 255, .15);
+
+        cursor: pointer;
+
+        transition:
+            background .2s ease,
+            border-color .2s ease,
+            box-shadow .2s ease,
+            transform .2s ease;
+    }
+
+    .view-game-button:hover {
+        background: linear-gradient(
+            135deg,
+            #2cc45b,
+            #10943e
+        );
+
+        border-color: #83f5a5;
+
+        box-shadow:
+            0 6px 18px rgba(23, 190, 78, .25),
+            inset 0 1px 0 rgba(255, 255, 255, .2);
+
+        transform: translateY(-2px);
+    }
+
+    .view-game-button:active {
+        background: linear-gradient(
+            135deg,
+            #16863a,
+            #075c25
+        );
+
+        transform: translateY(0);
+    }
+
+    .view-game-button:focus-visible {
+        outline: 3px solid #8df5a9;
+        outline-offset: 3px;
+    }
+
+    .view-game-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 25px;
+        height: 25px;
+
+        font-size: 17px;
+    }
+
+
+    /* =========================================
+    MORE INFORMATION
+    ========================================= */
+
+    .more-information {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        height: auto;
+
+        border: 1px solid #3a526e;
+        border-radius: 9px;
+
+        background: rgba(25, 41, 59, .75);
+
+        overflow: hidden;
+    }
+
+    .more-information-summary {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 100%;
+        min-height: 52px;
+
+        padding: 13px 15px;
+
+        color: #dcecff;
+        font-size: 14px;
+        font-weight: 700;
+
+        cursor: pointer;
+        list-style: none;
+    }
+
+    .more-information-summary::-webkit-details-marker {
+        display: none;
+    }
+
+    .more-information-summary:hover {
+        background: rgba(91, 146, 202, .12);
+    }
+
+    .dropdown-heading {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .dropdown-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 25px;
+        height: 25px;
+
+        border-radius: 6px;
+
+        background: #263f5c;
+        color: #9bcaff;
+    }
+
+    .dropdown-arrow {
+        color: #8fc4ff;
+        font-size: 18px;
+        transition: transform .2s;
+    }
+
+    .more-information[open] .dropdown-arrow {
+        transform: rotate(180deg);
+    }
+
+
+    /* =========================================
+    INFORMATION CONTENT
+    ========================================= */
+
+    .more-information-content {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        height: auto;
+
+        padding: 0 15px 17px;
+        gap: 20px;
+    }
+
+    .information-section {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        min-width: 0;
+
+        gap: 10px;
+    }
+
+    .information-section h3 {
+        color: #8fc4ff;
+        font-size: 12px;
+        font-weight: 750;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+    }
+
+    .information-text {
+        color: #c2cedd;
+        font-size: 13px;
+        line-height: 1.8;
+
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+    }
+
+
+    /* =========================================
+    TAGS AND PLATFORMS
+    ========================================= */
+
+    .platform-list,
+    .project-tags,
+    .project-links {
+        display: flex;
+        flex-wrap: wrap;
+
+        gap: 8px;
+        width: 100%;
+    }
+
+    .platform-item,
+    .project-tag {
+        display: inline-block;
+
+        padding: 7px 10px;
+
+        background: #20364f;
+        border: 1px solid #3b5878;
+        border-radius: 6px;
+
+        color: #c6e0ff;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+
+    /* =========================================
+    PROJECT DETAILS GRID
+    ========================================= */
+
+    .project-details {
+        display: grid;
+
+        width: 100%;
+
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-auto-flow: row;
+
+        gap: 8px;
+    }
+
+    .project-detail {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        width: 100%;
+        min-width: 0;
+
+        padding: 9px;
+
+        background: rgba(35, 53, 75, .65);
+        border: 1px solid #354b64;
+        border-radius: 7px;
+
+        gap: 4px;
+    }
+
+    .project-detail strong {
+        display: block;
+
+        width: 100%;
+
+        color: #8fa9c5;
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 1.3;
+        letter-spacing: .7px;
+        text-transform: uppercase;
+
+        overflow-wrap: anywhere;
+    }
+
+    .project-detail span {
+        display: block;
+
+        width: 100%;
+
+        color: #f0f5fc;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 1.5;
+
+        overflow-wrap: anywhere;
+        word-break: break-word;
+        white-space: pre-wrap;
+    }
+
+
+    /* =========================================
+    PROJECT LINKS
+    ========================================= */
+
+    .project-link {
+        display: inline-block;
+
+        padding: 9px 12px;
+
+        background: #20364f;
+        border: 1px solid #3b5878;
+        border-radius: 6px;
+
+        color: #c6e0ff;
+        font-size: 12px;
+        font-weight: 600;
+
+        text-decoration: none;
+        overflow-wrap: anywhere;
+    }
+
+    .project-link:not([href]) {
+        cursor: default;
+    }
+
+    .project-link[href]:hover {
+        background: #2b4b6c;
+    }
+
+
+    /* =========================================
+    RESPONSIVE
+    ========================================= */
+
+    @media (max-width: 700px) {
+
+        .project-details {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    @media (max-width: 500px) {
+
+        .project-content {
+            padding: 17px;
+        }
+
+        .project-title {
+            font-size: 22px;
+        }
+
+        .view-game-button {
+            min-height: 56px;
+            font-size: 17px;
+        }
+
+        .project-details {
+            gap: 6px;
+        }
+
+        .project-detail {
+            padding: 7px 8px;
+        }
+
+        .project-detail strong {
+            font-size: 9px;
+        }
+
+        .project-detail span {
+            font-size: 11px;
+        }
+    }
+
+    @media (max-width: 320px) {
+
+        .project-content {
+            padding: 12px;
+        }
+
+        .more-information-content {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .project-details {
+            gap: 5px;
+        }
+
+        .project-detail {
+            padding: 6px;
+        }
+    }

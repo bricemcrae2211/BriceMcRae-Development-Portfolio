@@ -1,0 +1,176 @@
+
+<!-- =====================================================
+     SECTION 01: PROJECT DESCRIPTION
+     COMPLETE HTML, CSS AND JAVASCRIPT
+===================================================== -->
+
+<section class="project-section dropdown-section"
+         id="projectDescriptionSection">
+
+    <!-- =========================================
+         DROPDOWN HEADER
+    ========================================== -->
+
+    <button type="button"
+            class="dropdown-header"
+            aria-expanded="false"
+            aria-controls="projectDescriptionDropdown">
+
+        <span>1. Project Description</span>
+
+        <span class="dropdown-arrow">▼</span>
+
+    </button>
+
+
+    <!-- =========================================
+         DROPDOWN CONTENT
+    ========================================== -->
+
+    <div class="dropdown-content"
+         id="projectDescriptionDropdown"
+         hidden>
+
+        <p class="section-description">
+            Provide an introduction to your project, including its title,
+            a short summary, and a detailed description of what you created.
+        </p>
+
+
+        <!-- =========================================
+             PROJECT TITLE
+        ========================================== -->
+
+        <div class="form-group">
+
+            <label for="projectTitle">
+                Project Title
+            </label>
+
+            <input type="text"
+                   id="projectTitle"
+                   name="projectTitle"
+                   placeholder="Enter project name"
+                   required>
+
+        </div>
+
+
+        <!-- =========================================
+             SHORT DESCRIPTION
+        ========================================== -->
+
+        <div class="form-group">
+
+            <label for="shortDescription">
+                Short Description
+            </label>
+
+            <textarea id="shortDescription"
+                      name="shortDescription"
+                      class="short-description"
+                      placeholder="Write a short introduction to your project..."></textarea>
+
+        </div>
+
+
+        <!-- =========================================
+             LONG DESCRIPTION
+        ========================================== -->
+
+        <div class="form-group">
+
+            <label for="longDescription">
+                Long Description
+            </label>
+
+            <textarea id="longDescription"
+                      name="longDescription"
+                      class="long-description"
+                      placeholder="Explain what the project is, its purpose, and how it was developed..."></textarea>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SECTION 01: PROJECT DESCRIPTION CSS
+===================================================== -->
+
+<link rel="stylesheet" href="sections/css/15-external-links-downloads.css">
+
+
+<!-- =====================================================
+     SECTION 01: PROJECT DESCRIPTION JAVASCRIPT
+===================================================== -->
+
+<script>
+
+(function () {
+
+    "use strict";
+
+    function initializeProjectDescription() {
+
+        const section = document.getElementById(
+            "projectDescriptionSection"
+        );
+
+        if (!section || section.dataset.initialized === "true") {
+            return;
+        }
+
+        const header = section.querySelector(
+            ":scope > .dropdown-header"
+        );
+
+        const content = section.querySelector(
+            "#projectDescriptionDropdown"
+        );
+
+        if (!header || !content) {
+            return;
+        }
+
+        section.dataset.initialized = "true";
+
+        header.addEventListener("click", function () {
+
+            const isExpanded =
+                header.getAttribute("aria-expanded") === "true";
+
+            header.setAttribute(
+                "aria-expanded",
+                String(!isExpanded)
+            );
+
+            content.hidden = isExpanded;
+
+            content.classList.toggle(
+                "open",
+                !isExpanded
+            );
+
+        });
+
+    }
+
+    if (document.readyState === "loading") {
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            initializeProjectDescription
+        );
+
+    } else {
+
+        initializeProjectDescription();
+
+    }
+
+})();
+
+</script>

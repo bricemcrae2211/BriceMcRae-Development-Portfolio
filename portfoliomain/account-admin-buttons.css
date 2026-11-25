@@ -1,0 +1,112 @@
+
+/* =========================================
+   SIGN IN AND ADMIN BUTTONS
+========================================= */
+
+.header-action-button,
+#adminToggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    min-width: 115px;
+    min-height: 42px;
+    padding: 10px 20px;
+
+    border: 1px solid #3b3b3b;
+    border-radius: 8px;
+
+    background: #1c1c1c;
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+    text-decoration: none;
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/* SIGN IN BUTTON */
+
+#accountButton,
+.account-button {
+    background: #ffffff;
+    color: #111111;
+    border-color: #ffffff;
+}
+
+#accountButton:hover,
+.account-button:hover {
+    background: #e5e5e5;
+    border-color: #e5e5e5;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(255, 255, 255, 0.12);
+}
+
+/* ADMIN BUTTON - OFF */
+
+#adminToggle {
+    background: #1c1c1c;
+    color: #ffffff;
+    border-color: #505050;
+}
+
+#adminToggle:hover {
+    background: #303030;
+    border-color: #888888;
+    transform: translateY(-2px);
+}
+
+/* ADMIN BUTTON - ON */
+
+#adminToggle.active,
+#adminToggle.admin-active,
+#adminToggle[aria-pressed="true"] {
+    background: #174b32;
+    color: #ffffff;
+    border-color: #2e9d65;
+    box-shadow: 0 0 12px rgba(46, 157, 101, 0.18);
+}
+
+#adminToggle.active:hover,
+#adminToggle.admin-active:hover,
+#adminToggle[aria-pressed="true"]:hover {
+    background: #206640;
+    border-color: #45c783;
+}
+
+/* CLICK FEEDBACK */
+
+.header-action-button:active,
+#adminToggle:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* KEYBOARD ACCESSIBILITY */
+
+.header-action-button:focus-visible,
+#adminToggle:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 4px;
+}
+
+/* DISABLED STATE */
+
+.header-action-button:disabled,
+#adminToggle:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}

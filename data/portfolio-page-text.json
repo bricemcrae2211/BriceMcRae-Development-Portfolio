@@ -1,0 +1,23 @@
+
+
+    {
+        "portfolio::top::a::brice-mcrae::1": {
+        "page": "portfolio",
+        "sectionId": "top",
+        "element": "a",
+        "elementId": "",
+        "elementClass": "logo page-text-edit-content page-text-editing",
+        "label": "BRICE MCRAE",
+        "editedText": "BRICE MCRAE | DEVELOPER PORTFOLIO",
+        "title": "",
+        "ariaLabel": "",
+        "name": "",
+        "href": "#top",
+        "attributes": {
+            "href": "#top",
+            "class": "logo page-text-edit-content page-text-editing"
+        },
+        "html": "<strong>BRICE MCRAE | DEVELOPER PORTFOLIO</strong>",
+        "updatedAt": "2026-11-20T00:05:22.455Z"
+    }
+}

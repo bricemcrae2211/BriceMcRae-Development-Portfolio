@@ -1,0 +1,936 @@
+
+<!-- =====================================================
+     PROJECT DOWNLOADS SECTION
+     COMPLETE HTML, CSS AND JAVASCRIPT
+===================================================== -->
+
+<link rel="stylesheet" href="sections/css/15-external-links-downloads.css">
+
+
+<!-- =====================================================
+     SECTION HTML
+===================================================== -->
+
+<section class="project-section dropdown-section"
+         id="projectDownloadsSection">
+
+    <!-- DROPDOWN HEADER -->
+
+    <button type="button"
+            class="dropdown-header downloads-header"
+            aria-expanded="false"
+            aria-controls="projectDownloadsDropdown">
+
+        <span>Project Downloads</span>
+
+        <span class="dropdown-arrow">▼</span>
+
+    </button>
+
+
+    <!-- DROPDOWN CONTENT -->
+
+    <div class="dropdown-content downloads-content"
+         id="projectDownloadsDropdown"
+         hidden>
+
+
+        <!-- =================================================
+             FILE UPLOAD
+        ================================================== -->
+
+        <div class="downloads-group">
+
+            <span class="downloads-group-title">
+                Upload Project Downloads
+            </span>
+
+            <div class="downloads-drop-area"
+                 id="downloadsDropArea"
+                 role="button"
+                 tabindex="0"
+                 aria-label="Select or drag files and folders">
+
+                <div class="downloads-drop-icon">📁</div>
+
+                <strong>Click or drag files and folders here</strong>
+
+                <span>
+                    Select multiple files or upload an entire folder
+                </span>
+
+                <span>
+                    You can also use the buttons below
+                </span>
+
+            </div>
+
+
+            <!-- FILE INPUT -->
+
+            <input type="file"
+                   id="downloadsFileInput"
+                   multiple
+                   hidden>
+
+
+            <!-- FOLDER INPUT -->
+
+            <input type="file"
+                   id="downloadsFolderInput"
+                   webkitdirectory
+                   directory
+                   multiple
+                   hidden>
+
+
+            <!-- FILE PICKER BUTTONS -->
+
+            <div class="downloads-button-row">
+
+                <button type="button"
+                        class="downloads-action-button"
+                        id="downloadsSelectFiles">
+
+                    Select Files
+
+                </button>
+
+                <button type="button"
+                        class="downloads-action-button"
+                        id="downloadsSelectFolder">
+
+                    Select Folder
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <hr class="downloads-divider">
+
+
+        <!-- =================================================
+             PENDING DOWNLOADS
+        ================================================== -->
+
+        <div class="downloads-group">
+
+            <span class="downloads-group-title">
+                Pending Downloads
+            </span>
+
+            <div class="downloads-count"
+                 id="pendingDownloadsCount">
+
+                0 downloads waiting to be added
+
+            </div>
+
+            <div class="downloads-list"
+                 id="pendingDownloadsList">
+
+                <div class="downloads-empty">
+                    No files selected yet.
+                </div>
+
+            </div>
+
+
+            <!-- PENDING ACTIONS -->
+
+            <div class="downloads-button-row">
+
+                <button type="button"
+                        class="downloads-action-button downloads-add-all"
+                        id="addAllDownloads">
+
+                    Add All Downloads
+
+                </button>
+
+                <button type="button"
+                        class="downloads-action-button"
+                        id="clearPendingDownloads">
+
+                    Clear Pending
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <hr class="downloads-divider">
+
+
+        <!-- =================================================
+             ADDED DOWNLOADS
+        ================================================== -->
+
+        <div class="downloads-group">
+
+            <span class="downloads-group-title">
+                Added Project Downloads
+            </span>
+
+            <div class="downloads-count"
+                 id="publishedDownloadsCount">
+
+                0 downloads added
+
+            </div>
+
+            <div class="downloads-published-list"
+                 id="publishedDownloadsList">
+
+                <div class="downloads-empty">
+                    No downloads have been added yet.
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROJECT DOWNLOADS JAVASCRIPT
+===================================================== -->
+
+<script>
+(function () {
+
+    "use strict";
+
+
+    /* =====================================================
+       INITIALIZE SECTION
+    ===================================================== */
+
+    const section = document.getElementById(
+        "projectDownloadsSection"
+    );
+
+    if (!section || section.dataset.downloadsInitialized === "true") {
+        return;
+    }
+
+    section.dataset.downloadsInitialized = "true";
+
+
+    /* =====================================================
+       DROPDOWN
+       This section handles its own dropdown.
+       Stop bubbling so the main loader's delegated
+       dropdown handler does not toggle it a second time.
+    ===================================================== */
+
+    const dropdownHeader = section.querySelector(
+        ".downloads-header"
+    );
+
+    const dropdownContent = section.querySelector(
+        "#projectDownloadsDropdown"
+    );
+
+    if (dropdownHeader && dropdownContent) {
+
+        dropdownHeader.addEventListener("click", function (event) {
+
+            event.stopPropagation();
+
+            const isOpen =
+                dropdownHeader.getAttribute("aria-expanded") === "true";
+
+            dropdownHeader.setAttribute(
+                "aria-expanded",
+                String(!isOpen)
+            );
+
+            dropdownContent.hidden = isOpen;
+
+        });
+
+    }
+
+
+    /* =====================================================
+       ELEMENT REFERENCES
+    ===================================================== */
+
+    const dropArea = section.querySelector(
+        "#downloadsDropArea"
+    );
+
+    const fileInput = section.querySelector(
+        "#downloadsFileInput"
+    );
+
+    const folderInput = section.querySelector(
+        "#downloadsFolderInput"
+    );
+
+    const pendingList = section.querySelector(
+        "#pendingDownloadsList"
+    );
+
+    const publishedList = section.querySelector(
+        "#publishedDownloadsList"
+    );
+
+    const pendingCount = section.querySelector(
+        "#pendingDownloadsCount"
+    );
+
+    const publishedCount = section.querySelector(
+        "#publishedDownloadsCount"
+    );
+
+    const selectFilesButton = section.querySelector(
+        "#downloadsSelectFiles"
+    );
+
+    const selectFolderButton = section.querySelector(
+        "#downloadsSelectFolder"
+    );
+
+    const addAllButton = section.querySelector(
+        "#addAllDownloads"
+    );
+
+    const clearPendingButton = section.querySelector(
+        "#clearPendingDownloads"
+    );
+
+
+    /* =====================================================
+       DOWNLOAD DATA
+    ===================================================== */
+
+    let pendingDownloads = [];
+
+    let publishedDownloads = [];
+
+    let nextDownloadId = 1;
+
+
+    /* =====================================================
+       AVAILABLE PLATFORMS
+    ===================================================== */
+
+    const platforms = [
+        "Windows PC",
+        "macOS",
+        "Linux",
+        "PC - Other",
+        "Android",
+        "iOS",
+        "Mobile - Other",
+        "Xbox One",
+        "Xbox Series X/S",
+        "PlayStation 4",
+        "PlayStation 5",
+        "Nintendo Switch",
+        "Web Browser",
+        "Other"
+    ];
+
+
+    /* =====================================================
+       OPEN FILE PICKERS
+    ===================================================== */
+
+    dropArea.addEventListener("click", function () {
+        fileInput.click();
+    });
+
+
+    dropArea.addEventListener("keydown", function (event) {
+
+        if (event.key === "Enter" || event.key === " ") {
+
+            event.preventDefault();
+
+            fileInput.click();
+
+        }
+
+    });
+
+
+    selectFilesButton.addEventListener("click", function () {
+        fileInput.click();
+    });
+
+
+    selectFolderButton.addEventListener("click", function () {
+        folderInput.click();
+    });
+
+
+    /* =====================================================
+       FILE INPUT CHANGES
+    ===================================================== */
+
+    fileInput.addEventListener("change", function () {
+
+        addSelectedFiles(fileInput.files);
+
+        fileInput.value = "";
+
+    });
+
+
+    folderInput.addEventListener("change", function () {
+
+        addSelectedFiles(folderInput.files);
+
+        folderInput.value = "";
+
+    });
+
+
+    /* =====================================================
+       DRAG AND DROP
+    ===================================================== */
+
+    dropArea.addEventListener("dragenter", function (event) {
+
+        event.preventDefault();
+
+        dropArea.classList.add("drag-over");
+
+    });
+
+
+    dropArea.addEventListener("dragover", function (event) {
+
+        event.preventDefault();
+
+        event.dataTransfer.dropEffect = "copy";
+
+        dropArea.classList.add("drag-over");
+
+    });
+
+
+    dropArea.addEventListener("dragleave", function (event) {
+
+        if (!dropArea.contains(event.relatedTarget)) {
+
+            dropArea.classList.remove("drag-over");
+
+        }
+
+    });
+
+
+    dropArea.addEventListener("drop", function (event) {
+
+        event.preventDefault();
+
+        dropArea.classList.remove("drag-over");
+
+        const files = Array.from(
+            event.dataTransfer.files || []
+        );
+
+        addSelectedFiles(files);
+
+    });
+
+
+    /* =====================================================
+       CREATE HTML ELEMENTS SAFELY
+    ===================================================== */
+
+    function createElement(tag, className, text) {
+
+        const element = document.createElement(tag);
+
+        if (className) {
+            element.className = className;
+        }
+
+        if (text !== undefined) {
+            element.textContent = text;
+        }
+
+        return element;
+
+    }
+
+
+    /* =====================================================
+       ADD SELECTED FILES
+    ===================================================== */
+
+    function addSelectedFiles(files) {
+
+        const selectedFiles = Array.from(files || []);
+
+        if (selectedFiles.length === 0) {
+            return;
+        }
+
+        selectedFiles.forEach(function (file) {
+
+            const duplicate = pendingDownloads.some(function (item) {
+
+                return item.file.name === file.name &&
+                       item.file.size === file.size &&
+                       item.file.lastModified === file.lastModified;
+
+            });
+
+            if (duplicate) {
+                return;
+            }
+
+            pendingDownloads.push({
+
+                id: nextDownloadId++,
+
+                file: file,
+
+                title: file.name.replace(/\.[^/.]+$/, ""),
+
+                platform: "Windows PC"
+
+            });
+
+        });
+
+        renderPendingDownloads();
+
+    }
+
+
+    /* =====================================================
+       CREATE PLATFORM SELECT
+    ===================================================== */
+
+    function createPlatformSelect(selectedPlatform, callback) {
+
+        const select = document.createElement("select");
+
+        platforms.forEach(function (platform) {
+
+            const option = document.createElement("option");
+
+            option.value = platform;
+
+            option.textContent = platform;
+
+            if (platform === selectedPlatform) {
+                option.selected = true;
+            }
+
+            select.appendChild(option);
+
+        });
+
+        select.addEventListener("change", function () {
+
+            callback(select.value);
+
+        });
+
+        return select;
+
+    }
+
+
+    /* =====================================================
+       RENDER PENDING DOWNLOADS
+    ===================================================== */
+
+    function renderPendingDownloads() {
+
+        pendingList.replaceChildren();
+
+        pendingCount.textContent =
+            pendingDownloads.length +
+            " downloads waiting to be added";
+
+
+        if (pendingDownloads.length === 0) {
+
+            pendingList.appendChild(
+                createElement(
+                    "div",
+                    "downloads-empty",
+                    "No files selected yet."
+                )
+            );
+
+            return;
+
+        }
+
+
+        pendingDownloads.forEach(function (download) {
+
+            const item = createElement(
+                "div",
+                "download-item"
+            );
+
+
+            /* FILE NAME AND REMOVE BUTTON */
+
+            const top = createElement(
+                "div",
+                "download-item-top"
+            );
+
+            const fileName = createElement(
+                "span",
+                "download-file-name",
+                download.file.webkitRelativePath || download.file.name
+            );
+
+            const removeButton = createElement(
+                "button",
+                "download-remove",
+                "Remove"
+            );
+
+            removeButton.type = "button";
+
+            removeButton.addEventListener("click", function () {
+
+                pendingDownloads = pendingDownloads.filter(
+                    function (entry) {
+                        return entry.id !== download.id;
+                    }
+                );
+
+                renderPendingDownloads();
+
+            });
+
+            top.append(fileName, removeButton);
+
+
+            /* DOWNLOAD TITLE */
+
+            const titleGroup = createElement(
+                "div",
+                "downloads-field"
+            );
+
+            const titleLabel = createElement(
+                "label",
+                "",
+                "Download Title"
+            );
+
+            const titleInput = document.createElement("input");
+
+            titleInput.type = "text";
+
+            titleInput.value = download.title;
+
+            titleInput.placeholder = "Enter download title...";
+
+            titleInput.addEventListener("input", function () {
+
+                download.title = titleInput.value;
+
+            });
+
+            titleGroup.append(
+                titleLabel,
+                titleInput
+            );
+
+
+            /* PLATFORM */
+
+            const platformGroup = createElement(
+                "div",
+                "downloads-field"
+            );
+
+            const platformLabel = createElement(
+                "label",
+                "",
+                "Platform"
+            );
+
+            const platformSelect = createPlatformSelect(
+                download.platform,
+                function (value) {
+                    download.platform = value;
+                }
+            );
+
+            platformGroup.append(
+                platformLabel,
+                platformSelect
+            );
+
+
+            /* ADD INDIVIDUAL DOWNLOAD */
+
+            const addButton = createElement(
+                "button",
+                "download-add-one",
+                "Add This Download"
+            );
+
+            addButton.type = "button";
+
+            addButton.addEventListener("click", function () {
+
+                addDownload(download.id);
+
+            });
+
+
+            /* BUILD ITEM */
+
+            item.append(
+                top,
+                titleGroup,
+                platformGroup,
+                addButton
+            );
+
+            pendingList.appendChild(item);
+
+        });
+
+    }
+
+
+    /* =====================================================
+       ADD ONE DOWNLOAD
+    ===================================================== */
+
+    function addDownload(id) {
+
+        const index = pendingDownloads.findIndex(
+            function (download) {
+                return download.id === id;
+            }
+        );
+
+        if (index === -1) {
+            return;
+        }
+
+        const download = pendingDownloads[index];
+
+        if (!download.title.trim()) {
+
+            alert("Please enter a download title.");
+
+            return;
+
+        }
+
+        publishedDownloads.push({
+
+            id: download.id,
+
+            file: download.file,
+
+            title: download.title.trim(),
+
+            platform: download.platform,
+
+            url: URL.createObjectURL(download.file)
+
+        });
+
+        pendingDownloads.splice(index, 1);
+
+        renderPendingDownloads();
+
+        renderPublishedDownloads();
+
+    }
+
+
+    /* =====================================================
+       ADD ALL DOWNLOADS
+    ===================================================== */
+
+    addAllButton.addEventListener("click", function () {
+
+        if (pendingDownloads.length === 0) {
+
+            alert("There are no pending downloads to add.");
+
+            return;
+
+        }
+
+        const invalidDownload = pendingDownloads.find(
+            function (download) {
+                return !download.title.trim();
+            }
+        );
+
+        if (invalidDownload) {
+
+            alert("Please enter a title for every download first.");
+
+            return;
+
+        }
+
+        const downloadsToAdd = pendingDownloads.slice();
+
+        downloadsToAdd.forEach(function (download) {
+
+            publishedDownloads.push({
+
+                id: download.id,
+
+                file: download.file,
+
+                title: download.title.trim(),
+
+                platform: download.platform,
+
+                url: URL.createObjectURL(download.file)
+
+            });
+
+        });
+
+        pendingDownloads = [];
+
+        renderPendingDownloads();
+
+        renderPublishedDownloads();
+
+    });
+
+
+    /* =====================================================
+       CLEAR PENDING DOWNLOADS
+    ===================================================== */
+
+    clearPendingButton.addEventListener("click", function () {
+
+        pendingDownloads = [];
+
+        renderPendingDownloads();
+
+    });
+
+
+    /* =====================================================
+       RENDER PUBLISHED DOWNLOADS
+    ===================================================== */
+
+    function renderPublishedDownloads() {
+
+        publishedList.replaceChildren();
+
+        publishedCount.textContent =
+            publishedDownloads.length + " downloads added";
+
+
+        if (publishedDownloads.length === 0) {
+
+            publishedList.appendChild(
+                createElement(
+                    "div",
+                    "downloads-empty",
+                    "No downloads have been added yet."
+                )
+            );
+
+            return;
+
+        }
+
+
+        publishedDownloads.forEach(function (download) {
+
+            const item = createElement(
+                "div",
+                "download-published-item"
+            );
+
+
+            /* DOWNLOAD INFORMATION */
+
+            const info = createElement(
+                "div",
+                "download-published-info"
+            );
+
+            const title = createElement(
+                "strong",
+                "",
+                download.title
+            );
+
+            const platform = createElement(
+                "span",
+                "",
+                download.platform
+            );
+
+            const fileName = createElement(
+                "span",
+                "",
+                download.file.webkitRelativePath || download.file.name
+            );
+
+
+            /* DOWNLOAD LINK */
+
+            const openLink = createElement(
+                "a",
+                "download-open",
+                "Download File"
+            );
+
+            openLink.href = download.url;
+
+            openLink.download = download.file.name;
+
+
+            info.append(
+                title,
+                platform,
+                fileName
+            );
+
+            item.append(
+                info,
+                openLink
+            );
+
+            publishedList.appendChild(item);
+
+        });
+
+    }
+
+
+    /* =====================================================
+       INITIAL DISPLAY
+    ===================================================== */
+
+    renderPendingDownloads();
+
+    renderPublishedDownloads();
+
+
+})();
+</script>

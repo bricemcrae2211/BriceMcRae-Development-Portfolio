@@ -1,0 +1,178 @@
+
+<!-- =====================================================
+     SECTION 12: SYSTEM REQUIREMENTS
+     COMPLETE HTML, CSS AND JAVASCRIPT
+===================================================== -->
+
+
+<!-- =====================================================
+     SECTION CSS
+===================================================== -->
+
+
+<link rel="stylesheet" href="sections/css/15-external-links-downloads.css">
+
+<!-- =====================================================
+     SECTION HTML
+===================================================== -->
+
+<section class="project-section dropdown-section"
+         id="systemRequirementsSection">
+
+
+    <!-- MAIN DROPDOWN HEADER -->
+
+    <button type="button"
+            class="dropdown-header"
+            aria-expanded="false"
+            aria-controls="requirementsDropdown">
+
+        <span>12. System Requirements</span>
+
+        <span class="dropdown-arrow">▼</span>
+
+    </button>
+
+
+    <!-- DROPDOWN CONTENT -->
+
+    <div class="dropdown-content"
+         id="requirementsDropdown"
+         hidden>
+
+
+        <!-- MINIMUM REQUIREMENTS -->
+
+        <div class="form-group">
+
+            <label for="minimumRequirements">
+                Minimum Requirements
+            </label>
+
+            <textarea id="minimumRequirements"
+                      name="minimumRequirements"
+                      placeholder="Enter minimum system requirements, including operating system, processor, memory, graphics and storage..."></textarea>
+
+        </div>
+
+
+        <!-- RECOMMENDED REQUIREMENTS -->
+
+        <div class="form-group">
+
+            <label for="recommendedRequirements">
+                Recommended Requirements
+            </label>
+
+            <textarea id="recommendedRequirements"
+                      name="recommendedRequirements"
+                      placeholder="Enter recommended system specifications, including operating system, processor, memory, graphics and storage..."></textarea>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SECTION JAVASCRIPT
+===================================================== -->
+
+<script>
+
+(function () {
+
+    "use strict";
+
+
+    /* =====================================================
+       INITIALIZE SECTION
+    ===================================================== */
+
+    const section = document.getElementById(
+        "systemRequirementsSection"
+    );
+
+    if (!section) {
+        return;
+    }
+
+    // Prevent duplicate initialization.
+
+    if (section.dataset.requirementsInitialized === "true") {
+        return;
+    }
+
+    section.dataset.requirementsInitialized = "true";
+
+
+    /* =====================================================
+       ELEMENT REFERENCES
+    ===================================================== */
+
+    const dropdownHeader = section.querySelector(
+        ".dropdown-header"
+    );
+
+    const dropdownContent = section.querySelector(
+        "#requirementsDropdown"
+    );
+
+
+    /* =====================================================
+       VALIDATE ELEMENTS
+    ===================================================== */
+
+    if (!dropdownHeader || !dropdownContent) {
+        return;
+    }
+
+
+    /* =====================================================
+       DROPDOWN OPEN AND CLOSE
+    ===================================================== */
+
+    dropdownHeader.addEventListener("click", function (event) {
+
+        // Prevent the main layout loader from
+        // handling this dropdown a second time.
+
+        event.stopPropagation();
+
+        const isOpen =
+            dropdownHeader.getAttribute("aria-expanded") === "true";
+
+
+        // Toggle dropdown state.
+
+        dropdownHeader.setAttribute(
+            "aria-expanded",
+            String(!isOpen)
+        );
+
+
+        // Show or hide dropdown content.
+
+        dropdownContent.hidden = isOpen;
+
+    });
+
+
+    /* =====================================================
+       INITIAL DROPDOWN STATE
+    ===================================================== */
+
+    dropdownHeader.setAttribute(
+        "aria-expanded",
+        "false"
+    );
+
+    dropdownContent.hidden = true;
+
+
+})();
+
+</script>
+

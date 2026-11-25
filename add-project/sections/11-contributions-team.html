@@ -1,0 +1,95 @@
+
+<!-- =====================================================
+     SECTION 09: CONTRIBUTIONS AND TEAM
+     COMPLETE HTML, CSS AND JAVASCRIPT
+===================================================== -->
+
+<link rel="stylesheet" href="sections/css/15-external-links-downloads.css">
+
+<section class="project-section dropdown-section"
+         id="contributionsSection">
+
+    <button type="button"
+            class="dropdown-header"
+            aria-expanded="false"
+            aria-controls="contributionsDropdown">
+
+        <span>9. Contributions and Team</span>
+        <span class="dropdown-arrow">▼</span>
+
+    </button>
+
+    <div class="dropdown-content"
+         id="contributionsDropdown"
+         hidden>
+
+        <div class="form-group">
+            <label for="contributions">My Contributions</label>
+            <textarea id="contributions"
+                      placeholder="Describe your contributions..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="developmentCredits">Development Credits</label>
+            <textarea id="developmentCredits"
+                      placeholder="List contributors and their roles..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="individualResponsibilities">Individual Responsibilities</label>
+            <textarea id="individualResponsibilities"
+                      placeholder="Describe individual responsibilities..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="teamInformation">Team Information</label>
+            <textarea id="teamInformation"
+                      placeholder="Describe the development team..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="teamMembers">Team Members</label>
+            <textarea id="teamMembers"
+                      placeholder="List team members..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="teamResponsibilities">Team Responsibilities</label>
+            <textarea id="teamResponsibilities"
+                      placeholder="Describe each member's responsibilities..."></textarea>
+        </div>
+
+    </div>
+</section>
+
+<script>
+(function () {
+    "use strict";
+
+    const section = document.getElementById("contributionsSection");
+
+    if (!section || section.dataset.contributionsInitialized === "true") {
+        return;
+    }
+
+    const header = section.querySelector(".dropdown-header");
+    const content = section.querySelector("#contributionsDropdown");
+
+    if (!header || !content) return;
+
+    section.dataset.contributionsInitialized = "true";
+
+    header.addEventListener("click", function (event) {
+        event.stopPropagation();
+
+        const isOpen =
+            header.getAttribute("aria-expanded") === "true";
+
+        header.setAttribute("aria-expanded", String(!isOpen));
+        content.hidden = isOpen;
+    });
+
+    header.setAttribute("aria-expanded", "false");
+    content.hidden = true;
+})();
+</script>

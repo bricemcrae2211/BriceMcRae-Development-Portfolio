@@ -1,0 +1,1609 @@
+
+<!-- =====================================================
+     SECTION 15: SOCIAL MEDIA, PLATFORM AND CUSTOM LINKS
+     COMPLETE HTML AND JAVASCRIPT
+===================================================== -->
+
+<section class="project-section dropdown-section"
+         id="socialMediaLinksSection">
+
+    <!-- MAIN DROPDOWN HEADER -->
+
+    <button type="button"
+            class="dropdown-header"
+            aria-expanded="false"
+            aria-controls="customLinksDropdown">
+
+        <span>15. Social Media and Custom Links</span>
+        <span class="dropdown-arrow">▼</span>
+
+    </button>
+
+
+    <!-- MAIN DROPDOWN CONTENT -->
+
+    <div class="dropdown-content"
+         id="customLinksDropdown"
+         hidden>
+
+        <p>
+            Add your social media profiles and external development
+            platform links. You can add multiple links to each
+            platform and give each link an optional title.
+        </p>
+
+
+        <!-- =============================================
+             DEFAULT PLATFORM LINKS DROPDOWN
+        ============================================== -->
+
+        <div class="platform-dropdown-section">
+
+            <button type="button"
+                    class="dropdown-header platform-dropdown-header"
+                    aria-expanded="false"
+                    aria-controls="platformLinksDropdown">
+
+                <span>Default Social Media and Platform Links</span>
+                <span class="dropdown-arrow">▼</span>
+
+            </button>
+
+
+            <div class="dropdown-content"
+                 id="platformLinksDropdown"
+                 hidden>
+
+
+                <!-- GITHUB -->
+
+                <div class="form-group platform-section">
+                    <h4>GitHub</h4>
+
+                    <div id="githubLinks"
+                         class="platform-links"></div>
+
+                    <button type="button"
+                            class="add-platform-link"
+                            data-target="githubLinks">
+                        + Add GitHub Link
+                    </button>
+                </div>
+
+
+                <!-- LINKEDIN -->
+
+                <div class="form-group platform-section">
+                    <h4>LinkedIn</h4>
+
+                    <div id="linkedinLinks"
+                         class="platform-links"></div>
+
+                    <button type="button"
+                            class="add-platform-link"
+                            data-target="linkedinLinks">
+                        + Add LinkedIn Link
+                    </button>
+                </div>
+
+
+                <!-- STEAM -->
+
+                <div class="form-group platform-section">
+                    <h4>Steam</h4>
+
+                    <div id="steamLinks"
+                         class="platform-links"></div>
+
+                    <button type="button"
+                            class="add-platform-link"
+                            data-target="steamLinks">
+                        + Add Steam Link
+                    </button>
+                </div>
+
+
+                <!-- FACEBOOK -->
+
+                <div class="form-group platform-section">
+                    <h4>Facebook</h4>
+
+                    <div id="facebookLinks"
+                         class="platform-links"></div>
+
+                    <button type="button"
+                            class="add-platform-link"
+                            data-target="facebookLinks">
+                        + Add Facebook Link
+                    </button>
+                </div>
+
+
+                <!-- YOUTUBE -->
+
+                <div class="form-group platform-section">
+                    <h4>YouTube</h4>
+
+                    <div id="youtubeLinks"
+                         class="platform-links"></div>
+
+                    <button type="button"
+                            class="add-platform-link"
+                            data-target="youtubeLinks">
+                        + Add YouTube Link
+                    </button>
+                </div>
+
+
+                <!-- DISCORD -->
+
+                <div class="form-group platform-section">
+                    <h4>Discord</h4>
+
+                    <div id="discordLinks"
+                         class="platform-links"></div>
+
+                    <button type="button"
+                            class="add-platform-link"
+                            data-target="discordLinks">
+                        + Add Discord Link
+                    </button>
+                </div>
+
+
+                <!-- INSTAGRAM -->
+
+                <div class="form-group platform-section">
+                    <h4>Instagram</h4>
+
+                    <div id="instagramLinks"
+                         class="platform-links"></div>
+
+                    <button type="button"
+                            class="add-platform-link"
+                            data-target="instagramLinks">
+                        + Add Instagram Link
+                    </button>
+                </div>
+
+
+                <!-- X / TWITTER -->
+
+                <div class="form-group platform-section">
+                    <h4>X / Twitter</h4>
+
+                    <div id="twitterLinks"
+                         class="platform-links"></div>
+
+                    <button type="button"
+                            class="add-platform-link"
+                            data-target="twitterLinks">
+                        + Add X / Twitter Link
+                    </button>
+                </div>
+
+
+                <!-- TWITCH -->
+
+                <div class="form-group platform-section">
+                    <h4>Twitch</h4>
+
+                    <div id="twitchLinks"
+                         class="platform-links"></div>
+
+                    <button type="button"
+                            class="add-platform-link"
+                            data-target="twitchLinks">
+                        + Add Twitch Link
+                    </button>
+                </div>
+
+
+                <!-- REDDIT -->
+
+                <div class="form-group platform-section">
+                    <h4>Reddit</h4>
+
+                    <div id="redditLinks"
+                         class="platform-links"></div>
+
+                    <button type="button"
+                            class="add-platform-link"
+                            data-target="redditLinks">
+                        + Add Reddit Link
+                    </button>
+                </div>
+
+
+                <!-- ITCH.IO -->
+
+                <div class="form-group platform-section">
+                    <h4>itch.io</h4>
+
+                    <div id="itchioLinks"
+                         class="platform-links"></div>
+
+                    <button type="button"
+                            class="add-platform-link"
+                            data-target="itchioLinks">
+                        + Add itch.io Link
+                    </button>
+                </div>
+
+
+                <!-- ARTSTATION -->
+
+                <div class="form-group platform-section">
+                    <h4>ArtStation</h4>
+
+                    <div id="artstationLinks"
+                         class="platform-links"></div>
+
+                    <button type="button"
+                            class="add-platform-link"
+                            data-target="artstationLinks">
+                        + Add ArtStation Link
+                    </button>
+                </div>
+
+
+                <!-- BEHANCE -->
+
+                <div class="form-group platform-section">
+                    <h4>Behance</h4>
+
+                    <div id="behanceLinks"
+                         class="platform-links"></div>
+
+                    <button type="button"
+                            class="add-platform-link"
+                            data-target="behanceLinks">
+                        + Add Behance Link
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <hr>
+
+
+        <!-- =============================================
+             ADDITIONAL CUSTOM LINKS
+        ============================================== -->
+
+        <h3>Additional Custom Links</h3>
+
+        <p>
+            Create your own custom link groups with a main title.
+            Every URL has its own optional title and URL field.
+            You can also add additional title groups.
+        </p>
+
+        <div id="customLinksContainer"></div>
+
+        <button type="button"
+                id="addCustomLink">
+            + Add Custom Link
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SECTION 15 CSS
+===================================================== -->
+
+
+<link rel="stylesheet" href="sections/css/15-external-links-downloads.css">
+
+<!-- =====================================================
+     SECTION 15 JAVASCRIPT
+===================================================== -->
+
+<script>
+
+(function () {
+
+    "use strict";
+
+
+    /* =============================================
+       PREVENT DUPLICATE INITIALIZATION
+    ============================================== */
+
+    if (window.socialMediaLinksHandlerInstalled) {
+        return;
+    }
+
+    window.socialMediaLinksHandlerInstalled = true;
+
+
+    const sectionSelector = "#socialMediaLinksSection";
+
+
+    /* =============================================
+       PLATFORM CONFIGURATION
+
+       PORTFOLIO AND OTHER WEBSITE REMOVED
+    ============================================== */
+
+    const platforms = [
+        { id: "githubLinks", prefix: "github", name: "GitHub" },
+        { id: "linkedinLinks", prefix: "linkedin", name: "LinkedIn" },
+        { id: "steamLinks", prefix: "steam", name: "Steam" },
+        { id: "facebookLinks", prefix: "facebook", name: "Facebook" },
+        { id: "youtubeLinks", prefix: "youtube", name: "YouTube" },
+        { id: "discordLinks", prefix: "discord", name: "Discord" },
+        { id: "instagramLinks", prefix: "instagram", name: "Instagram" },
+        { id: "twitterLinks", prefix: "twitter", name: "X / Twitter" },
+        { id: "twitchLinks", prefix: "twitch", name: "Twitch" },
+        { id: "redditLinks", prefix: "reddit", name: "Reddit" },
+        { id: "itchioLinks", prefix: "itchio", name: "itch.io" },
+        { id: "artstationLinks", prefix: "artstation", name: "ArtStation" },
+        { id: "behanceLinks", prefix: "behance", name: "Behance" }
+    ];
+
+
+    /* =============================================
+       ELEMENT HELPERS
+    ============================================== */
+
+    function createElement(tag, className, text) {
+
+        const element = document.createElement(tag);
+
+        if (className) {
+            element.className = className;
+        }
+
+        if (text !== undefined) {
+            element.textContent = text;
+        }
+
+        return element;
+    }
+
+
+    function createButton(className, text) {
+
+        const button = createElement(
+            "button",
+            className,
+            text
+        );
+
+        button.type = "button";
+
+        return button;
+    }
+
+
+    /* =============================================
+       PLATFORM AND CUSTOM GROUP NUMBERING
+    ============================================== */
+
+    function updateLinkNumbers(container) {
+
+        if (!container) return;
+
+        const entries = Array.from(container.children).filter(
+            function (child) {
+                return child.classList.contains("custom-link-entry");
+            }
+        );
+
+        entries.forEach(function (entry, index) {
+
+            let number = entry.querySelector(
+                ":scope > .link-entry-number"
+            );
+
+            if (!number) {
+
+                number = createElement(
+                    "span",
+                    "link-entry-number"
+                );
+
+                entry.insertBefore(
+                    number,
+                    entry.firstChild
+                );
+            }
+
+            number.textContent = (index + 1) + ".";
+
+        });
+
+    }
+
+
+    /* =============================================
+       URL NUMBERING
+
+       EACH TITLE GROUP STARTS AT 1
+    ============================================== */
+
+    function updateURLNumbers(container) {
+
+        if (!container) return;
+
+        const entries = container.querySelectorAll(
+            ":scope > .custom-link-url-entry"
+        );
+
+        entries.forEach(function (entry, index) {
+
+            let number = entry.querySelector(
+                ":scope > .custom-link-url-number"
+            );
+
+            if (!number) {
+
+                number = createElement(
+                    "span",
+                    "custom-link-url-number"
+                );
+
+                entry.insertBefore(
+                    number,
+                    entry.firstChild
+                );
+            }
+
+            number.textContent = (index + 1) + ".";
+
+        });
+
+    }
+
+
+    function updateAllNumbers(section) {
+
+        if (!section) return;
+
+        platforms.forEach(function (platform) {
+
+            const container = section.querySelector(
+                "#" + platform.id
+            );
+
+            updateLinkNumbers(container);
+
+        });
+
+        const customContainer = section.querySelector(
+            "#customLinksContainer"
+        );
+
+        updateLinkNumbers(customContainer);
+
+        section.querySelectorAll(
+            ".custom-link-urls"
+        ).forEach(function (container) {
+
+            updateURLNumbers(container);
+
+        });
+
+    }
+
+
+    /* =============================================
+       CREATE PLATFORM LINK
+    ============================================== */
+
+    function createPlatformLink(container, platform) {
+
+        if (!container) return null;
+
+        const entry = createElement(
+            "div",
+            "form-group custom-link-entry"
+        );
+
+
+        /* OPTIONAL TITLE BUTTON */
+
+        const titleButton = createButton(
+            "social-title-toggle",
+            "+ Add Title"
+        );
+
+        titleButton.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+
+        /* OPTIONAL TITLE FIELD */
+
+        const titleWrapper = createElement(
+            "div",
+            "social-title-field"
+        );
+
+        titleWrapper.hidden = true;
+
+        const titleLabel = createElement(
+            "label",
+            "",
+            platform.name + " Link Title"
+        );
+
+        const titleInput = createElement(
+            "input",
+            "custom-link-title"
+        );
+
+        titleInput.type = "text";
+        titleInput.name = platform.prefix + "Title[]";
+        titleInput.placeholder = "Enter " + platform.name + " title...";
+
+        titleWrapper.appendChild(titleLabel);
+        titleWrapper.appendChild(titleInput);
+
+
+        /* URL FIELD */
+
+        const urlLabel = createElement(
+            "label",
+            "",
+            platform.name + " URL"
+        );
+
+        const urlInput = createElement(
+            "input",
+            "custom-link-url"
+        );
+
+        urlInput.type = "url";
+        urlInput.name = platform.prefix + "URL[]";
+        urlInput.placeholder = "https://...";
+
+
+        /* REMOVE BUTTON */
+
+        const removeButton = createButton(
+            "remove-custom-link",
+            "Remove Link"
+        );
+
+
+        entry.appendChild(titleButton);
+        entry.appendChild(titleWrapper);
+        entry.appendChild(urlLabel);
+        entry.appendChild(urlInput);
+        entry.appendChild(removeButton);
+
+        container.appendChild(entry);
+
+        updateLinkNumbers(container);
+
+        return entry;
+    }
+
+
+    /* =============================================
+       ADD PLATFORM LINK
+    ============================================== */
+
+    function addPlatformLink(button) {
+
+        const platform = platforms.find(function (item) {
+            return item.id === button.dataset.target;
+        });
+
+        if (!platform) return;
+
+        const section = button.closest(sectionSelector);
+
+        if (!section) return;
+
+        const container = section.querySelector(
+            "#" + platform.id
+        );
+
+        const entry = createPlatformLink(
+            container,
+            platform
+        );
+
+        if (entry) {
+
+            const input = entry.querySelector(
+                ".custom-link-url"
+            );
+
+            if (input) input.focus();
+
+        }
+
+    }
+
+
+    /* =============================================
+       CREATE INDIVIDUAL CUSTOM URL ENTRY
+
+       EVERY URL HAS ITS OWN TITLE BUTTON
+    ============================================== */
+
+    function createCustomURL(container, titleName, urlName) {
+
+        if (!container) return null;
+
+        const urlEntry = createElement(
+            "div",
+            "custom-link-url-entry"
+        );
+
+
+        /* INDIVIDUAL TITLE BUTTON */
+
+        const titleButton = createButton(
+            "custom-url-title-toggle",
+            "+ Add Title"
+        );
+
+        titleButton.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+
+        /* INDIVIDUAL TITLE FIELD */
+
+        const titleWrapper = createElement(
+            "div",
+            "custom-url-title-field"
+        );
+
+        titleWrapper.hidden = true;
+
+        const titleLabel = createElement(
+            "label",
+            "",
+            "Link Title"
+        );
+
+        const titleInput = createElement(
+            "input",
+            "custom-link-url-title"
+        );
+
+        titleInput.type = "text";
+        titleInput.name = titleName;
+        titleInput.placeholder = "Enter link title...";
+
+        titleWrapper.appendChild(titleLabel);
+        titleWrapper.appendChild(titleInput);
+
+
+        /* URL LABEL */
+
+        const urlLabel = createElement(
+            "label",
+            "",
+            "Link URL"
+        );
+
+        const urlInput = createElement(
+            "input",
+            "custom-link-url"
+        );
+
+        urlInput.type = "url";
+        urlInput.name = urlName;
+        urlInput.placeholder = "https://...";
+
+
+        /* REMOVE URL BUTTON */
+
+        const removeButton = createButton(
+            "remove-custom-url",
+            "Remove URL"
+        );
+
+
+        urlEntry.appendChild(titleButton);
+        urlEntry.appendChild(titleWrapper);
+        urlEntry.appendChild(urlLabel);
+        urlEntry.appendChild(urlInput);
+        urlEntry.appendChild(removeButton);
+
+        container.appendChild(urlEntry);
+
+        updateURLNumbers(container);
+
+        return urlEntry;
+    }
+
+
+    /* =============================================
+       TOGGLE INDIVIDUAL CUSTOM URL TITLE
+    ============================================== */
+
+    function toggleCustomURLTitle(button) {
+
+        const urlEntry = button.closest(
+            ".custom-link-url-entry"
+        );
+
+        if (!urlEntry) return;
+
+        const wrapper = urlEntry.querySelector(
+            ".custom-url-title-field"
+        );
+
+        if (!wrapper) return;
+
+        const input = wrapper.querySelector(
+            ".custom-link-url-title"
+        );
+
+
+        if (wrapper.hidden) {
+
+            wrapper.hidden = false;
+
+            button.textContent = "− Remove Title";
+
+            button.setAttribute(
+                "aria-expanded",
+                "true"
+            );
+
+            if (input) input.focus();
+
+        } else {
+
+            wrapper.hidden = true;
+
+            button.textContent = "+ Add Title";
+
+            button.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            if (input) input.value = "";
+
+        }
+
+    }
+
+
+    /* =============================================
+       CREATE URL GROUP
+    ============================================== */
+
+    function createURLGroup(titleName, urlName, heading) {
+
+        const group = createElement(
+            "div",
+            "custom-link-url-group"
+        );
+
+        if (heading) {
+
+            group.appendChild(
+                createElement(
+                    "h5",
+                    "",
+                    heading
+                )
+            );
+
+        }
+
+        const urlsContainer = createElement(
+            "div",
+            "custom-link-urls"
+        );
+
+        urlsContainer.dataset.titleName = titleName;
+        urlsContainer.dataset.urlName = urlName;
+
+
+        const addURLButton = createButton(
+            "add-custom-url",
+            "+ Add URL"
+        );
+
+
+        group.appendChild(urlsContainer);
+        group.appendChild(addURLButton);
+
+
+        createCustomURL(
+            urlsContainer,
+            titleName,
+            urlName
+        );
+
+        return group;
+    }
+
+
+    /* =============================================
+       CREATE CUSTOM LINK GROUP
+    ============================================== */
+
+    function createCustomLink(container) {
+
+        if (!container) return null;
+
+        const entry = createElement(
+            "div",
+            "form-group custom-link-entry custom-link-group"
+        );
+
+
+        /* MAIN LINK TITLE */
+
+        const mainTitleLabel = createElement(
+            "label",
+            "",
+            "Main Link Title"
+        );
+
+        const mainTitleInput = createElement(
+            "input",
+            "custom-link-title"
+        );
+
+        mainTitleInput.type = "text";
+        mainTitleInput.name = "customLinkTitle[]";
+        mainTitleInput.placeholder = "Enter main link title...";
+
+
+        /* MAIN TITLE URLS */
+
+        const mainURLGroup = createURLGroup(
+            "customLinkURLTitle[]",
+            "customLinkURL[]",
+            "Main Title URLs"
+        );
+
+        mainURLGroup.classList.add(
+            "main-title-url-group"
+        );
+
+
+        /* ADDITIONAL TITLE GROUPS CONTAINER */
+
+        const additionalTitlesContainer = createElement(
+            "div",
+            "custom-link-second-container"
+        );
+
+
+        /* ADD TITLE GROUP BUTTON */
+
+        const addTitleButton = createButton(
+            "add-second-custom-title",
+            "+ Add Title"
+        );
+
+
+        /* REMOVE CUSTOM GROUP */
+
+        const removeButton = createButton(
+            "remove-custom-link",
+            "Remove Custom Link"
+        );
+
+
+        entry.appendChild(mainTitleLabel);
+        entry.appendChild(mainTitleInput);
+
+        entry.appendChild(mainURLGroup);
+
+        entry.appendChild(addTitleButton);
+        entry.appendChild(additionalTitlesContainer);
+
+        entry.appendChild(removeButton);
+
+        container.appendChild(entry);
+
+        updateLinkNumbers(container);
+
+        return entry;
+    }
+
+
+    /* =============================================
+       ADD ADDITIONAL TITLE GROUP
+    ============================================== */
+
+    function addSecondTitle(button) {
+
+        const entry = button.closest(
+            ".custom-link-group"
+        );
+
+        if (!entry) return;
+
+        const titlesContainer = entry.querySelector(
+            ".custom-link-second-container"
+        );
+
+        if (!titlesContainer) return;
+
+
+        const secondGroup = createElement(
+            "div",
+            "custom-link-second-group"
+        );
+
+
+        /* ADDITIONAL GROUP TITLE */
+
+        const titleLabel = createElement(
+            "label",
+            "",
+            "Additional Link Title"
+        );
+
+        const titleInput = createElement(
+            "input",
+            "custom-link-second-title"
+        );
+
+        titleInput.type = "text";
+        titleInput.name = "customLinkSecondTitle[]";
+        titleInput.placeholder = "Enter additional title...";
+
+
+        /* ADDITIONAL TITLE URLS */
+
+        const secondURLGroup = createURLGroup(
+            "customLinkSecondURLTitle[]",
+            "customLinkSecondURL[]",
+            "Additional Title URLs"
+        );
+
+        secondURLGroup.classList.add(
+            "second-title-url-group"
+        );
+
+
+        /* REMOVE THIS TITLE GROUP */
+
+        const removeSecondTitleButton = createButton(
+            "remove-second-custom-title",
+            "Remove Title"
+        );
+
+
+        secondGroup.appendChild(titleLabel);
+        secondGroup.appendChild(titleInput);
+        secondGroup.appendChild(secondURLGroup);
+        secondGroup.appendChild(removeSecondTitleButton);
+
+
+        titlesContainer.appendChild(secondGroup);
+
+        titleInput.focus();
+
+    }
+
+
+    /* =============================================
+       ADD CUSTOM LINK GROUP
+    ============================================== */
+
+    function addCustomLink(button) {
+
+        const section = button.closest(sectionSelector);
+
+        if (!section) return;
+
+        const container = section.querySelector(
+            "#customLinksContainer"
+        );
+
+        const entry = createCustomLink(container);
+
+        if (entry) {
+
+            const input = entry.querySelector(
+                ".custom-link-title"
+            );
+
+            if (input) input.focus();
+
+        }
+
+    }
+
+
+    /* =============================================
+       ADD URL TO THE CORRECT TITLE GROUP
+    ============================================== */
+
+    function addCustomURL(button) {
+
+        const group = button.closest(
+            ".custom-link-url-group"
+        );
+
+        if (!group) return;
+
+        const container = group.querySelector(
+            ".custom-link-urls"
+        );
+
+        if (!container) return;
+
+        const titleName = container.dataset.titleName;
+        const urlName = container.dataset.urlName;
+
+        const urlEntry = createCustomURL(
+            container,
+            titleName,
+            urlName
+        );
+
+        if (urlEntry) {
+
+            const input = urlEntry.querySelector(
+                ".custom-link-url"
+            );
+
+            if (input) input.focus();
+
+        }
+
+    }
+
+
+    /* =============================================
+       TOGGLE OPTIONAL PLATFORM TITLE
+    ============================================== */
+
+    function togglePlatformTitle(button) {
+
+        const entry = button.closest(
+            ".custom-link-entry"
+        );
+
+        if (!entry) return;
+
+        const wrapper = entry.querySelector(
+            ".social-title-field"
+        );
+
+        if (!wrapper) return;
+
+        const input = wrapper.querySelector(
+            ".custom-link-title"
+        );
+
+
+        if (wrapper.hidden) {
+
+            wrapper.hidden = false;
+
+            button.textContent = "− Remove Title";
+
+            button.setAttribute(
+                "aria-expanded",
+                "true"
+            );
+
+            if (input) input.focus();
+
+        } else {
+
+            wrapper.hidden = true;
+
+            button.textContent = "+ Add Title";
+
+            button.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            if (input) input.value = "";
+
+        }
+
+    }
+
+
+    /* =============================================
+       REMOVE INDIVIDUAL URL
+
+       KEEP AT LEAST ONE URL FIELD
+    ============================================== */
+
+    function removeCustomURL(button) {
+
+        const urlEntry = button.closest(
+            ".custom-link-url-entry"
+        );
+
+        if (!urlEntry) return;
+
+        const container = urlEntry.parentElement;
+
+        if (!container) return;
+
+        const entries = container.querySelectorAll(
+            ":scope > .custom-link-url-entry"
+        );
+
+
+        if (entries.length <= 1) {
+
+            const titleInput = urlEntry.querySelector(
+                ".custom-link-url-title"
+            );
+
+            const urlInput = urlEntry.querySelector(
+                ".custom-link-url"
+            );
+
+            if (titleInput) titleInput.value = "";
+
+            if (urlInput) urlInput.value = "";
+
+            const titleWrapper = urlEntry.querySelector(
+                ".custom-url-title-field"
+            );
+
+            const titleButton = urlEntry.querySelector(
+                ".custom-url-title-toggle"
+            );
+
+            if (titleWrapper) {
+                titleWrapper.hidden = true;
+            }
+
+            if (titleButton) {
+
+                titleButton.textContent = "+ Add Title";
+
+                titleButton.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            }
+
+            return;
+        }
+
+
+        urlEntry.remove();
+
+        updateURLNumbers(container);
+
+    }
+
+
+    /* =============================================
+       REMOVE ADDITIONAL TITLE GROUP
+    ============================================== */
+
+    function removeSecondTitle(button) {
+
+        const secondGroup = button.closest(
+            ".custom-link-second-group"
+        );
+
+        if (!secondGroup) return;
+
+        secondGroup.remove();
+
+    }
+
+
+    /* =============================================
+       REMOVE CUSTOM OR PLATFORM LINK
+
+       DEFAULT PLATFORM LINKS ARE PROTECTED
+    ============================================== */
+
+    function removeLink(button) {
+
+        const entry = button.closest(
+            ".custom-link-entry"
+        );
+
+        if (!entry) return;
+
+        if (entry.classList.contains("default-link")) {
+            return;
+        }
+
+        const container = entry.parentElement;
+
+        entry.remove();
+
+        updateLinkNumbers(container);
+
+    }
+
+
+    /* =============================================
+       INITIALIZE DEFAULT PLATFORM LINKS
+
+       EACH PLATFORM STARTS WITH ONE DEFAULT LINK
+    ============================================== */
+
+    function initializePlatformDefaults(section) {
+
+        platforms.forEach(function (platform) {
+
+            const container = section.querySelector(
+                "#" + platform.id
+            );
+
+            if (!container) return;
+
+
+            const existing = container.querySelector(
+                ":scope > .custom-link-entry"
+            );
+
+            if (existing) return;
+
+
+            const entry = createElement(
+                "div",
+                "form-group custom-link-entry default-link"
+            );
+
+
+            /* OPTIONAL TITLE BUTTON */
+
+            const titleButton = createButton(
+                "social-title-toggle",
+                "+ Add Title"
+            );
+
+            titleButton.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+
+            /* TITLE FIELD */
+
+            const titleWrapper = createElement(
+                "div",
+                "social-title-field"
+            );
+
+            titleWrapper.hidden = true;
+
+            const titleLabel = createElement(
+                "label",
+                "",
+                platform.name + " Link Title"
+            );
+
+            const titleInput = createElement(
+                "input",
+                "custom-link-title"
+            );
+
+            titleInput.type = "text";
+            titleInput.name = platform.prefix + "Title[]";
+            titleInput.placeholder = "Enter " + platform.name + " title...";
+
+            titleWrapper.appendChild(titleLabel);
+            titleWrapper.appendChild(titleInput);
+
+
+            /* URL FIELD */
+
+            const urlLabel = createElement(
+                "label",
+                "",
+                platform.name + " URL"
+            );
+
+            const urlInput = createElement(
+                "input",
+                "custom-link-url"
+            );
+
+            urlInput.type = "url";
+            urlInput.name = platform.prefix + "URL[]";
+            urlInput.placeholder = "https://...";
+
+
+            /* DEFAULT LINK BUTTON */
+
+            const defaultButton = createButton(
+                "remove-custom-link",
+                "Default Link"
+            );
+
+            defaultButton.disabled = true;
+
+
+            entry.appendChild(titleButton);
+            entry.appendChild(titleWrapper);
+            entry.appendChild(urlLabel);
+            entry.appendChild(urlInput);
+            entry.appendChild(defaultButton);
+
+            container.appendChild(entry);
+
+        });
+
+    }
+
+
+    /* =============================================
+       INITIALIZE SECTION
+    ============================================== */
+
+    function initializeSocialMediaLinks() {
+
+        const section = document.querySelector(
+            sectionSelector
+        );
+
+        if (!section) return;
+
+        initializePlatformDefaults(section);
+
+        updateAllNumbers(section);
+
+    }
+
+
+    /* =============================================
+       SINGLE EVENT DELEGATION HANDLER
+    ============================================== */
+
+    document.addEventListener("click", function (event) {
+
+        if (!(event.target instanceof Element)) {
+            return;
+        }
+
+        const button = event.target.closest("button");
+
+        if (!button) return;
+
+        const section = button.closest(sectionSelector);
+
+        if (!section) return;
+
+
+        /* MAIN AND NESTED DROPDOWNS */
+
+        if (button.classList.contains("dropdown-header")) {
+
+            const targetId = button.getAttribute(
+                "aria-controls"
+            );
+
+            if (!targetId) return;
+
+            const content = section.querySelector(
+                "#" + targetId
+            );
+
+            if (!content) return;
+
+            const expanded =
+                button.getAttribute("aria-expanded") === "true";
+
+            button.setAttribute(
+                "aria-expanded",
+                String(!expanded)
+            );
+
+            content.hidden = expanded;
+
+            return;
+        }
+
+
+        /* ADD PLATFORM LINK */
+
+        if (button.classList.contains("add-platform-link")) {
+
+            addPlatformLink(button);
+
+            return;
+        }
+
+
+        /* ADD CUSTOM LINK GROUP */
+
+        if (button.id === "addCustomLink") {
+
+            addCustomLink(button);
+
+            return;
+        }
+
+
+        /* ADD ADDITIONAL TITLE GROUP */
+
+        if (button.classList.contains("add-second-custom-title")) {
+
+            addSecondTitle(button);
+
+            return;
+        }
+
+
+        /* TOGGLE INDIVIDUAL URL TITLE */
+
+        if (button.classList.contains("custom-url-title-toggle")) {
+
+            toggleCustomURLTitle(button);
+
+            return;
+        }
+
+
+        /* ADD URL */
+
+        if (button.classList.contains("add-custom-url")) {
+
+            addCustomURL(button);
+
+            return;
+        }
+
+
+        /* TOGGLE OPTIONAL PLATFORM TITLE */
+
+        if (button.classList.contains("social-title-toggle")) {
+
+            togglePlatformTitle(button);
+
+            return;
+        }
+
+
+        /* REMOVE ADDITIONAL TITLE GROUP */
+
+        if (button.classList.contains("remove-second-custom-title")) {
+
+            removeSecondTitle(button);
+
+            return;
+        }
+
+
+        /* REMOVE URL */
+
+        if (button.classList.contains("remove-custom-url")) {
+
+            removeCustomURL(button);
+
+            return;
+        }
+
+
+        /* REMOVE LINK */
+
+        if (button.classList.contains("remove-custom-link")) {
+
+            removeLink(button);
+
+            return;
+        }
+
+    });
+
+
+    /* =============================================
+       DYNAMIC HTML LOADER SUPPORT
+    ============================================== */
+
+    let initializationScheduled = false;
+
+    function scheduleInitialization() {
+
+        if (initializationScheduled) return;
+
+        initializationScheduled = true;
+
+        requestAnimationFrame(function () {
+
+            initializationScheduled = false;
+
+            initializeSocialMediaLinks();
+
+        });
+
+    }
+
+
+    const observer = new MutationObserver(function (mutations) {
+
+        for (const mutation of mutations) {
+
+            for (const node of mutation.addedNodes) {
+
+                if (node.nodeType !== Node.ELEMENT_NODE) {
+                    continue;
+                }
+
+                if (
+                    node.id === "socialMediaLinksSection" ||
+                    (
+                        node.querySelector &&
+                        node.querySelector(sectionSelector)
+                    )
+                ) {
+
+                    scheduleInitialization();
+
+                    return;
+                }
+
+            }
+
+        }
+
+    });
+
+
+    /* =============================================
+       START OBSERVER
+    ============================================== */
+
+    function startObserver() {
+
+        if (!document.body) return;
+
+        observer.observe(document.body, {
+            childList: true,
+            subtree: true
+        });
+
+        initializeSocialMediaLinks();
+
+    }
+
+
+    if (document.readyState === "loading") {
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            startObserver,
+            { once: true }
+        );
+
+    } else {
+
+        startObserver();
+
+    }
+
+
+    /* =============================================
+       PUBLIC INITIALIZATION FUNCTION
+
+       CAN BE CALLED BY PROJECT HTML LOADER
+    ============================================== */
+
+    window.initializeSocialMediaLinks =
+        initializeSocialMediaLinks;
+
+
+    console.log(
+        "[SECTION 15] Social Media and Custom Links initialized successfully."
+    );
+
+})();
+
+</script>

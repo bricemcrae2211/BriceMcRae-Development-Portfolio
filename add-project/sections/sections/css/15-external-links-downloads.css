@@ -1,0 +1,2893 @@
+
+/* =====================================================
+   PROJECT SECTIONS CSS
+   ALL PROJECT SECTIONS
+
+   01. PROJECT DESCRIPTION
+   02. GENERAL PROJECT INFORMATION
+   03. PROJECT IMAGES AND SCREENSHOTS
+   04. STORY AND WORLD
+   05. GAMEPLAY AND FUNCTIONALITY
+   06. PROJECT FEATURES
+   07. TECHNICAL OVERVIEW
+   08. DEVELOPMENT CHALLENGES
+   09. DEVELOPMENT INFORMATION
+   10. ABOUT THE PROJECT
+
+   ADDITIONAL SECTIONS
+   09. CONTRIBUTIONS AND TEAM
+   10. DEVELOPMENT TOOLS AND LEARNING
+   11. FUTURE DEVELOPMENT
+   12. SYSTEM REQUIREMENTS
+   15. SOCIAL MEDIA AND CUSTOM LINKS
+===================================================== */
+
+
+/* =====================================================
+   PART 1: ORIGINAL PROJECT SECTIONS
+===================================================== */
+
+
+/* =====================================================
+   1. SHARED SECTION BASE
+===================================================== */
+
+:is(
+    #projectDescriptionSection,
+    #projectImagesSection,
+    #aboutProjectSection,
+    #generalProjectInformationSection,
+    #storyWorldSection,
+    #gameplaySection,
+    #projectFeaturesSection,
+    #technicalOverviewSection,
+    #developmentChallengesSection,
+    #developmentInformationSection
+) {
+    width: 100%;
+    min-width: 0;
+    padding: 0;
+
+    color: var(--text, white);
+    background: var(--section-bg, #252525);
+
+    border: 1px solid var(--border, #444);
+    border-radius: var(--section-radius, 6px);
+
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+:is(
+    #projectDescriptionSection,
+    #projectImagesSection,
+    #aboutProjectSection,
+    #generalProjectInformationSection,
+    #storyWorldSection,
+    #gameplaySection,
+    #projectFeaturesSection,
+    #technicalOverviewSection,
+    #developmentChallengesSection,
+    #developmentInformationSection
+) *,
+:is(
+    #projectDescriptionSection,
+    #projectImagesSection,
+    #aboutProjectSection,
+    #generalProjectInformationSection,
+    #storyWorldSection,
+    #gameplaySection,
+    #projectFeaturesSection,
+    #technicalOverviewSection,
+    #developmentChallengesSection,
+    #developmentInformationSection
+) *::before,
+:is(
+    #projectDescriptionSection,
+    #projectImagesSection,
+    #aboutProjectSection,
+    #generalProjectInformationSection,
+    #storyWorldSection,
+    #gameplaySection,
+    #projectFeaturesSection,
+    #technicalOverviewSection,
+    #developmentChallengesSection,
+    #developmentInformationSection
+) *::after {
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   2. DROPDOWN HEADERS
+===================================================== */
+
+:is(
+    #projectDescriptionSection,
+    #projectImagesSection,
+    #aboutProjectSection,
+    #generalProjectInformationSection,
+    #storyWorldSection,
+    #gameplaySection,
+    #projectFeaturesSection,
+    #technicalOverviewSection,
+    #developmentChallengesSection,
+    #developmentInformationSection
+) > .dropdown-header {
+    width: 100%;
+    min-height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    padding: 12px 15px;
+
+    color: white;
+    background: #292929;
+
+    border: none;
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+
+    text-align: left;
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+:is(
+    #projectDescriptionSection,
+    #projectImagesSection,
+    #aboutProjectSection,
+    #generalProjectInformationSection,
+    #storyWorldSection,
+    #gameplaySection,
+    #projectFeaturesSection,
+    #technicalOverviewSection,
+    #developmentChallengesSection,
+    #developmentInformationSection
+) > .dropdown-header:hover {
+    background: #333;
+}
+
+:is(
+    #projectDescriptionSection,
+    #projectImagesSection,
+    #aboutProjectSection,
+    #generalProjectInformationSection,
+    #storyWorldSection,
+    #gameplaySection,
+    #projectFeaturesSection,
+    #technicalOverviewSection,
+    #developmentChallengesSection,
+    #developmentInformationSection
+) > .dropdown-header[aria-expanded="true"] {
+    background: #303030;
+    border-bottom: 1px solid #444;
+}
+
+
+/* =====================================================
+   3. DROPDOWN ARROWS
+===================================================== */
+
+:is(
+    #projectDescriptionSection,
+    #projectImagesSection,
+    #aboutProjectSection,
+    #generalProjectInformationSection,
+    #storyWorldSection,
+    #gameplaySection,
+    #projectFeaturesSection,
+    #technicalOverviewSection,
+    #developmentChallengesSection,
+    #developmentInformationSection
+) .dropdown-arrow {
+    width: 23px;
+    height: 23px;
+
+    flex-shrink: 0;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ccc;
+    background: #333;
+
+    border: 1px solid #444;
+    border-radius: 5px;
+
+    font-size: 10px;
+
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+:is(
+    #projectDescriptionSection,
+    #projectImagesSection,
+    #aboutProjectSection,
+    #generalProjectInformationSection,
+    #storyWorldSection,
+    #gameplaySection,
+    #projectFeaturesSection,
+    #technicalOverviewSection,
+    #developmentChallengesSection,
+    #developmentInformationSection
+) .dropdown-header[aria-expanded="true"] .dropdown-arrow {
+    color: #2477d4;
+    transform: rotate(180deg);
+}
+
+
+/* =====================================================
+   4. DROPDOWN CONTENT
+===================================================== */
+
+:is(
+    #projectDescriptionSection,
+    #projectImagesSection,
+    #aboutProjectSection,
+    #generalProjectInformationSection,
+    #storyWorldSection,
+    #gameplaySection,
+    #projectFeaturesSection,
+    #technicalOverviewSection,
+    #developmentChallengesSection,
+    #developmentInformationSection
+) > .dropdown-content {
+    width: 100%;
+    min-width: 0;
+
+    padding: 15px;
+
+    color: white;
+    background: transparent;
+
+    border-top: 1px solid #444;
+}
+
+:is(
+    #projectDescriptionSection,
+    #projectImagesSection,
+    #aboutProjectSection,
+    #generalProjectInformationSection,
+    #storyWorldSection,
+    #gameplaySection,
+    #projectFeaturesSection,
+    #technicalOverviewSection,
+    #developmentChallengesSection,
+    #developmentInformationSection
+) .dropdown-content[hidden] {
+    display: none !important;
+}
+
+:is(
+    #projectDescriptionSection,
+    #projectImagesSection,
+    #aboutProjectSection,
+    #generalProjectInformationSection,
+    #storyWorldSection,
+    #gameplaySection,
+    #projectFeaturesSection,
+    #technicalOverviewSection,
+    #developmentChallengesSection,
+    #developmentInformationSection
+) .dropdown-content.open {
+    display: block;
+}
+
+
+/* =====================================================
+   5. SECTION CONTAINERS
+===================================================== */
+
+:is(
+    #generalProjectInformationSection,
+    #technicalOverviewSection,
+    #developmentChallengesSection,
+    #developmentInformationSection
+) .general-information-container,
+:is(
+    #technicalOverviewSection,
+    #developmentChallengesSection,
+    #developmentInformationSection
+) :is(
+    .technical-overview-container,
+    .development-challenges-container,
+    .development-information-container
+) {
+    width: 100%;
+    min-width: 0;
+}
+
+
+/* =====================================================
+   6. SECTION HEADINGS
+===================================================== */
+
+:is(
+    #projectImagesSection,
+    #technicalOverviewSection,
+    #developmentChallengesSection,
+    #developmentInformationSection,
+    #generalProjectInformationSection
+) h3,
+#projectImagesSection .image-section-heading {
+    margin: 0 0 8px;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   7. SECTION DESCRIPTIONS
+===================================================== */
+
+:is(
+    #projectDescriptionSection,
+    #projectImagesSection,
+    #generalProjectInformationSection,
+    #technicalOverviewSection,
+    #developmentChallengesSection,
+    #developmentInformationSection
+) .section-description,
+#projectImagesSection .image-section-description {
+    max-width: 850px;
+
+    margin: 0 0 18px;
+
+    color: #aaa;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   8. FORM GROUPS
+===================================================== */
+
+:is(
+    #projectDescriptionSection,
+    #projectImagesSection,
+    #aboutProjectSection,
+    #generalProjectInformationSection,
+    #storyWorldSection,
+    #gameplaySection,
+    #projectFeaturesSection,
+    #technicalOverviewSection,
+    #developmentChallengesSection,
+    #developmentInformationSection
+) .form-group {
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    margin-bottom: 12px;
+}
+
+:is(
+    #projectDescriptionSection,
+    #projectImagesSection,
+    #aboutProjectSection,
+    #generalProjectInformationSection,
+    #storyWorldSection,
+    #gameplaySection,
+    #projectFeaturesSection,
+    #technicalOverviewSection,
+    #developmentChallengesSection,
+    #developmentInformationSection
+) .form-group:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =====================================================
+   9. FORM LABELS
+===================================================== */
+
+:is(
+    #projectDescriptionSection,
+    #projectImagesSection,
+    #aboutProjectSection,
+    #generalProjectInformationSection,
+    #storyWorldSection,
+    #gameplaySection,
+    #projectFeaturesSection,
+    #technicalOverviewSection,
+    #developmentChallengesSection,
+    #developmentInformationSection
+) label {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #ccc;
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   10. TEXT INPUTS
+===================================================== */
+
+:is(
+    #projectDescriptionSection,
+    #aboutProjectSection,
+    #generalProjectInformationSection,
+    #technicalOverviewSection,
+    #developmentInformationSection,
+    #projectImagesSection
+) input:not([type="file"]),
+:is(
+    #projectDescriptionSection,
+    #aboutProjectSection,
+    #generalProjectInformationSection,
+    #technicalOverviewSection,
+    #developmentInformationSection,
+    #projectImagesSection
+) select {
+    width: 100%;
+    min-width: 0;
+    min-height: 36px;
+
+    padding: 9px;
+
+    color: white;
+    background: #292929;
+
+    border: 1px solid #444;
+    border-radius: 5px;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+
+    outline: none;
+}
+
+:is(
+    #projectDescriptionSection,
+    #aboutProjectSection,
+    #generalProjectInformationSection,
+    #technicalOverviewSection,
+    #developmentInformationSection,
+    #projectImagesSection
+) input:focus,
+:is(
+    #projectDescriptionSection,
+    #aboutProjectSection,
+    #generalProjectInformationSection,
+    #technicalOverviewSection,
+    #developmentInformationSection,
+    #projectImagesSection
+) select:focus {
+    border-color: #2477d4;
+}
+
+:is(
+    #projectDescriptionSection,
+    #aboutProjectSection,
+    #generalProjectInformationSection,
+    #technicalOverviewSection,
+    #developmentInformationSection,
+    #projectImagesSection
+) input::placeholder {
+    color: #888;
+}
+
+:is(
+    #projectDescriptionSection,
+    #aboutProjectSection,
+    #generalProjectInformationSection,
+    #technicalOverviewSection,
+    #developmentInformationSection,
+    #projectImagesSection
+) select option {
+    color: white;
+    background: #292929;
+}
+
+
+/* =====================================================
+   11. DATE AND NUMBER INPUTS
+===================================================== */
+
+#developmentInformationSection input[type="date"],
+#developmentInformationSection input[type="number"] {
+    min-height: 38px;
+    color-scheme: dark;
+}
+
+#developmentInformationSection input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: invert(1);
+}
+
+
+/* =====================================================
+   12. FILE INPUTS
+===================================================== */
+
+#projectImagesSection input[type="file"] {
+    width: 100%;
+    min-width: 0;
+
+    color: #ccc;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+
+#projectImagesSection input[type="file"]::file-selector-button {
+    padding: 8px 12px;
+
+    margin-right: 10px;
+
+    color: white;
+    background: #383838;
+
+    border: 1px solid #555;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+#projectImagesSection input[type="file"]::file-selector-button:hover {
+    background: #454545;
+}
+
+
+/* =====================================================
+   13. TEXTAREAS
+===================================================== */
+
+:is(
+    #projectDescriptionSection,
+    #aboutProjectSection,
+    #generalProjectInformationSection,
+    #storyWorldSection,
+    #gameplaySection,
+    #projectFeaturesSection,
+    #technicalOverviewSection,
+    #developmentChallengesSection,
+    #developmentInformationSection,
+    #projectImagesSection
+) textarea {
+    width: 100%;
+    min-width: 0;
+
+    min-height: 100px;
+
+    padding: 10px;
+
+    color: white;
+    background: #292929;
+
+    border: 1px solid #444;
+    border-radius: 5px;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+
+    outline: none;
+    resize: vertical;
+}
+
+:is(
+    #projectDescriptionSection,
+    #aboutProjectSection,
+    #generalProjectInformationSection,
+    #storyWorldSection,
+    #gameplaySection,
+    #projectFeaturesSection,
+    #technicalOverviewSection,
+    #developmentChallengesSection,
+    #developmentInformationSection,
+    #projectImagesSection
+) textarea:focus {
+    border-color: #2477d4;
+}
+
+:is(
+    #projectDescriptionSection,
+    #aboutProjectSection,
+    #generalProjectInformationSection,
+    #storyWorldSection,
+    #gameplaySection,
+    #projectFeaturesSection,
+    #technicalOverviewSection,
+    #developmentChallengesSection,
+    #developmentInformationSection,
+    #projectImagesSection
+) textarea::placeholder {
+    color: #888;
+    opacity: 1;
+}
+
+
+/* =====================================================
+   14. DESCRIPTION TEXTAREA SIZES
+===================================================== */
+
+#projectDescriptionSection .short-description {
+    min-height: 85px;
+}
+
+#projectDescriptionSection .long-description {
+    min-height: 150px;
+}
+
+
+/* =====================================================
+   15. FORM GRID
+===================================================== */
+
+:is(
+    #generalProjectInformationSection,
+    #technicalOverviewSection,
+    #developmentInformationSection
+) .form-grid {
+    width: 100%;
+    min-width: 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+
+    margin-bottom: 12px;
+}
+
+
+/* =====================================================
+   16. SMALL INFORMATION TEXT
+===================================================== */
+
+:is(
+    #generalProjectInformationSection,
+    #technicalOverviewSection,
+    #developmentInformationSection
+) small {
+    color: #999;
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   17. PROJECT IMAGE UPLOAD AREA
+===================================================== */
+
+#projectImagesSection .cover-upload-area,
+#projectImagesSection .screenshot-drop-area {
+    width: 100%;
+    min-height: 130px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 20px;
+
+    color: #ccc;
+    background: #292929;
+
+    border: 2px dashed #555;
+    border-radius: 6px;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+#projectImagesSection .cover-upload-area:hover,
+#projectImagesSection .screenshot-drop-area:hover {
+    background: #303030;
+    border-color: #2477d4;
+}
+
+#projectImagesSection .cover-upload-area.drag-over,
+#projectImagesSection .screenshot-drop-area.drag-over {
+    background: #26384c;
+    border-color: #2477d4;
+}
+
+#projectImagesSection .cover-upload-area strong,
+#projectImagesSection .screenshot-drop-area strong {
+    color: white;
+    font-size: 13px;
+}
+
+#projectImagesSection .cover-upload-area span,
+#projectImagesSection .screenshot-drop-area span {
+    color: #999;
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   18. PROJECT COVER PREVIEW
+===================================================== */
+
+/* =====================================================
+   SECTION 14: CREDITS AND ADDITIONAL INFORMATION
+   PROJECT DOWNLOADS
+   COMPLETE CSS
+===================================================== */
+
+
+/* =====================================================
+   SHARED SECTION STYLING
+===================================================== */
+
+#additionalInformationSection,
+#projectDownloadsSection {
+    width: 100%;
+    color: white;
+    box-sizing: border-box;
+}
+
+#additionalInformationSection *,
+#projectDownloadsSection * {
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   SECTION 14: CREDITS AND ADDITIONAL INFORMATION
+===================================================== */
+
+#additionalInformationSection .dropdown-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+
+    padding: 14px 16px;
+
+    background: #252525;
+    color: white;
+
+    border: 1px solid #444;
+    border-radius: 6px;
+
+    font-size: 15px;
+    font-weight: 600;
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+#additionalInformationSection .dropdown-header:hover {
+    background: #303030;
+    border-color: #666;
+}
+
+#additionalInformationSection .dropdown-header:focus-visible {
+    outline: 2px solid #4b9cff;
+    outline-offset: 2px;
+}
+
+#additionalInformationSection .dropdown-arrow {
+    flex-shrink: 0;
+    font-size: 12px;
+    transition: transform 0.2s ease;
+}
+
+#additionalInformationSection .dropdown-header[aria-expanded="true"] .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+
+/* =====================================================
+   SECTION 14 DROPDOWN CONTENT
+===================================================== */
+
+#additionalInformationSection .dropdown-content {
+    width: 100%;
+    padding: 18px;
+
+    background: #1e1e1e;
+
+    border: 1px solid #3d3d3d;
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+}
+
+#additionalInformationSection .dropdown-content[hidden],
+#projectDownloadsSection .dropdown-content[hidden] {
+    display: none !important;
+}
+
+
+/* =====================================================
+   SECTION 14 FORM GROUPS
+===================================================== */
+
+#additionalInformationSection .form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    margin-bottom: 18px;
+}
+
+#additionalInformationSection .form-group:last-child {
+    margin-bottom: 0;
+}
+
+#additionalInformationSection .form-group label {
+    display: block;
+
+    color: #e5e5e5;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   SECTION 14 TEXTAREAS
+===================================================== */
+
+#additionalInformationSection textarea {
+    width: 100%;
+    min-height: 95px;
+
+    padding: 11px 12px;
+
+    background: #292929;
+    color: white;
+
+    border: 1px solid #494949;
+    border-radius: 5px;
+
+    font-family: inherit;
+    font-size: 13px;
+    line-height: 1.5;
+
+    resize: vertical;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+#additionalInformationSection textarea::placeholder {
+    color: #929292;
+}
+
+#additionalInformationSection textarea:hover {
+    border-color: #666;
+}
+
+#additionalInformationSection textarea:focus {
+    outline: none;
+    background: #303030;
+    border-color: #4b9cff;
+    box-shadow: 0 0 0 2px rgba(75, 156, 255, 0.15);
+}
+
+
+/* =====================================================
+   PROJECT DOWNLOADS: MAIN HEADER
+===================================================== */
+
+#projectDownloadsSection .downloads-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+
+    padding: 14px 16px;
+
+    background: #252525;
+    color: white;
+
+    border: 1px solid #444;
+    border-radius: 6px;
+
+    font-size: 15px;
+    font-weight: 600;
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+#projectDownloadsSection .downloads-header:hover {
+    background: #303030;
+    border-color: #666;
+}
+
+#projectDownloadsSection .downloads-header:focus-visible {
+    outline: 2px solid #4b9cff;
+    outline-offset: 2px;
+}
+
+#projectDownloadsSection .downloads-header .dropdown-arrow {
+    flex-shrink: 0;
+    font-size: 12px;
+    transition: transform 0.2s ease;
+}
+
+#projectDownloadsSection .downloads-header[aria-expanded="true"] .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+
+/* =====================================================
+   PROJECT DOWNLOADS: DROPDOWN CONTENT
+===================================================== */
+
+#projectDownloadsSection .downloads-content {
+    width: 100%;
+    padding: 18px;
+
+    background: #1e1e1e;
+
+    border: 1px solid #3d3d3d;
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+}
+
+
+/* =====================================================
+   DOWNLOAD GROUPS
+===================================================== */
+
+#projectDownloadsSection .downloads-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#projectDownloadsSection .downloads-group-title {
+    display: block;
+
+    color: #f0f0f0;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   FILE AND FOLDER DROP AREA
+===================================================== */
+
+#projectDownloadsSection .downloads-drop-area {
+    width: 100%;
+    min-height: 155px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+
+    padding: 22px;
+
+    background: #252525;
+    color: #e5e5e5;
+
+    border: 2px dashed #555;
+    border-radius: 7px;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+#projectDownloadsSection .downloads-drop-area:hover {
+    background: #303030;
+    border-color: #4b9cff;
+}
+
+#projectDownloadsSection .downloads-drop-area:focus-visible {
+    outline: 2px solid #4b9cff;
+    outline-offset: 3px;
+}
+
+#projectDownloadsSection .downloads-drop-area.drag-over {
+    background: #26384b;
+    border-color: #4b9cff;
+    border-style: solid;
+    transform: scale(1.005);
+}
+
+#projectDownloadsSection .downloads-drop-icon {
+    font-size: 34px;
+    line-height: 1.2;
+}
+
+#projectDownloadsSection .downloads-drop-area strong {
+    color: white;
+    font-size: 14px;
+}
+
+#projectDownloadsSection .downloads-drop-area span {
+    color: #aaa;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   DOWNLOAD BUTTON ROW
+===================================================== */
+
+#projectDownloadsSection .downloads-button-row {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+
+/* =====================================================
+   GENERAL DOWNLOAD ACTION BUTTONS
+===================================================== */
+
+#projectDownloadsSection .downloads-action-button {
+    min-height: 36px;
+
+    padding: 9px 15px;
+
+    background: #353535;
+    color: white;
+
+    border: 1px solid #555;
+    border-radius: 5px;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.15s ease;
+}
+
+#projectDownloadsSection .downloads-action-button:hover {
+    background: #454545;
+    border-color: #777;
+}
+
+#projectDownloadsSection .downloads-action-button:active {
+    transform: scale(0.98);
+}
+
+#projectDownloadsSection .downloads-action-button:focus-visible {
+    outline: 2px solid #4b9cff;
+    outline-offset: 2px;
+}
+
+
+/* =====================================================
+   ADD ALL DOWNLOADS BUTTON
+===================================================== */
+
+#projectDownloadsSection .downloads-add-all {
+    background: #245b8f;
+    border-color: #347bb8;
+}
+
+#projectDownloadsSection .downloads-add-all:hover {
+    background: #2e70aa;
+    border-color: #5599d0;
+}
+
+
+/* =====================================================
+   DOWNLOAD DIVIDERS
+===================================================== */
+
+#projectDownloadsSection .downloads-divider {
+    width: 100%;
+    height: 1px;
+
+    margin: 22px 0;
+
+    background: #414141;
+    border: none;
+}
+
+
+/* =====================================================
+   DOWNLOAD COUNTS
+===================================================== */
+
+#projectDownloadsSection .downloads-count {
+    width: 100%;
+
+    padding: 9px 11px;
+
+    background: #292929;
+    color: #bdbdbd;
+
+    border: 1px solid #3f3f3f;
+    border-radius: 5px;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   PENDING DOWNLOAD LIST
+===================================================== */
+
+#projectDownloadsSection .downloads-list {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+/* =====================================================
+   EMPTY DOWNLOAD MESSAGES
+===================================================== */
+
+#projectDownloadsSection .downloads-empty {
+    width: 100%;
+
+    padding: 22px 14px;
+
+    background: #252525;
+    color: #999;
+
+    border: 1px dashed #494949;
+    border-radius: 5px;
+
+    font-size: 12px;
+    text-align: center;
+}
+
+
+/* =====================================================
+   PENDING DOWNLOAD ITEM
+===================================================== */
+
+#projectDownloadsSection .download-item {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+
+    padding: 14px;
+
+    background: #292929;
+
+    border: 1px solid #484848;
+    border-radius: 6px;
+}
+
+
+/* =====================================================
+   PENDING DOWNLOAD TOP ROW
+===================================================== */
+
+#projectDownloadsSection .download-item-top {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+#projectDownloadsSection .download-file-name {
+    min-width: 0;
+
+    color: #e5e5e5;
+
+    font-size: 12px;
+    line-height: 1.5;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =====================================================
+   REMOVE DOWNLOAD BUTTON
+===================================================== */
+
+#projectDownloadsSection .download-remove {
+    flex-shrink: 0;
+
+    padding: 6px 10px;
+
+    background: #542d2d;
+    color: #ffbebe;
+
+    border: 1px solid #814545;
+    border-radius: 4px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+#projectDownloadsSection .download-remove:hover {
+    background: #753737;
+    border-color: #a85b5b;
+}
+
+#projectDownloadsSection .download-remove:focus-visible {
+    outline: 2px solid #ff8585;
+    outline-offset: 2px;
+}
+
+
+/* =====================================================
+   DOWNLOAD FORM FIELDS
+===================================================== */
+
+#projectDownloadsSection .downloads-field {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+#projectDownloadsSection .downloads-field label {
+    display: block;
+
+    color: #dcdcdc;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   DOWNLOAD TITLE INPUT
+===================================================== */
+
+#projectDownloadsSection .downloads-field input {
+    width: 100%;
+    min-height: 37px;
+
+    padding: 9px 11px;
+
+    background: #1f1f1f;
+    color: white;
+
+    border: 1px solid #4b4b4b;
+    border-radius: 4px;
+
+    font-family: inherit;
+    font-size: 12px;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+#projectDownloadsSection .downloads-field input::placeholder {
+    color: #888;
+}
+
+#projectDownloadsSection .downloads-field input:hover {
+    border-color: #666;
+}
+
+#projectDownloadsSection .downloads-field input:focus {
+    outline: none;
+    background: #292929;
+    border-color: #4b9cff;
+    box-shadow: 0 0 0 2px rgba(75, 156, 255, 0.15);
+}
+
+
+/* =====================================================
+   DOWNLOAD PLATFORM SELECT
+===================================================== */
+
+#projectDownloadsSection .downloads-field select {
+    width: 100%;
+    min-height: 37px;
+
+    padding: 8px 11px;
+
+    background: #1f1f1f;
+    color: white;
+
+    border: 1px solid #4b4b4b;
+    border-radius: 4px;
+
+    font-family: inherit;
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+#projectDownloadsSection .downloads-field select:hover {
+    border-color: #666;
+}
+
+#projectDownloadsSection .downloads-field select:focus {
+    outline: none;
+    border-color: #4b9cff;
+    box-shadow: 0 0 0 2px rgba(75, 156, 255, 0.15);
+}
+
+#projectDownloadsSection .downloads-field select option {
+    background: #252525;
+    color: white;
+}
+
+
+/* =====================================================
+   ADD INDIVIDUAL DOWNLOAD BUTTON
+===================================================== */
+
+#projectDownloadsSection .download-add-one {
+    align-self: flex-start;
+
+    min-height: 34px;
+
+    padding: 8px 13px;
+
+    background: #245b8f;
+    color: white;
+
+    border: 1px solid #347bb8;
+    border-radius: 4px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+#projectDownloadsSection .download-add-one:hover {
+    background: #2e70aa;
+    border-color: #5599d0;
+}
+
+#projectDownloadsSection .download-add-one:focus-visible {
+    outline: 2px solid #4b9cff;
+    outline-offset: 2px;
+}
+
+
+/* =====================================================
+   PUBLISHED DOWNLOAD LIST
+===================================================== */
+
+#projectDownloadsSection .downloads-published-list {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+/* =====================================================
+   PUBLISHED DOWNLOAD ITEM
+===================================================== */
+
+#projectDownloadsSection .download-published-item {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    padding: 14px;
+
+    background: #292929;
+
+    border: 1px solid #484848;
+    border-radius: 6px;
+}
+
+
+/* =====================================================
+   PUBLISHED DOWNLOAD INFORMATION
+===================================================== */
+
+#projectDownloadsSection .download-published-info {
+    min-width: 0;
+
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 6px;
+}
+
+#projectDownloadsSection .download-published-info strong {
+    color: white;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    overflow-wrap: anywhere;
+}
+
+#projectDownloadsSection .download-published-info span {
+    color: #aaa;
+
+    font-size: 11px;
+    line-height: 1.5;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =====================================================
+   PUBLISHED DOWNLOAD LINK
+===================================================== */
+
+#projectDownloadsSection .download-open {
+    flex-shrink: 0;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 35px;
+
+    padding: 8px 13px;
+
+    background: #245b8f;
+    color: white;
+
+    border: 1px solid #347bb8;
+    border-radius: 4px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    text-align: center;
+    text-decoration: none;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+#projectDownloadsSection .download-open:hover {
+    background: #2e70aa;
+    border-color: #5599d0;
+}
+
+#projectDownloadsSection .download-open:focus-visible {
+    outline: 2px solid #4b9cff;
+    outline-offset: 2px;
+}
+
+
+/* =====================================================
+   ACCESSIBILITY
+===================================================== */
+
+#additionalInformationSection button:focus-visible,
+#projectDownloadsSection button:focus-visible {
+    outline-offset: 2px;
+}
+
+#additionalInformationSection button:disabled,
+#projectDownloadsSection button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+
+
+#projectImagesSection .cover-preview {
+    display: none;
+
+    width: 100%;
+    max-width: 500px;
+    max-height: 300px;
+
+    margin-top: 12px;
+
+    object-fit: contain;
+
+    background: #1d1d1d;
+
+    border: 1px solid #444;
+    border-radius: 5px;
+}
+
+
+/* =====================================================
+   19. IMAGE BUTTONS
+===================================================== */
+
+#projectImagesSection .image-buttons {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin-top: 12px;
+}
+
+#projectImagesSection .image-buttons button,
+#projectImagesSection .remove-screenshot-button {
+    min-height: 34px;
+
+    padding: 8px 14px;
+
+    color: white;
+    background: #383838;
+
+    border: 1px solid #555;
+    border-radius: 5px;
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+#projectImagesSection .image-buttons button:hover,
+#projectImagesSection .remove-screenshot-button:hover {
+    background: #454545;
+    border-color: #2477d4;
+}
+
+
+/* =====================================================
+   20. IMAGE SECTION DIVIDERS
+===================================================== */
+
+#projectImagesSection hr {
+    width: 100%;
+
+    margin: 20px 0;
+
+    border: none;
+    border-top: 1px solid #444;
+}
+
+
+/* =====================================================
+   21. SCREENSHOT PREVIEW GRID
+===================================================== */
+
+#projectImagesSection .screenshot-preview-grid {
+    width: 100%;
+    min-width: 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 15px;
+
+    margin-top: 15px;
+}
+
+
+/* =====================================================
+   22. SCREENSHOT CARDS
+===================================================== */
+
+#projectImagesSection .screenshot-card {
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    padding: 12px;
+
+    color: white;
+    background: #292929;
+
+    border: 1px solid #444;
+    border-radius: 6px;
+}
+
+#projectImagesSection .screenshot-image {
+    width: 100%;
+    max-height: 220px;
+
+    display: block;
+
+    object-fit: contain;
+
+    background: #1d1d1d;
+
+    border: 1px solid #444;
+    border-radius: 5px;
+}
+
+#projectImagesSection .screenshot-card .form-group {
+    margin-bottom: 4px;
+}
+
+#projectImagesSection .screenshot-card textarea {
+    min-height: 75px;
+}
+
+#projectImagesSection .remove-screenshot-button {
+    align-self: flex-start;
+
+    margin-top: 4px;
+
+    background: #472929;
+    border-color: #704040;
+}
+
+#projectImagesSection .remove-screenshot-button:hover {
+    background: #633333;
+    border-color: #a34b4b;
+}
+
+
+/* =====================================================
+   23. EMPTY SCREENSHOT MESSAGE
+===================================================== */
+
+#projectImagesSection .empty-screenshots {
+    width: 100%;
+
+    grid-column: 1 / -1;
+
+    padding: 25px 15px;
+
+    color: #999;
+    background: #292929;
+
+    border: 1px dashed #555;
+    border-radius: 5px;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   24. ACCESSIBILITY
+===================================================== */
+
+:is(
+    #projectDescriptionSection,
+    #projectImagesSection,
+    #aboutProjectSection,
+    #generalProjectInformationSection,
+    #storyWorldSection,
+    #gameplaySection,
+    #projectFeaturesSection,
+    #technicalOverviewSection,
+    #developmentChallengesSection,
+    #developmentInformationSection
+) button:focus-visible,
+#projectImagesSection [role="button"]:focus-visible {
+    outline: 2px solid #2477d4;
+    outline-offset: 2px;
+}
+
+
+/* =====================================================
+   25. DISABLED INPUTS
+===================================================== */
+
+:is(
+    #projectDescriptionSection,
+    #projectImagesSection,
+    #aboutProjectSection,
+    #generalProjectInformationSection,
+    #storyWorldSection,
+    #gameplaySection,
+    #projectFeaturesSection,
+    #technicalOverviewSection,
+    #developmentChallengesSection,
+    #developmentInformationSection
+) :is(input, select, textarea, button):disabled {
+    color: #999;
+    background: #333;
+
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+
+/* =====================================================
+   26. MOBILE RESPONSIVE
+===================================================== */
+
+@media (max-width: 650px) {
+
+    :is(
+        #projectDescriptionSection,
+        #projectImagesSection,
+        #aboutProjectSection,
+        #generalProjectInformationSection,
+        #storyWorldSection,
+        #gameplaySection,
+        #projectFeaturesSection,
+        #technicalOverviewSection,
+        #developmentChallengesSection,
+        #developmentInformationSection
+    ) > .dropdown-header {
+        min-height: 42px;
+
+        padding: 10px 12px;
+
+        font-size: 12px;
+    }
+
+    :is(
+        #projectDescriptionSection,
+        #projectImagesSection,
+        #aboutProjectSection,
+        #generalProjectInformationSection,
+        #storyWorldSection,
+        #gameplaySection,
+        #projectFeaturesSection,
+        #technicalOverviewSection,
+        #developmentChallengesSection,
+        #developmentInformationSection
+    ) > .dropdown-content {
+        padding: 10px;
+    }
+
+    :is(
+        #generalProjectInformationSection,
+        #technicalOverviewSection,
+        #developmentInformationSection
+    ) .form-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    #projectImagesSection .screenshot-preview-grid {
+        grid-template-columns: 1fr;
+    }
+
+    :is(
+        #projectDescriptionSection,
+        #projectImagesSection,
+        #aboutProjectSection,
+        #generalProjectInformationSection,
+        #storyWorldSection,
+        #gameplaySection,
+        #projectFeaturesSection,
+        #technicalOverviewSection,
+        #developmentChallengesSection,
+        #developmentInformationSection
+    ) .form-group {
+        margin-bottom: 10px;
+    }
+
+    :is(
+        #projectDescriptionSection,
+        #aboutProjectSection,
+        #generalProjectInformationSection,
+        #technicalOverviewSection,
+        #developmentInformationSection
+    ) input,
+    :is(
+        #generalProjectInformationSection,
+        #technicalOverviewSection,
+        #developmentInformationSection
+    ) select {
+        min-height: 38px;
+    }
+
+    :is(
+        #projectDescriptionSection,
+        #generalProjectInformationSection,
+        #technicalOverviewSection,
+        #developmentChallengesSection,
+        #developmentInformationSection
+    ) .section-description {
+        font-size: 11px;
+    }
+
+    #projectImagesSection .cover-upload-area,
+    #projectImagesSection .screenshot-drop-area {
+        min-height: 110px;
+        padding: 15px;
+    }
+
+    #projectImagesSection .image-buttons {
+        flex-direction: column;
+    }
+
+    #projectImagesSection .image-buttons button {
+        width: 100%;
+    }
+}
+
+
+/* =====================================================
+   27. SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+
+    :is(
+        #projectDescriptionSection,
+        #projectImagesSection,
+        #aboutProjectSection,
+        #generalProjectInformationSection,
+        #storyWorldSection,
+        #gameplaySection,
+        #projectFeaturesSection,
+        #technicalOverviewSection,
+        #developmentChallengesSection,
+        #developmentInformationSection
+    ) > .dropdown-content {
+        padding: 8px;
+    }
+
+    #projectImagesSection .screenshot-card {
+        padding: 9px;
+    }
+
+    #projectImagesSection .cover-upload-area,
+    #projectImagesSection .screenshot-drop-area {
+        padding: 10px;
+    }
+}
+
+
+/* =====================================================
+   28. REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    :is(
+        #projectDescriptionSection,
+        #projectImagesSection,
+        #aboutProjectSection,
+        #generalProjectInformationSection,
+        #storyWorldSection,
+        #gameplaySection,
+        #projectFeaturesSection,
+        #technicalOverviewSection,
+        #developmentChallengesSection,
+        #developmentInformationSection
+    ) * {
+        animation: none !important;
+        transition: none !important;
+    }
+
+}
+
+
+/* =====================================================
+   PART 2: ADDITIONAL PROJECT SECTIONS
+   SECTIONS 09 - 12 AND 15
+===================================================== */
+
+
+/* =====================================================
+   1. SHARED SECTION BASE
+===================================================== */
+
+:is(
+    #contributionsSection,
+    #toolsSection,
+    #futureDevelopmentSection,
+    #systemRequirementsSection,
+    #socialMediaLinksSection
+) {
+    width: 100%;
+    min-width: 0;
+    padding: 0;
+
+    color: var(--text, white);
+    background: var(--section-bg, #252525);
+
+    border: 1px solid var(--border, #444);
+    border-radius: var(--section-radius, 6px);
+
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+:is(
+    #contributionsSection,
+    #toolsSection,
+    #futureDevelopmentSection,
+    #systemRequirementsSection,
+    #socialMediaLinksSection
+) *,
+:is(
+    #contributionsSection,
+    #toolsSection,
+    #futureDevelopmentSection,
+    #systemRequirementsSection,
+    #socialMediaLinksSection
+) *::before,
+:is(
+    #contributionsSection,
+    #toolsSection,
+    #futureDevelopmentSection,
+    #systemRequirementsSection,
+    #socialMediaLinksSection
+) *::after {
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   2. MAIN DROPDOWN HEADERS
+===================================================== */
+
+:is(
+    #contributionsSection,
+    #toolsSection,
+    #futureDevelopmentSection,
+    #systemRequirementsSection,
+    #socialMediaLinksSection
+) > .dropdown-header {
+    width: 100%;
+    min-height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    padding: 12px 15px;
+
+    color: white;
+    background: #292929;
+
+    border: none;
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+
+    text-align: left;
+    cursor: pointer;
+}
+
+:is(
+    #contributionsSection,
+    #toolsSection,
+    #futureDevelopmentSection,
+    #systemRequirementsSection,
+    #socialMediaLinksSection
+) > .dropdown-header:hover {
+    background: #333;
+}
+
+:is(
+    #contributionsSection,
+    #toolsSection,
+    #futureDevelopmentSection,
+    #systemRequirementsSection,
+    #socialMediaLinksSection
+) > .dropdown-header[aria-expanded="true"] {
+    background: #303030;
+    border-bottom: 1px solid #444;
+}
+
+
+/* =====================================================
+   3. DROPDOWN ARROWS
+===================================================== */
+
+:is(
+    #contributionsSection,
+    #toolsSection,
+    #futureDevelopmentSection,
+    #systemRequirementsSection,
+    #socialMediaLinksSection
+) .dropdown-arrow {
+    width: 23px;
+    height: 23px;
+
+    flex-shrink: 0;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ccc;
+    background: #333;
+
+    border: 1px solid #444;
+    border-radius: 5px;
+
+    font-size: 10px;
+
+    transition: transform 0.2s ease;
+}
+
+:is(
+    #contributionsSection,
+    #toolsSection,
+    #futureDevelopmentSection,
+    #systemRequirementsSection,
+    #socialMediaLinksSection
+) .dropdown-header[aria-expanded="true"] .dropdown-arrow {
+    color: #2477d4;
+    transform: rotate(180deg);
+}
+
+
+/* =====================================================
+   4. DROPDOWN CONTENT
+===================================================== */
+
+:is(
+    #contributionsSection,
+    #toolsSection,
+    #futureDevelopmentSection,
+    #systemRequirementsSection,
+    #socialMediaLinksSection
+) > .dropdown-content {
+    width: 100%;
+    min-width: 0;
+
+    padding: 15px;
+
+    color: white;
+    background: transparent;
+
+    border-top: 1px solid #444;
+}
+
+:is(
+    #contributionsSection,
+    #toolsSection,
+    #futureDevelopmentSection,
+    #systemRequirementsSection,
+    #socialMediaLinksSection
+) .dropdown-content[hidden] {
+    display: none !important;
+}
+
+
+/* =====================================================
+   5. FORM GROUPS
+===================================================== */
+
+:is(
+    #contributionsSection,
+    #toolsSection,
+    #futureDevelopmentSection,
+    #systemRequirementsSection,
+    #socialMediaLinksSection
+) .form-group {
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    margin-bottom: 12px;
+}
+
+:is(
+    #contributionsSection,
+    #toolsSection,
+    #futureDevelopmentSection,
+    #systemRequirementsSection,
+    #socialMediaLinksSection
+) .form-group:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =====================================================
+   6. LABELS
+===================================================== */
+
+:is(
+    #contributionsSection,
+    #toolsSection,
+    #futureDevelopmentSection,
+    #systemRequirementsSection,
+    #socialMediaLinksSection
+) label {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #ccc;
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   7. INPUTS
+===================================================== */
+
+:is(
+    #contributionsSection,
+    #toolsSection,
+    #futureDevelopmentSection,
+    #systemRequirementsSection,
+    #socialMediaLinksSection
+) input {
+    width: 100%;
+    min-width: 0;
+    min-height: 36px;
+
+    padding: 9px;
+
+    color: white;
+    background: #292929;
+
+    border: 1px solid #444;
+    border-radius: 5px;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+
+    outline: none;
+}
+
+:is(
+    #contributionsSection,
+    #toolsSection,
+    #futureDevelopmentSection,
+    #systemRequirementsSection,
+    #socialMediaLinksSection
+) input:focus {
+    border-color: #2477d4;
+}
+
+:is(
+    #contributionsSection,
+    #toolsSection,
+    #futureDevelopmentSection,
+    #systemRequirementsSection,
+    #socialMediaLinksSection
+) input::placeholder {
+    color: #888;
+}
+
+
+/* =====================================================
+   8. TEXTAREAS
+===================================================== */
+
+:is(
+    #contributionsSection,
+    #toolsSection,
+    #futureDevelopmentSection,
+    #systemRequirementsSection,
+    #socialMediaLinksSection
+) textarea {
+    width: 100%;
+    min-width: 0;
+    min-height: 100px;
+
+    padding: 10px;
+
+    color: white;
+    background: #292929;
+
+    border: 1px solid #444;
+    border-radius: 5px;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+
+    outline: none;
+    resize: vertical;
+}
+
+:is(
+    #contributionsSection,
+    #toolsSection,
+    #futureDevelopmentSection,
+    #systemRequirementsSection,
+    #socialMediaLinksSection
+) textarea:focus {
+    border-color: #2477d4;
+}
+
+:is(
+    #contributionsSection,
+    #toolsSection,
+    #futureDevelopmentSection,
+    #systemRequirementsSection,
+    #socialMediaLinksSection
+) textarea::placeholder {
+    color: #888;
+    opacity: 1;
+}
+
+
+/* =====================================================
+   9. SOCIAL MEDIA SECTION TEXT
+===================================================== */
+
+#socialMediaLinksSection > .dropdown-content > p {
+    max-width: 850px;
+
+    margin: 0 0 16px;
+
+    color: #aaa;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+#socialMediaLinksSection h3 {
+    margin: 18px 0 8px;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+#socialMediaLinksSection h4 {
+    margin: 0 0 8px;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+#socialMediaLinksSection h5 {
+    margin: 10px 0;
+
+    color: #ccc;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   10. SOCIAL MEDIA NESTED DROPDOWN
+===================================================== */
+
+#socialMediaLinksSection .platform-dropdown-section {
+    width: 100%;
+    min-width: 0;
+
+    margin-top: 15px;
+
+    border: 1px solid #444;
+    border-radius: 5px;
+
+    overflow: hidden;
+}
+
+#socialMediaLinksSection .platform-dropdown-header {
+    width: 100%;
+    min-height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    padding: 11px 13px;
+
+    color: white;
+    background: #303030;
+
+    border: none;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+
+    text-align: left;
+    cursor: pointer;
+}
+
+#socialMediaLinksSection .platform-dropdown-header:hover {
+    background: #393939;
+}
+
+#socialMediaLinksSection .platform-dropdown-header[aria-expanded="true"] {
+    background: #353535;
+    border-bottom: 1px solid #444;
+}
+
+#socialMediaLinksSection .platform-dropdown-section > .dropdown-content {
+    padding: 12px;
+    background: #252525;
+}
+
+#socialMediaLinksSection .platform-dropdown-section > .dropdown-content[hidden] {
+    display: none !important;
+}
+
+
+/* =====================================================
+   11. PLATFORM SECTIONS
+===================================================== */
+
+#socialMediaLinksSection .platform-section {
+    width: 100%;
+    min-width: 0;
+
+    padding: 12px;
+
+    background: #292929;
+
+    border: 1px solid #444;
+    border-radius: 5px;
+}
+
+#socialMediaLinksSection .platform-section + .platform-section {
+    margin-top: 12px;
+}
+
+#socialMediaLinksSection .platform-links {
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+/* =====================================================
+   12. PLATFORM AND CUSTOM LINK ENTRIES
+===================================================== */
+
+#socialMediaLinksSection .custom-link-entry {
+    position: relative;
+
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    padding: 12px;
+
+    background: #303030;
+
+    border: 1px solid #484848;
+    border-radius: 5px;
+}
+
+#socialMediaLinksSection .default-link {
+    border-left: 3px solid #2477d4;
+}
+
+#socialMediaLinksSection .link-entry-number {
+    display: block;
+
+    color: #2477d4;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   13. CUSTOM LINK TITLE FIELDS
+===================================================== */
+
+#socialMediaLinksSection .social-title-field,
+#socialMediaLinksSection .custom-url-title-field {
+    width: 100%;
+    min-width: 0;
+}
+
+#socialMediaLinksSection .social-title-field[hidden],
+#socialMediaLinksSection .custom-url-title-field[hidden] {
+    display: none !important;
+}
+
+
+/* =====================================================
+   14. CUSTOM URL GROUPS
+===================================================== */
+
+#socialMediaLinksSection .custom-link-url-group {
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    padding: 12px;
+
+    background: #292929;
+
+    border: 1px solid #444;
+    border-radius: 5px;
+}
+
+#socialMediaLinksSection .main-title-url-group {
+    margin-top: 12px;
+}
+
+#socialMediaLinksSection .custom-link-second-container {
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#socialMediaLinksSection .custom-link-second-group {
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+
+    padding: 12px;
+
+    background: #292929;
+
+    border: 1px solid #444;
+    border-radius: 5px;
+}
+
+#socialMediaLinksSection .custom-link-urls {
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+/* =====================================================
+   15. INDIVIDUAL CUSTOM URL ENTRIES
+===================================================== */
+
+#socialMediaLinksSection .custom-link-url-entry {
+    position: relative;
+
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    padding: 12px;
+
+    background: #303030;
+
+    border: 1px solid #484848;
+    border-radius: 5px;
+}
+
+#socialMediaLinksSection .custom-link-url-number {
+    color: #2477d4;
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   16. SOCIAL MEDIA BUTTONS
+===================================================== */
+
+#socialMediaLinksSection button:not(.dropdown-header) {
+    width: fit-content;
+    max-width: 100%;
+    min-height: 34px;
+
+    padding: 8px 13px;
+
+    color: white;
+    background: #383838;
+
+    border: 1px solid #555;
+    border-radius: 5px;
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+#socialMediaLinksSection button:not(.dropdown-header):hover:not(:disabled) {
+    background: #454545;
+    border-color: #2477d4;
+}
+
+#socialMediaLinksSection button:disabled {
+    color: #999;
+    background: #333;
+
+    border-color: #444;
+
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+
+/* =====================================================
+   17. ADD BUTTONS
+===================================================== */
+
+#socialMediaLinksSection .add-platform-link,
+#socialMediaLinksSection #addCustomLink,
+#socialMediaLinksSection .add-custom-url,
+#socialMediaLinksSection .add-second-custom-title {
+    background: #26384c;
+    border-color: #385d82;
+}
+
+#socialMediaLinksSection .add-platform-link:hover,
+#socialMediaLinksSection #addCustomLink:hover,
+#socialMediaLinksSection .add-custom-url:hover,
+#socialMediaLinksSection .add-second-custom-title:hover {
+    background: #304c68;
+    border-color: #2477d4;
+}
+
+#socialMediaLinksSection #addCustomLink {
+    margin-top: 12px;
+}
+
+
+/* =====================================================
+   18. TITLE TOGGLE BUTTONS
+===================================================== */
+
+#socialMediaLinksSection .social-title-toggle,
+#socialMediaLinksSection .custom-url-title-toggle {
+    align-self: flex-start;
+
+    color: #ddd;
+    background: #383838;
+
+    border-color: #555;
+}
+
+
+/* =====================================================
+   19. REMOVE BUTTONS
+===================================================== */
+
+#socialMediaLinksSection .remove-custom-link,
+#socialMediaLinksSection .remove-custom-url,
+#socialMediaLinksSection .remove-second-custom-title {
+    align-self: flex-start;
+
+    color: #fff !important;
+    background: #472929 !important;
+
+    border-color: #704040 !important;
+}
+
+#socialMediaLinksSection .remove-custom-link:hover,
+#socialMediaLinksSection .remove-custom-url:hover,
+#socialMediaLinksSection .remove-second-custom-title:hover {
+    background: #633333 !important;
+    border-color: #a34b4b !important;
+}
+
+
+/* =====================================================
+   20. SOCIAL MEDIA DIVIDERS
+===================================================== */
+
+#socialMediaLinksSection hr {
+    width: 100%;
+
+    margin: 20px 0;
+
+    border: none;
+    border-top: 1px solid #444;
+}
+
+
+/* =====================================================
+   21. ACCESSIBILITY
+===================================================== */
+
+:is(
+    #contributionsSection,
+    #toolsSection,
+    #futureDevelopmentSection,
+    #systemRequirementsSection,
+    #socialMediaLinksSection
+) button:focus-visible {
+    outline: 2px solid #2477d4;
+    outline-offset: 2px;
+}
+
+
+/* =====================================================
+   22. DISABLED INPUTS
+===================================================== */
+
+:is(
+    #contributionsSection,
+    #toolsSection,
+    #futureDevelopmentSection,
+    #systemRequirementsSection,
+    #socialMediaLinksSection
+) :is(input, textarea, button):disabled {
+    color: #999;
+    background: #333;
+
+    cursor: not-allowed;
+}
+
+
+/* =====================================================
+   23. MOBILE RESPONSIVE
+===================================================== */
+
+@media (max-width: 650px) {
+
+    :is(
+        #contributionsSection,
+        #toolsSection,
+        #futureDevelopmentSection,
+        #systemRequirementsSection,
+        #socialMediaLinksSection
+    ) > .dropdown-header {
+        min-height: 42px;
+
+        padding: 10px 12px;
+
+        font-size: 12px;
+    }
+
+    :is(
+        #contributionsSection,
+        #toolsSection,
+        #futureDevelopmentSection,
+        #systemRequirementsSection,
+        #socialMediaLinksSection
+    ) > .dropdown-content {
+        padding: 10px;
+    }
+
+    #socialMediaLinksSection .platform-section,
+    #socialMediaLinksSection .custom-link-entry,
+    #socialMediaLinksSection .custom-link-url-group,
+    #socialMediaLinksSection .custom-link-url-entry,
+    #socialMediaLinksSection .custom-link-second-group {
+        padding: 9px;
+    }
+
+    #socialMediaLinksSection button:not(.dropdown-header) {
+        min-height: 38px;
+    }
+
+    #socialMediaLinksSection > .dropdown-content > p {
+        font-size: 11px;
+    }
+}
+
+
+/* =====================================================
+   24. SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+
+    :is(
+        #contributionsSection,
+        #toolsSection,
+        #futureDevelopmentSection,
+        #systemRequirementsSection,
+        #socialMediaLinksSection
+    ) > .dropdown-content {
+        padding: 8px;
+    }
+
+    #socialMediaLinksSection .platform-dropdown-section > .dropdown-content {
+        padding: 8px;
+    }
+
+    #socialMediaLinksSection .platform-section,
+    #socialMediaLinksSection .custom-link-entry,
+    #socialMediaLinksSection .custom-link-url-group,
+    #socialMediaLinksSection .custom-link-url-entry,
+    #socialMediaLinksSection .custom-link-second-group {
+        padding: 8px;
+    }
+}
+
+/* =====================================================
+   RESPONSIVE: TABLETS
+===================================================== */
+
+@media (max-width: 768px) {
+
+    #additionalInformationSection .dropdown-content,
+    #projectDownloadsSection .downloads-content {
+        padding: 14px;
+    }
+
+    #projectDownloadsSection .downloads-drop-area {
+        min-height: 140px;
+        padding: 18px;
+    }
+
+    #projectDownloadsSection .download-published-item {
+        align-items: flex-start;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE: MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+    #additionalInformationSection .dropdown-header,
+    #projectDownloadsSection .downloads-header {
+        padding: 12px;
+        font-size: 13px;
+    }
+
+    #additionalInformationSection .dropdown-content,
+    #projectDownloadsSection .downloads-content {
+        padding: 11px;
+    }
+
+    #additionalInformationSection textarea {
+        min-height: 85px;
+        font-size: 12px;
+    }
+
+    #projectDownloadsSection .downloads-button-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #projectDownloadsSection .downloads-action-button {
+        width: 100%;
+    }
+
+    #projectDownloadsSection .download-published-item {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #projectDownloadsSection .download-open {
+        width: 100%;
+    }
+
+    #projectDownloadsSection .download-add-one {
+        width: 100%;
+    }
+
+    #projectDownloadsSection .downloads-drop-area {
+        min-height: 125px;
+        padding: 14px;
+    }
+
+    #projectDownloadsSection .downloads-drop-area strong {
+        font-size: 12px;
+    }
+
+    #projectDownloadsSection .download-item {
+        padding: 11px;
+    }
+
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    #additionalInformationSection *,
+    #projectDownloadsSection * {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
+/* =====================================================
+   25. REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    :is(
+        #contributionsSection,
+        #toolsSection,
+        #futureDevelopmentSection,
+        #systemRequirementsSection,
+        #socialMediaLinksSection
+    ) * {
+        animation: none !important;
+        transition: none !important;
+    }
+}

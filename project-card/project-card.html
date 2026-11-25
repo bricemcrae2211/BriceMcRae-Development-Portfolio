@@ -1,0 +1,413 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Project Card</title>
+
+    <link rel="stylesheet" href="project-card.css">
+    <link rel="stylesheet" href="project-card-visibility.css">
+
+    <!-- PROJECT CARD SCRIPTS -->
+
+    <script src="project-card-resizer.js" defer></script>
+    <script src="project-card-renderer.js" defer></script>
+    <script src="project-card.js" defer></script>
+    <script src="project-card-navigation.js" defer></script>
+    <script src="project-card-data.js" defer></script>
+<script src="../portfoliomain/project-card-debug-status.js" defer></script>
+<script src="../portfoliomain/project-debug-button.js" defer></script>
+
+    <!-- DEBUG DISPLAY -->
+    <script src="project-card-debug.js" defer></script>
+
+</head>
+
+<body>
+
+<div id="cardContentRoot">
+
+    <article
+        class="project-container"
+        id="projectCard"
+        data-project-card
+        data-card-debug="off"
+    >
+
+        <!-- PROJECT IMAGE -->
+
+        <div class="project-thumbnail" data-project-image-container>
+
+            <img
+                data-project-field="image"
+                alt="Project thumbnail"
+                hidden
+            >
+
+            <div class="thumbnail-placeholder">
+                <span class="thumbnail-placeholder-icon">▧</span>
+                <span class="thumbnail-placeholder-text">
+                    No Project Image
+                </span>
+            </div>
+
+        </div>
+
+        <div class="project-content">
+
+            <!-- PROJECT TITLE -->
+
+            <div class="project-heading">
+
+                <h2
+                    class="project-title"
+                    data-project-field="projectTitle"
+                >
+                    Loading Project...
+                </h2>
+
+            </div>
+
+            <!-- PROJECT TAGS -->
+
+            <div
+                class="project-tags"
+                data-project-field="tags"
+            ></div>
+
+            <!-- VIEW GAME BUTTON -->
+
+            <div class="project-card-button-container">
+
+                <button
+                    type="button"
+                    class="view-game-button"
+                    data-view-game-button
+                >
+
+                    <span class="view-game-icon">▶</span>
+
+                    <span class="view-game-label">
+                        View Game
+                    </span>
+
+                    <!-- CARD NUMBER -->
+
+                    <span
+                        class="view-game-card-number"
+                        data-project-card-number
+                        hidden
+                    >
+                        #...
+                    </span>
+
+                    <!-- GRID POSITION -->
+
+                    <span
+                        class="view-game-grid-position"
+                        data-project-grid-position
+                        hidden
+                    >
+                        Grid ...
+                    </span>
+
+                    <!-- JSON FILENAME -->
+
+                    <span
+                        class="view-game-json-filename"
+                        data-project-json-button
+                        hidden
+                    >
+                        Waiting for JSON...
+                    </span>
+
+                </button>
+
+            </div>
+
+            <!-- SHORT DESCRIPTION -->
+
+            <p
+                class="project-description"
+                data-project-field="shortDescription"
+            ></p>
+
+            <!-- MORE PROJECT INFORMATION -->
+
+            <details class="more-information">
+
+                <summary class="more-information-summary">
+
+                    <span class="dropdown-heading">
+                        <span class="dropdown-icon">＋</span>
+                        More Project Information
+                    </span>
+
+                    <span class="dropdown-arrow">⌄</span>
+
+                </summary>
+
+                <div class="more-information-content">
+
+                    <!-- MULTIPLAYER -->
+
+                    <section
+                        class="information-section"
+                        data-project-section="multiplayer"
+                    >
+
+                        <h3>Multiplayer</h3>
+
+                        <p
+                            class="information-text"
+                            data-project-field="multiplayer"
+                        ></p>
+
+                    </section>
+
+                    <!-- PLATFORMS -->
+
+                    <section
+                        class="information-section"
+                        data-project-section="platforms"
+                    >
+
+                        <h3>Platforms</h3>
+
+                        <div
+                            class="platform-list"
+                            data-project-field="platforms"
+                        ></div>
+
+                    </section>
+
+                    <!-- PROJECT DETAILS -->
+
+                    <section
+                        class="information-section"
+                        data-project-section="details"
+                    >
+
+                        <h3>Project Details</h3>
+
+                        <div class="project-details">
+
+                            <div class="project-detail">
+                                <strong>Category</strong>
+                                <span data-project-field="projectCategory"></span>
+                            </div>
+
+                            <div class="project-detail">
+                                <strong>Genre</strong>
+                                <span data-project-field="genre"></span>
+                            </div>
+
+                            <div class="project-detail">
+                                <strong>Subgenre</strong>
+                                <span data-project-field="subgenre"></span>
+                            </div>
+
+                            <div class="project-detail">
+                                <strong>Type</strong>
+                                <span data-project-field="type"></span>
+                            </div>
+
+                            <div class="project-detail">
+                                <strong>Perspective</strong>
+                                <span data-project-field="perspective"></span>
+                            </div>
+
+                            <div class="project-detail">
+                                <strong>Game Mode</strong>
+                                <span data-project-field="gameMode"></span>
+                            </div>
+
+                            <div class="project-detail">
+                                <strong>Age Rating</strong>
+                                <span data-project-field="ageRating"></span>
+                            </div>
+
+                            <div class="project-detail">
+                                <strong>Engine</strong>
+                                <span data-project-field="engine"></span>
+                            </div>
+
+                            <div class="project-detail">
+                                <strong>Engine Version</strong>
+                                <span data-project-field="engineVersion"></span>
+                            </div>
+
+                            <div class="project-detail">
+                                <strong>Status</strong>
+                                <span data-project-field="status"></span>
+                            </div>
+
+                            <div class="project-detail">
+                                <strong>Release Status</strong>
+                                <span data-project-field="releaseStatus"></span>
+                            </div>
+
+                            <div class="project-detail">
+                                <strong>Languages</strong>
+                                <span data-project-field="languages"></span>
+                            </div>
+
+                            <div class="project-detail">
+                                <strong>Technologies</strong>
+                                <span data-project-field="technologies"></span>
+                            </div>
+
+                            <div class="project-detail">
+                                <strong>Role</strong>
+                                <span data-project-field="role"></span>
+                            </div>
+
+                            <div class="project-detail">
+                                <strong>Team Size</strong>
+                                <span data-project-field="teamSize"></span>
+                            </div>
+
+                            <div class="project-detail">
+                                <strong>Start Date</strong>
+                                <span data-project-field="startDate"></span>
+                            </div>
+
+                            <div class="project-detail">
+                                <strong>End Date</strong>
+                                <span data-project-field="endDate"></span>
+                            </div>
+
+                            <div class="project-detail">
+                                <strong>Project ID</strong>
+                                <span data-project-field="projectId"></span>
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                    <!-- TECHNICAL PERFORMANCE -->
+
+                    <section
+                        class="information-section"
+                        data-project-section="technicalPerformance"
+                    >
+
+                        <h3>Technical Performance</h3>
+
+                        <p
+                            class="information-text"
+                            data-project-field="technicalPerformance"
+                        ></p>
+
+                    </section>
+
+                    <!-- DEVELOPMENT INFORMATION -->
+
+                    <section
+                        class="information-section"
+                        data-project-section="development"
+                    >
+
+                        <h3>Development Information</h3>
+
+                        <p data-project-field="developmentAdditional"></p>
+
+                        <p data-project-field="developmentUpdates"></p>
+
+                    </section>
+
+                    <!-- SYSTEM REQUIREMENTS -->
+
+                    <section
+                        class="information-section"
+                        data-project-section="requirements"
+                    >
+
+                        <h3>System Requirements</h3>
+
+                        <p>
+                            <strong>Minimum:</strong>
+                            <span data-project-field="minimumRequirements"></span>
+                        </p>
+
+                        <p>
+                            <strong>Recommended:</strong>
+                            <span data-project-field="recommendedRequirements"></span>
+                        </p>
+
+                    </section>
+
+                    <!-- ADDITIONAL INFORMATION -->
+
+                    <section
+                        class="information-section"
+                        data-project-section="additionalInformation"
+                    >
+
+                        <h3>Additional Information</h3>
+
+                        <p
+                            class="information-text"
+                            data-project-field="additionalInformation"
+                        ></p>
+
+                    </section>
+
+                    <!-- PROJECT LINKS -->
+
+                    <section
+                        class="information-section"
+                        data-project-section="links"
+                    >
+
+                        <h3>Project Links</h3>
+
+                        <div class="project-links">
+
+                            <a class="project-link" data-project-field="itchURL" target="_blank" rel="noopener noreferrer" hidden>itch.io</a>
+
+                            <a class="project-link" data-project-field="githubURL" target="_blank" rel="noopener noreferrer" hidden>GitHub</a>
+
+                            <a class="project-link" data-project-field="websiteURL" target="_blank" rel="noopener noreferrer" hidden>Website</a>
+
+                            <a class="project-link" data-project-field="downloadURL" target="_blank" rel="noopener noreferrer" hidden>Download</a>
+
+                            <a class="project-link" data-project-field="videoURL" target="_blank" rel="noopener noreferrer" hidden>Video</a>
+
+                            <a class="project-link" data-project-field="documentationURL" target="_blank" rel="noopener noreferrer" hidden>Documentation</a>
+
+                            <a class="project-link" data-project-field="demoURL" target="_blank" rel="noopener noreferrer" hidden>Demo</a>
+
+                        </div>
+
+                    </section>
+
+                    <!-- CREDITS -->
+
+                    <section
+                        class="information-section"
+                        data-project-section="credits"
+                    >
+
+                        <h3>Credits</h3>
+
+                        <p data-project-field="musicCredits"></p>
+
+                    </section>
+
+                </div>
+
+            </details>
+
+        </div>
+
+    </article>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+
+<!-- =====================================================
+     SECTION 07: DEVELOPMENT CHALLENGES
+     COMPLETE HTML, CSS AND JAVASCRIPT
+===================================================== -->
+
+<link rel="stylesheet" href="sections/css/15-external-links-downloads.css">
+
+<section class="project-section dropdown-section"
+         id="developmentChallengesSection">
+
+    <button type="button"
+            class="dropdown-header"
+            aria-expanded="false"
+            aria-controls="challengesDropdown">
+
+        <span>7. Development Challenges</span>
+        <span class="dropdown-arrow">▼</span>
+
+    </button>
+
+    <div class="dropdown-content"
+         id="challengesDropdown"
+         hidden>
+
+        <div class="development-challenges-container">
+
+            <h3>Development Challenges and Solutions</h3>
+
+            <p class="section-description">
+                Explain the problems you encountered during development,
+                how you approached them, and what you learned.
+            </p>
+
+            <div class="form-group">
+                <label for="technicalChallenges">
+                    Development Challenges
+                </label>
+                <textarea id="technicalChallenges"
+                          name="technicalChallenges"
+                          rows="6"
+                          placeholder="Describe technical problems, design difficulties, bugs, limitations, or other challenges encountered during development..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="challengeSolutions">Solutions</label>
+                <textarea id="challengeSolutions"
+                          name="challengeSolutions"
+                          rows="6"
+                          placeholder="Explain how you investigated, approached, and solved the challenges..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="lessonsLearned">Lessons Learned</label>
+                <textarea id="lessonsLearned"
+                          name="lessonsLearned"
+                          rows="5"
+                          placeholder="Describe what you learned, what you would improve, and how the experience helped your development skills..."></textarea>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<script>
+(function () {
+    "use strict";
+
+    const section = document.getElementById(
+        "developmentChallengesSection"
+    );
+
+    if (!section || section.dataset.challengesInitialized === "true") {
+        return;
+    }
+
+    const header = section.querySelector(".dropdown-header");
+    const content = section.querySelector("#challengesDropdown");
+
+    if (!header || !content) return;
+
+    section.dataset.challengesInitialized = "true";
+
+    header.addEventListener("click", function (event) {
+        event.stopPropagation();
+
+        const isOpen =
+            header.getAttribute("aria-expanded") === "true";
+
+        header.setAttribute("aria-expanded", String(!isOpen));
+        content.hidden = isOpen;
+    });
+
+    header.setAttribute("aria-expanded", "false");
+    content.hidden = true;
+})();
+</script>

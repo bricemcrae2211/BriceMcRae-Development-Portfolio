@@ -1,0 +1,80 @@
+<!-- =====================================================
+     SECTION 04: GAMEPLAY AND FUNCTIONALITY
+===================================================== -->
+
+<link rel="stylesheet" href="sections/css/15-external-links-downloads.css">
+
+<section class="project-section dropdown-section"
+         id="gameplaySection">
+
+    <button type="button"
+            class="dropdown-header"
+            aria-expanded="false"
+            aria-controls="gameplayDropdown">
+
+        <span>4. Gameplay and Functionality</span>
+        <span class="dropdown-arrow">▼</span>
+
+    </button>
+
+    <div class="dropdown-content"
+         id="gameplayDropdown"
+         hidden>
+
+        <div class="form-group">
+            <label for="gameplay">Gameplay</label>
+            <textarea id="gameplay"
+                      name="gameplay"
+                      placeholder="Describe the gameplay..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="gameplayLoop">Gameplay Loop</label>
+            <textarea id="gameplayLoop"
+                      name="gameplayLoop"
+                      placeholder="Describe the main gameplay loop..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="mechanics">Game Mechanics</label>
+            <textarea id="mechanics"
+                      name="mechanics"
+                      placeholder="Describe the game's mechanics..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="multiplayer">Multiplayer</label>
+            <textarea id="multiplayer"
+                      name="multiplayer"
+                      placeholder="Describe multiplayer functionality..."></textarea>
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+(function () {
+    "use strict";
+
+    const section = document.getElementById("gameplaySection");
+
+    if (!section || section.dataset.dropdownInitialized === "true") {
+        return;
+    }
+
+    section.dataset.dropdownInitialized = "true";
+
+    const header = section.querySelector(".dropdown-header");
+    const content = section.querySelector(".dropdown-content");
+
+    if (!header || !content) return;
+
+    header.addEventListener("click", function () {
+        const isExpanded = header.getAttribute("aria-expanded") === "true";
+
+        header.setAttribute("aria-expanded", String(!isExpanded));
+        content.hidden = isExpanded;
+    });
+})();
+</script>

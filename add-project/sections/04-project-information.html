@@ -1,0 +1,250 @@
+
+<!-- =====================================================
+     SECTION 02: GENERAL PROJECT INFORMATION
+===================================================== -->
+
+<section class="project-section dropdown-section"
+         id="generalProjectInformationSection">
+
+    <button type="button"
+            class="dropdown-header"
+            aria-expanded="false"
+            aria-controls="generalInformationDropdown">
+
+        <span>2. General Project Information</span>
+        <span class="dropdown-arrow">▼</span>
+
+    </button>
+
+    <div class="dropdown-content"
+         id="generalInformationDropdown"
+         hidden>
+
+        <div class="general-information-container">
+
+            <h3>Project Details</h3>
+
+            <p class="section-description">
+                Add the general information, technical details,
+                development status, and platforms associated with your project.
+            </p>
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label for="projectCategory">Project Category</label>
+
+                    <select id="projectCategory" name="projectCategory">
+                        <option value="">Select Category</option>
+                        <option value="Game">Game</option>
+                        <option value="Software">Software</option>
+                        <option value="Website">Website</option>
+                        <option value="Application">Application</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="gameGenre">Game Genre</label>
+
+                    <input type="text"
+                           id="gameGenre"
+                           name="gameGenre"
+                           placeholder="RPG, Strategy, Action...">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="gameSubgenre">Game Subgenre</label>
+
+                    <input type="text"
+                           id="gameSubgenre"
+                           name="gameSubgenre"
+                           placeholder="Grand Strategy, Survival...">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="gameType">Game Type</label>
+
+                    <select id="gameType" name="gameType">
+                        <option value="">Select Game Type</option>
+                        <option value="Single-player">Single-player</option>
+                        <option value="Multiplayer">Multiplayer</option>
+                        <option value="Cooperative">Cooperative</option>
+                        <option value="Competitive">Competitive</option>
+                        <option value="Sandbox">Sandbox</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="gamePerspective">Camera Perspective</label>
+
+                    <select id="gamePerspective" name="gamePerspective">
+                        <option value="">Select Perspective</option>
+                        <option value="First Person">First Person</option>
+                        <option value="Third Person">Third Person</option>
+                        <option value="Top Down">Top Down</option>
+                        <option value="Isometric">Isometric</option>
+                        <option value="Side Scrolling">Side Scrolling</option>
+                        <option value="Fixed Camera">Fixed Camera</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="gameMode">Game Mode</label>
+
+                    <input type="text"
+                           id="gameMode"
+                           name="gameMode"
+                           placeholder="Single-player, Online, Local Co-op...">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="engine">Engine / Framework</label>
+
+                    <input type="text"
+                           id="engine"
+                           name="engine"
+                           placeholder="Unity, Unreal, React...">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="engineVersion">Engine Version</label>
+
+                    <input type="text"
+                           id="engineVersion"
+                           name="engineVersion"
+                           placeholder="Unity 2022.3, Unreal Engine 5...">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="projectStatus">Development Status</label>
+
+                    <select id="projectStatus" name="projectStatus">
+                        <option value="">Select Status</option>
+                        <option value="Planning">Planning</option>
+                        <option value="In Development">In Development</option>
+                        <option value="Completed">Completed</option>
+                        <option value="On Hold">On Hold</option>
+                        <option value="Cancelled">Cancelled</option>
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="releaseStatus">Release Status</label>
+
+                    <select id="releaseStatus" name="releaseStatus">
+                        <option value="">Select Release Status</option>
+                        <option value="Not Released">Not Released</option>
+                        <option value="Unreleased">Unreleased</option>
+                        <option value="Early Access">Early Access</option>
+                        <option value="Released">Released</option>
+                        <option value="Demo Available">Demo Available</option>
+                        <option value="Discontinued">Discontinued</option>
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="platforms">Supported Platforms</label>
+
+                    <input type="text"
+                           id="platforms"
+                           name="platforms"
+                           placeholder="Windows, Linux, Android, Web...">
+
+                    <small>
+                        Separate multiple platforms with commas.
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     SECTION 02 CSS
+===================================================== -->
+
+<link rel="stylesheet" href="sections/css/15-external-links-downloads.css">
+
+<!-- =====================================================
+     SECTION 02 JAVASCRIPT
+===================================================== -->
+
+<script>
+(function () {
+    "use strict";
+
+    function initializeGeneralProjectInformation() {
+
+        const section = document.getElementById(
+            "generalProjectInformationSection"
+        );
+
+        if (!section || section.dataset.dropdownInitialized === "true") {
+            return;
+        }
+
+        const header = section.querySelector(".dropdown-header");
+        const content = section.querySelector(".dropdown-content");
+
+        if (!header || !content) {
+            return;
+        }
+
+        section.dataset.dropdownInitialized = "true";
+
+        header.addEventListener("click", function () {
+
+            const expanded =
+                header.getAttribute("aria-expanded") === "true";
+
+            header.setAttribute("aria-expanded", String(!expanded));
+
+            content.hidden = expanded;
+
+        });
+
+    }
+
+    function start() {
+        initializeGeneralProjectInformation();
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", start, { once: true });
+    } else {
+        start();
+    }
+
+    document.addEventListener("projectSectionsLoaded", start);
+
+})();
+</script>

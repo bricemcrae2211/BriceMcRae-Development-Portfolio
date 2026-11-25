@@ -1,0 +1,65 @@
+
+/* =====================================
+   TOP DEBUG MESSAGE
+===================================== */
+
+.top-debug-message {
+
+    position: fixed;
+
+    top: 10px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 10000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    width: max-content;
+    max-width: 90%;
+
+    padding: 12px 18px;
+
+    background: #222;
+    color: #ffffff;
+
+    border: 1px solid #666;
+    border-radius: 6px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    text-align: center;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+
+}
+
+.top-debug-message[hidden] {
+    display: none;
+}
+
+#closeTopDebugMessage {
+
+    background: transparent;
+    color: #ffffff;
+
+    border: none;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    padding: 0 4px;
+
+}
+
+#closeTopDebugMessage:hover {
+    color: #ff5555;
+}

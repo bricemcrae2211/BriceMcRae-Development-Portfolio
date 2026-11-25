@@ -1,0 +1,193 @@
+
+<!-- =====================================================
+     SECTION 11: FUTURE DEVELOPMENT
+     COMPLETE HTML, CSS AND JAVASCRIPT
+===================================================== -->
+
+
+<!-- =====================================================
+     SECTION CSS
+===================================================== -->
+
+
+<link rel="stylesheet" href="sections/css/15-external-links-downloads.css">
+
+
+<!-- =====================================================
+     SECTION HTML
+===================================================== -->
+
+<section class="project-section dropdown-section"
+         id="futureDevelopmentSection">
+
+
+    <!-- MAIN DROPDOWN HEADER -->
+
+    <button type="button"
+            class="dropdown-header"
+            aria-expanded="false"
+            aria-controls="futureDropdown">
+
+        <span>11. Future Development</span>
+
+        <span class="dropdown-arrow">▼</span>
+
+    </button>
+
+
+    <!-- DROPDOWN CONTENT -->
+
+    <div class="dropdown-content"
+         id="futureDropdown"
+         hidden>
+
+
+        <!-- FUTURE DEVELOPMENT -->
+
+        <div class="form-group">
+
+            <label for="future">
+                Future Development
+            </label>
+
+            <textarea id="future"
+                      name="future"
+                      placeholder="Describe planned future development, long-term goals, upcoming updates and project improvements..."></textarea>
+
+        </div>
+
+
+        <!-- PLANNED FEATURES -->
+
+        <div class="form-group">
+
+            <label for="plannedFeatures">
+                Planned Features
+            </label>
+
+            <textarea id="plannedFeatures"
+                      name="plannedFeatures"
+                      placeholder="List planned features, upcoming additions, new mechanics and improvements..."></textarea>
+
+        </div>
+
+
+        <!-- KNOWN ISSUES -->
+
+        <div class="form-group">
+
+            <label for="knownIssues">
+                Known Issues
+            </label>
+
+            <textarea id="knownIssues"
+                      name="knownIssues"
+                      placeholder="Describe known issues, bugs, limitations and problems that still need to be addressed..."></textarea>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SECTION JAVASCRIPT
+===================================================== -->
+
+<script>
+
+(function () {
+
+    "use strict";
+
+
+    /* =====================================================
+       INITIALIZE SECTION
+    ===================================================== */
+
+    const section = document.getElementById(
+        "futureDevelopmentSection"
+    );
+
+    if (!section) {
+        return;
+    }
+
+    // Prevent duplicate initialization.
+
+    if (section.dataset.futureDevelopmentInitialized === "true") {
+        return;
+    }
+
+    section.dataset.futureDevelopmentInitialized = "true";
+
+
+    /* =====================================================
+       ELEMENT REFERENCES
+    ===================================================== */
+
+    const dropdownHeader = section.querySelector(
+        ".dropdown-header"
+    );
+
+    const dropdownContent = section.querySelector(
+        "#futureDropdown"
+    );
+
+
+    /* =====================================================
+       VALIDATE ELEMENTS
+    ===================================================== */
+
+    if (!dropdownHeader || !dropdownContent) {
+        return;
+    }
+
+
+    /* =====================================================
+       DROPDOWN OPEN AND CLOSE
+    ===================================================== */
+
+    dropdownHeader.addEventListener("click", function (event) {
+
+        // Prevent the main layout loader from
+        // toggling this dropdown a second time.
+
+        event.stopPropagation();
+
+        const isOpen =
+            dropdownHeader.getAttribute("aria-expanded") === "true";
+
+
+        // Update dropdown state.
+
+        dropdownHeader.setAttribute(
+            "aria-expanded",
+            String(!isOpen)
+        );
+
+
+        // Show or hide content.
+
+        dropdownContent.hidden = isOpen;
+
+    });
+
+
+    /* =====================================================
+       INITIAL DROPDOWN STATE
+    ===================================================== */
+
+    dropdownHeader.setAttribute(
+        "aria-expanded",
+        "false"
+    );
+
+    dropdownContent.hidden = true;
+
+
+})();
+
+</script>

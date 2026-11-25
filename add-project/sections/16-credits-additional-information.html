@@ -1,0 +1,207 @@
+
+<!-- =====================================================
+     SECTION 14: CREDITS AND ADDITIONAL INFORMATION
+     COMPLETE HTML, CSS AND JAVASCRIPT
+===================================================== -->
+
+
+
+<link rel="stylesheet" href="sections/css/15-external-links-downloads.css">
+
+<!-- =====================================================
+     SECTION HTML
+===================================================== -->
+
+<section class="project-section dropdown-section"
+         id="additionalInformationSection">
+
+    <!-- DROPDOWN HEADER -->
+
+    <button type="button"
+            class="dropdown-header"
+            aria-expanded="false"
+            aria-controls="additionalDropdown">
+
+        <span>14. Credits and Additional Information</span>
+
+        <span class="dropdown-arrow">▼</span>
+
+    </button>
+
+
+    <!-- DROPDOWN CONTENT -->
+
+    <div class="dropdown-content"
+         id="additionalDropdown"
+         hidden>
+
+
+        <!-- PROJECT CREDITS -->
+
+        <div class="form-group">
+
+            <label for="credits">
+                Project Credits
+            </label>
+
+            <textarea id="credits"
+                      placeholder="List project credits..."></textarea>
+
+        </div>
+
+
+        <!-- MUSIC AND AUDIO CREDITS -->
+
+        <div class="form-group">
+
+            <label for="musicCredits">
+                Music and Audio Credits
+            </label>
+
+            <textarea id="musicCredits"
+                      placeholder="Music, sound design, audio credits..."></textarea>
+
+        </div>
+
+
+        <!-- ASSET CREDITS -->
+
+        <div class="form-group">
+
+            <label for="assetCredits">
+                Asset Credits
+            </label>
+
+            <textarea id="assetCredits"
+                      placeholder="List external assets and their creators..."></textarea>
+
+        </div>
+
+
+        <!-- SUPPORTED LANGUAGES -->
+
+        <div class="form-group">
+
+            <label for="supportedLanguages">
+                Supported Languages
+            </label>
+
+            <textarea id="supportedLanguages"
+                      placeholder="English, French..."></textarea>
+
+        </div>
+
+
+        <!-- ADDITIONAL INFORMATION -->
+
+        <div class="form-group">
+
+            <label for="additionalInformation">
+                Additional Information
+            </label>
+
+            <textarea id="additionalInformation"
+                      placeholder="Other information about the project..."></textarea>
+
+        </div>
+
+
+        <!-- ADDITIONAL NOTES -->
+
+        <div class="form-group">
+
+            <label for="additionalNotes">
+                Additional Notes
+            </label>
+
+            <textarea id="additionalNotes"
+                      placeholder="Enter additional developer notes..."></textarea>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SECTION 14 JAVASCRIPT
+===================================================== -->
+
+<script>
+(function () {
+
+    "use strict";
+
+    /* =====================================================
+       INITIALIZE SECTION
+    ===================================================== */
+
+    const section = document.getElementById(
+        "additionalInformationSection"
+    );
+
+    if (!section || section.dataset.additionalInformationInitialized === "true") {
+        return;
+    }
+
+    section.dataset.additionalInformationInitialized = "true";
+
+
+    /* =====================================================
+       DROPDOWN ELEMENTS
+    ===================================================== */
+
+    const dropdownHeader = section.querySelector(
+        ".dropdown-header"
+    );
+
+    const dropdownContent = section.querySelector(
+        "#additionalDropdown"
+    );
+
+
+    /* =====================================================
+       DROPDOWN FUNCTIONALITY
+
+       This section manages its own dropdown.
+       Stop bubbling to prevent the main layout loader's
+       delegated dropdown handler from toggling it twice.
+    ===================================================== */
+
+    if (dropdownHeader && dropdownContent) {
+
+        dropdownHeader.addEventListener("click", function (event) {
+
+            event.stopPropagation();
+
+            const isOpen =
+                dropdownHeader.getAttribute("aria-expanded") === "true";
+
+            dropdownHeader.setAttribute(
+                "aria-expanded",
+                String(!isOpen)
+            );
+
+            dropdownContent.hidden = isOpen;
+
+        });
+
+    }
+
+
+    /* =====================================================
+       INITIAL DROPDOWN STATE
+    ===================================================== */
+
+    if (dropdownHeader && dropdownContent) {
+
+        dropdownHeader.setAttribute(
+            "aria-expanded",
+            String(!dropdownContent.hidden)
+        );
+
+    }
+
+})();
+</script>

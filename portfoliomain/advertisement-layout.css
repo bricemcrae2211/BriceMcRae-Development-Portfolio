@@ -1,0 +1,688 @@
+
+/* =====================================
+   BRICE MCRAE PORTFOLIO
+   COMPLETE ADVERTISEMENT LAYOUT CSS
+
+   INCLUDES:
+   - Full-width page
+   - Desktop layout
+   - Vertical advertisements
+   - Left and right advertisement support
+   - Tablet responsive layout
+   - Mobile responsive layout
+   - Small phones
+   - Very small phones
+===================================== */
+
+
+/* =========================================
+   GLOBAL ADVERTISEMENT SETTINGS
+========================================= */
+
+.advertisement-loader {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    gap: 25px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================
+   ADVERTISEMENT SLOTS
+========================================= */
+
+.advertisement-slot {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    margin: 0 auto;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   ADVERTISEMENT BOX
+========================================= */
+
+.ad-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 940px;
+    min-width: 0;
+
+    height: clamp(120px, 20vw, 260px);
+
+    margin: 0 auto;
+    padding: 5px;
+
+    background: #151515;
+
+    border: 1px solid #444444;
+    border-radius: 6px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   ADVERTISEMENT PLACEHOLDER
+========================================= */
+
+.advertisement-loader .ad-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    height: 100%;
+
+    padding: 5px;
+
+    color: #777777;
+
+    font-size: 12px;
+    text-align: center;
+
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+
+/* =========================================
+   ADVERTISEMENT ERRORS
+========================================= */
+
+.advertisement-error {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    padding: 10px;
+
+    color: #ffffff;
+    background: #301717;
+
+    border: 1px solid #d9534f;
+    border-radius: 5px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+    overflow-wrap: anywhere;
+}
+
+.advertisement-error h3 {
+    margin-bottom: 6px;
+
+    color: #ff7777;
+    font-size: 12px;
+}
+
+.advertisement-error p {
+    margin: 5px 0;
+
+    font-size: 11px;
+    line-height: 1.3;
+
+    overflow-wrap: anywhere;
+}
+
+.advertisement-error button {
+    width: 100%;
+    max-width: 100%;
+
+    padding: 7px;
+
+    font-size: 12px;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================
+   FULL-WIDTH MAIN PAGE GRID
+========================================= */
+
+.page-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr) !important;
+
+    grid-auto-flow: row;
+
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    margin: 0;
+    padding: 0;
+
+    align-items: start;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.page-layout > main {
+    display: flex;
+    flex-direction: column;
+
+    grid-column: 1 !important;
+    grid-row: 1;
+
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    margin: 0;
+    padding: 12px;
+
+    justify-self: stretch;
+
+    box-sizing: border-box;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================
+   MAIN CONTENT CHILDREN
+========================================= */
+
+.page-layout > main > * {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   SIDE ADVERTISEMENT CONTAINERS
+========================================= */
+
+.page-layout > .side-ad {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    margin: 0;
+    padding: 5px;
+
+    position: static;
+
+    grid-column: 1 !important;
+
+    justify-self: stretch;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   LEFT ADVERTISEMENT
+========================================= */
+
+.page-layout > .side-ad-left {
+    grid-row: 2;
+
+    order: 2;
+}
+
+
+/* =========================================
+   RIGHT ADVERTISEMENT
+========================================= */
+
+.page-layout > .side-ad-right {
+    grid-row: 3;
+
+    order: 3;
+
+    position: static;
+
+    left: auto;
+    right: auto;
+
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    justify-self: stretch;
+}
+
+
+/* =========================================
+   VERTICAL ADVERTISEMENT ORDER
+========================================= */
+
+.page-layout {
+    grid-auto-flow: row;
+}
+
+.page-layout > main {
+    order: 1;
+}
+
+.page-layout > .side-ad-left {
+    order: 2;
+}
+
+.page-layout > .side-ad-right {
+    order: 3;
+}
+
+
+/* =========================================
+   REMOVE OLD THREE-COLUMN LAYOUT
+========================================= */
+
+.page-layout:has(> .side-ad-left .ad-box):has(> .side-ad-right .ad-box),
+.page-layout:has(> .side-ad-left .ad-box):not(:has(> .side-ad-right .ad-box)),
+.page-layout:has(> .side-ad-right .ad-box):not(:has(> .side-ad-left .ad-box)),
+.page-layout:not(:has(> .side-ad-left .ad-box)):not(:has(> .side-ad-right .ad-box)) {
+
+    grid-template-columns:
+        minmax(0, 1fr) !important;
+}
+
+
+/* =========================================
+   HIDE EMPTY ADVERTISEMENTS
+========================================= */
+
+.page-layout > .side-ad-left:not(:has(.ad-box)),
+.page-layout > .side-ad-right:not(:has(.ad-box)) {
+    display: none;
+}
+
+
+/* =========================================
+   FULL-WIDTH ADVERTISEMENT PLACEMENTS
+========================================= */
+
+.page-advertisement {
+    display: flex;
+    flex-direction: column;
+
+    align-items: stretch;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    margin: 25px 0;
+    padding: 12px;
+
+    background: #151515;
+
+    border: 1px solid #333333;
+    border-radius: 6px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   VERTICAL ADVERTISEMENT LOADER
+========================================= */
+
+.page-advertisement .advertisement-loader {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    gap: 15px;
+}
+
+
+/* =========================================
+   PREVENT CONTENT OVERFLOW
+========================================= */
+
+.page-layout,
+.page-layout > main,
+.page-layout > main * {
+    min-width: 0;
+}
+
+.page-layout img,
+.page-layout video,
+.page-layout iframe {
+    max-width: 100%;
+}
+
+
+/* =========================================
+   TABLET LAYOUT
+========================================= */
+
+@media screen and (max-width: 1000px) {
+
+    .page-layout {
+        display: grid;
+
+        grid-template-columns:
+            minmax(0, 1fr) !important;
+
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .page-layout > main {
+        width: 100%;
+        max-width: 100%;
+
+        padding: 10px;
+    }
+
+    .page-layout > .side-ad {
+        width: 100%;
+        max-width: 100%;
+
+        position: static;
+
+        left: auto;
+        right: auto;
+
+        padding: 5px;
+    }
+
+    .page-layout > .side-ad-right {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .advertisement-loader {
+        gap: 15px;
+    }
+
+    .ad-box {
+        width: 100%;
+        max-width: 940px;
+
+        height: clamp(110px, 25vw, 200px);
+    }
+
+    .page-advertisement {
+        margin: 20px 0;
+    }
+}
+
+
+/* =========================================
+   MOBILE LAYOUT
+========================================= */
+
+@media screen and (max-width: 700px) {
+
+    .page-layout {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        gap: 0;
+    }
+
+
+    /* MAIN CONTENT */
+
+    .page-layout > main {
+        display: flex;
+        flex-direction: column;
+
+        order: 1;
+
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        margin: 0;
+        padding: 6px;
+    }
+
+
+    /* ADVERTISEMENT CONTAINERS */
+
+    .page-layout > .side-ad {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        margin: 0;
+        padding: 5px;
+
+        position: static;
+
+        left: auto;
+        right: auto;
+    }
+
+
+    /* LEFT ADVERTISEMENT */
+
+    .page-layout > .side-ad-left {
+        order: 2;
+    }
+
+
+    /* RIGHT ADVERTISEMENT */
+
+    .page-layout > .side-ad-right {
+        order: 3;
+
+        width: 100%;
+        max-width: 100%;
+
+        left: auto;
+        right: auto;
+    }
+
+
+    /* ADVERTISEMENT LOADER */
+
+    .advertisement-loader {
+        width: 100%;
+        max-width: 100%;
+
+        gap: 10px;
+    }
+
+
+    /* ADVERTISEMENT SLOTS */
+
+    .advertisement-slot {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* ADVERTISEMENT BOX */
+
+    .ad-box {
+        width: 100%;
+        max-width: 100%;
+
+        height: clamp(90px, 30vw, 160px);
+
+        margin: 0;
+        padding: 3px;
+    }
+
+
+    /* ADVERTISEMENT PLACEMENTS */
+
+    .page-advertisement {
+        width: 100%;
+        max-width: 100%;
+
+        margin: 15px 0;
+        padding: 6px;
+    }
+
+
+    /* ADVERTISEMENT PLACEHOLDER */
+
+    .advertisement-loader .ad-placeholder {
+        padding: 3px;
+        font-size: 10px;
+    }
+
+
+    /* ADVERTISEMENT ERRORS */
+
+    .advertisement-error {
+        padding: 6px;
+    }
+
+    .advertisement-error h3 {
+        font-size: 11px;
+    }
+
+    .advertisement-error p {
+        font-size: 10px;
+    }
+
+    .advertisement-error button {
+        padding: 5px;
+        font-size: 10px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media screen and (max-width: 500px) {
+
+    .page-layout {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .page-layout > main {
+        width: 100%;
+        max-width: 100%;
+
+        padding: 4px;
+    }
+
+    .page-layout > .side-ad {
+        width: 100%;
+        max-width: 100%;
+
+        padding: 3px;
+    }
+
+    .advertisement-loader {
+        gap: 8px;
+    }
+
+    .advertisement-slot {
+        width: 100%;
+    }
+
+    .ad-box {
+        width: 100%;
+        max-width: 100%;
+
+        height: 100px;
+    }
+
+    .page-advertisement {
+        margin: 12px 0;
+        padding: 4px;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL SCREENS
+========================================= */
+
+@media screen and (max-width: 350px) {
+
+    .page-layout {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .page-layout > main {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        padding: 3px;
+    }
+
+    .page-layout > .side-ad {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        padding: 2px;
+    }
+
+    .advertisement-loader {
+        gap: 6px;
+    }
+
+    .ad-box {
+        width: 100%;
+        max-width: 100%;
+
+        height: 90px;
+    }
+
+    .page-advertisement {
+        margin: 10px 0;
+        padding: 3px;
+    }
+}

@@ -1,0 +1,568 @@
+
+<!-- =====================================================
+     SECTION 03: PROJECT IMAGES AND SCREENSHOTS
+===================================================== -->
+
+<section class="project-section dropdown-section"
+         id="projectImagesSection">
+
+<link rel="stylesheet" href="sections/css/15-external-links-downloads.css">
+
+    <!-- MAIN DROPDOWN HEADER -->
+
+    <button type="button"
+            class="dropdown-header"
+            aria-expanded="false"
+            aria-controls="projectImagesDropdown">
+
+        <span>3. Project Images and Screenshots</span>
+
+        <span class="dropdown-arrow">▼</span>
+
+    </button>
+
+    <!-- DROPDOWN CONTENT -->
+
+    <div class="dropdown-content"
+         id="projectImagesDropdown">
+
+        <!-- =========================================
+             PROJECT COVER IMAGE
+        ========================================= -->
+
+        <div class="form-group">
+
+            <h3 class="image-section-heading">
+                Project Cover Image
+            </h3>
+
+            <p class="image-section-description">
+                Upload or drag and drop one main image to represent your project.
+            </p>
+
+            <input type="file"
+                   id="projectImage"
+                   class="image-upload-input"
+                   accept="image/*">
+
+            <div class="cover-upload-area"
+                 id="coverUploadArea"
+                 role="button"
+                 tabindex="0">
+
+                <strong id="previewText">
+                    Click or drag an image here to upload your cover
+                </strong>
+
+                <span>
+                    Select one image file
+                </span>
+
+                <img id="previewImage"
+                     class="cover-preview"
+                     alt="Project cover image preview">
+
+            </div>
+
+            <div class="image-buttons">
+
+                <button type="button"
+                        id="uploadCoverButton">
+                    Upload Cover
+                </button>
+
+                <button type="button"
+                        id="removeCoverButton">
+                    Remove Cover
+                </button>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <!-- =========================================
+             PROJECT SCREENSHOTS
+        ========================================= -->
+
+        <div class="form-group">
+
+            <h3 class="image-section-heading">
+                Project Screenshots
+            </h3>
+
+            <p class="image-section-description">
+                Upload multiple screenshots. Each screenshot will have its own title, tags, and description.
+            </p>
+
+            <input type="file"
+                   id="screenshots"
+                   class="image-upload-input"
+                   accept="image/*"
+                   multiple>
+
+            <div class="screenshot-drop-area"
+                 id="screenshotDropArea"
+                 role="button"
+                 tabindex="0">
+
+                <strong>
+                    Click or drag screenshots here
+                </strong>
+
+                <span>
+                    You can upload multiple images at once
+                </span>
+
+            </div>
+
+            <div class="image-buttons">
+
+                <button type="button"
+                        id="uploadScreenshotsButton">
+                    Upload Screenshots
+                </button>
+
+                <button type="button"
+                        id="removeScreenshotsButton">
+                    Remove All Screenshots
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- SCREENSHOT CARDS -->
+
+        <div id="screenshotPreviews"
+             class="screenshot-preview-grid">
+
+            <div class="empty-screenshots">
+                No screenshots uploaded yet.
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- =========================================
+         SECTION JAVASCRIPT
+    ========================================= -->
+
+    <script>
+    (function () {
+
+        "use strict";
+
+        const section = document.getElementById("projectImagesSection");
+
+        if (!section || section.dataset.initialized === "true") {
+            return;
+        }
+
+        section.dataset.initialized = "true";
+
+        /* =========================================
+           DROPDOWN
+        ========================================= */
+
+        const dropdownHeader = section.querySelector(".dropdown-header");
+        const dropdownContent = section.querySelector(".dropdown-content");
+
+        dropdownHeader.addEventListener("click", function () {
+
+            const isOpen = dropdownHeader.getAttribute("aria-expanded") === "true";
+
+            dropdownHeader.setAttribute("aria-expanded", String(!isOpen));
+            dropdownContent.classList.toggle("open", !isOpen);
+
+        });
+
+        /* =========================================
+           COVER IMAGE ELEMENTS
+        ========================================= */
+
+        const projectImageInput = section.querySelector("#projectImage");
+        const coverUploadArea = section.querySelector("#coverUploadArea");
+        const previewImage = section.querySelector("#previewImage");
+        const previewText = section.querySelector("#previewText");
+
+        const uploadCoverButton = section.querySelector("#uploadCoverButton");
+        const removeCoverButton = section.querySelector("#removeCoverButton");
+
+        let coverImageUrl = null;
+
+        function uploadCover(file) {
+
+            if (!file || !file.type.startsWith("image/")) {
+                alert("Please select a valid image file.");
+                return;
+            }
+
+            if (coverImageUrl) {
+                URL.revokeObjectURL(coverImageUrl);
+            }
+
+            coverImageUrl = URL.createObjectURL(file);
+
+            previewImage.src = coverImageUrl;
+            previewImage.style.display = "block";
+
+            previewText.textContent = file.name;
+
+        }
+
+        uploadCoverButton.addEventListener("click", function () {
+            projectImageInput.click();
+        });
+
+        coverUploadArea.addEventListener("click", function () {
+            projectImageInput.click();
+        });
+
+        coverUploadArea.addEventListener("keydown", function (event) {
+
+            if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                projectImageInput.click();
+            }
+
+        });
+
+        projectImageInput.addEventListener("change", function () {
+
+            const file = projectImageInput.files[0];
+
+            if (file) {
+                uploadCover(file);
+            }
+
+        });
+
+        removeCoverButton.addEventListener("click", function () {
+
+            if (coverImageUrl) {
+                URL.revokeObjectURL(coverImageUrl);
+            }
+
+            coverImageUrl = null;
+
+            previewImage.removeAttribute("src");
+            previewImage.style.display = "none";
+
+            previewText.textContent =
+                "Click or drag an image here to upload your cover";
+
+            projectImageInput.value = "";
+
+        });
+
+        /* COVER DRAG AND DROP */
+
+        ["dragenter", "dragover"].forEach(function (eventName) {
+
+            coverUploadArea.addEventListener(eventName, function (event) {
+
+                event.preventDefault();
+                coverUploadArea.classList.add("drag-over");
+
+            });
+
+        });
+
+        ["dragleave", "drop"].forEach(function (eventName) {
+
+            coverUploadArea.addEventListener(eventName, function (event) {
+
+                event.preventDefault();
+                coverUploadArea.classList.remove("drag-over");
+
+            });
+
+        });
+
+        coverUploadArea.addEventListener("drop", function (event) {
+
+            const file = Array.from(event.dataTransfer.files)
+                .find(function (item) {
+                    return item.type.startsWith("image/");
+                });
+
+            if (file) {
+                uploadCover(file);
+            }
+
+        });
+
+        /* =========================================
+           SCREENSHOT ELEMENTS
+        ========================================= */
+
+        const screenshotsInput = section.querySelector("#screenshots");
+        const screenshotDropArea = section.querySelector("#screenshotDropArea");
+
+        const uploadScreenshotsButton =
+            section.querySelector("#uploadScreenshotsButton");
+
+        const removeScreenshotsButton =
+            section.querySelector("#removeScreenshotsButton");
+
+        const screenshotPreviews =
+            section.querySelector("#screenshotPreviews");
+
+        let screenshots = [];
+        let screenshotCounter = 0;
+
+        /* =========================================
+           ADD SCREENSHOTS
+        ========================================= */
+
+        function addScreenshots(files) {
+
+            const imageFiles = Array.from(files).filter(function (file) {
+                return file.type.startsWith("image/");
+            });
+
+            imageFiles.forEach(function (file) {
+
+                screenshotCounter++;
+
+                screenshots.push({
+                    id: screenshotCounter,
+                    file: file,
+                    imageUrl: URL.createObjectURL(file),
+                    title: "",
+                    tags: "",
+                    description: ""
+                });
+
+            });
+
+            renderScreenshots();
+
+        }
+
+        uploadScreenshotsButton.addEventListener("click", function () {
+            screenshotsInput.click();
+        });
+
+        screenshotDropArea.addEventListener("click", function () {
+            screenshotsInput.click();
+        });
+
+        screenshotDropArea.addEventListener("keydown", function (event) {
+
+            if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                screenshotsInput.click();
+            }
+
+        });
+
+        screenshotsInput.addEventListener("change", function () {
+
+            if (screenshotsInput.files.length > 0) {
+                addScreenshots(screenshotsInput.files);
+            }
+
+            screenshotsInput.value = "";
+
+        });
+
+        /* SCREENSHOT DRAG AND DROP */
+
+        ["dragenter", "dragover"].forEach(function (eventName) {
+
+            screenshotDropArea.addEventListener(eventName, function (event) {
+
+                event.preventDefault();
+                screenshotDropArea.classList.add("drag-over");
+
+            });
+
+        });
+
+        ["dragleave", "drop"].forEach(function (eventName) {
+
+            screenshotDropArea.addEventListener(eventName, function (event) {
+
+                event.preventDefault();
+                screenshotDropArea.classList.remove("drag-over");
+
+            });
+
+        });
+
+        screenshotDropArea.addEventListener("drop", function (event) {
+
+            addScreenshots(event.dataTransfer.files);
+
+        });
+
+        /* =========================================
+           RENDER SCREENSHOT CARDS
+        ========================================= */
+
+        function renderScreenshots() {
+
+            screenshotPreviews.innerHTML = "";
+
+            if (screenshots.length === 0) {
+
+                const emptyMessage = document.createElement("div");
+
+                emptyMessage.className = "empty-screenshots";
+                emptyMessage.textContent = "No screenshots uploaded yet.";
+
+                screenshotPreviews.appendChild(emptyMessage);
+
+                return;
+            }
+
+            screenshots.forEach(function (screenshot) {
+
+                const card = document.createElement("div");
+                card.className = "screenshot-card";
+                card.dataset.screenshotId = screenshot.id;
+
+                const image = document.createElement("img");
+                image.className = "screenshot-image";
+                image.src = screenshot.imageUrl;
+                image.alt = screenshot.title || "Project screenshot";
+
+                card.appendChild(image);
+
+                /* TITLE */
+
+                const titleGroup = document.createElement("div");
+                titleGroup.className = "form-group";
+
+                const titleLabel = document.createElement("label");
+                titleLabel.textContent = "Screenshot Title";
+
+                const titleInput = document.createElement("input");
+                titleInput.type = "text";
+                titleInput.placeholder = "Enter screenshot title...";
+                titleInput.value = screenshot.title;
+
+                titleInput.addEventListener("input", function () {
+
+                    screenshot.title = titleInput.value;
+                    image.alt = screenshot.title || "Project screenshot";
+
+                });
+
+                titleGroup.appendChild(titleLabel);
+                titleGroup.appendChild(titleInput);
+
+                card.appendChild(titleGroup);
+
+                /* TAGS */
+
+                const tagsGroup = document.createElement("div");
+                tagsGroup.className = "form-group";
+
+                const tagsLabel = document.createElement("label");
+                tagsLabel.textContent = "Screenshot Tags";
+
+                const tagsInput = document.createElement("input");
+                tagsInput.type = "text";
+                tagsInput.placeholder = "Example: Gameplay, UI, Environment...";
+                tagsInput.value = screenshot.tags;
+
+                tagsInput.addEventListener("input", function () {
+                    screenshot.tags = tagsInput.value;
+                });
+
+                tagsGroup.appendChild(tagsLabel);
+                tagsGroup.appendChild(tagsInput);
+
+                card.appendChild(tagsGroup);
+
+                /* DESCRIPTION */
+
+                const descriptionGroup = document.createElement("div");
+                descriptionGroup.className = "form-group";
+
+                const descriptionLabel = document.createElement("label");
+                descriptionLabel.textContent = "Screenshot Description";
+
+                const descriptionInput = document.createElement("textarea");
+                descriptionInput.placeholder =
+                    "Describe what this screenshot shows...";
+                descriptionInput.value = screenshot.description;
+
+                descriptionInput.addEventListener("input", function () {
+                    screenshot.description = descriptionInput.value;
+                });
+
+                descriptionGroup.appendChild(descriptionLabel);
+                descriptionGroup.appendChild(descriptionInput);
+
+                card.appendChild(descriptionGroup);
+
+                /* REMOVE BUTTON */
+
+                const removeButton = document.createElement("button");
+
+                removeButton.type = "button";
+                removeButton.className = "remove-screenshot-button";
+                removeButton.textContent = "Remove Screenshot";
+
+                removeButton.addEventListener("click", function () {
+                    removeScreenshot(screenshot.id);
+                });
+
+                card.appendChild(removeButton);
+
+                screenshotPreviews.appendChild(card);
+
+            });
+
+        }
+
+        /* =========================================
+           REMOVE ONE SCREENSHOT
+        ========================================= */
+
+        function removeScreenshot(id) {
+
+            const screenshot = screenshots.find(function (item) {
+                return item.id === id;
+            });
+
+            if (!screenshot) {
+                return;
+            }
+
+            URL.revokeObjectURL(screenshot.imageUrl);
+
+            screenshots = screenshots.filter(function (item) {
+                return item.id !== id;
+            });
+
+            renderScreenshots();
+
+        }
+
+        /* =========================================
+           REMOVE ALL SCREENSHOTS
+        ========================================= */
+
+        removeScreenshotsButton.addEventListener("click", function () {
+
+            screenshots.forEach(function (screenshot) {
+                URL.revokeObjectURL(screenshot.imageUrl);
+            });
+
+            screenshots = [];
+
+            renderScreenshots();
+
+        });
+
+    })();
+    </script>
+
+</section>

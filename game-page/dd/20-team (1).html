@@ -1,0 +1,28 @@
+'use strict';
+/* Reads the selected project JSON and fills text sections only. Media loaders stay separate. */
+window.addEventListener('DOMContentLoaded', async () => {
+  const MISSING_VALUE='NA'; const STORAGE_KEY='selectedProjectInformation';
+  const pageInformation=window.GamePageInformation;
+  if(!pageInformation){console.error('GamePageInformation is unavailable.');return;}
+  try { if(window.GamePageSectionsReady) await window.GamePageSectionsReady; } catch(e){console.error(e);return;}
+  let project=null;
+  try { const raw=localStorage.getItem(STORAGE_KEY); if(raw){const selected=JSON.parse(raw);project=selected.project||selected.projectInformation||selected.json||selected; if(typeof project==='string')project=JSON.parse(project);} } catch(e){console.warn('Could not read selected project from storage:',e);}
+  if(!project||typeof project!=='object'){fillNA();return;}
+  const values=pageInformation.getFieldValues(project);
+  setText('gameTitle',values.projectTitle);setText('gameDescription',values.gameDescription);
+  setText('game-tags',values.tags);setText('gameInformation',values.gameInformation);setText('developmentInformation',values.developmentInformation);
+  for(const [sectionId,paths] of Object.entries(pageInformation.sections)){
+    const section=document.getElementById(sectionId); if(!section)continue;
+    const heading=section.querySelector('.section-heading')||section.querySelector('h2');
+    const title=heading?heading.textContent:pageInformation.sectionTitles[sectionId]||sectionId;
+    section.replaceChildren(); if(heading)section.appendChild(heading);else{const h=document.createElement('h2');h.className='section-heading';h.textContent=title;section.appendChild(h);}
+    const value=values[sectionId]??MISSING_VALUE; const content=document.createElement('div');content.className='section-content';renderValue(content,value);section.appendChild(content);
+  }
+  window.GamePageLoadedData=project;
+  document.dispatchEvent(new CustomEvent('gamePageInformationLoaded',{detail:project}));
+  window.GameInformationLoader=Object.freeze({reload:()=>location.reload(),getData:()=>window.GamePageLoadedData});
+  function fillNA(){setText('gameTitle',MISSING_VALUE);setText('gameDescription',MISSING_VALUE);}
+  function setText(id,value){const el=document.getElementById(id);if(el){if(id==='game-tags'&&Array.isArray(value))el.innerHTML=value.map(x=>`<span class="tag">${escapeHTML(String(x))}</span>`).join(' ');else el.textContent=value==null?MISSING_VALUE:(typeof value==='object'?JSON.stringify(value,null,2):String(value));}}
+  function renderValue(parent,value){if(value===undefined||value===null||value===''){parent.textContent=MISSING_VALUE;return;} if(Array.isArray(value)){const ul=document.createElement('ul');value.forEach(v=>{const li=document.createElement('li');renderValue(li,v);ul.appendChild(li);});parent.appendChild(ul);return;}if(typeof value==='object'){const dl=document.createElement('dl');Object.entries(value).forEach(([k,v])=>{const dt=document.createElement('dt');dt.textContent=k;const dd=document.createElement('dd');renderValue(dd,v);dl.append(dt,dd);});parent.appendChild(dl);return;}parent.textContent=String(value);}
+  function escapeHTML(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+});

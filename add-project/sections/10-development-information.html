@@ -1,0 +1,153 @@
+
+<!-- =====================================================
+     SECTION 08: DEVELOPMENT INFORMATION
+     COMPLETE HTML, CSS AND JAVASCRIPT
+===================================================== -->
+
+<link rel="stylesheet" href="sections/css/15-external-links-downloads.css">
+
+<section class="project-section dropdown-section"
+         id="developmentInformationSection">
+
+    <button type="button"
+            class="dropdown-header"
+            aria-expanded="false"
+            aria-controls="developmentDropdown">
+
+        <span>8. Development Information</span>
+        <span class="dropdown-arrow">▼</span>
+
+    </button>
+
+    <div class="dropdown-content"
+         id="developmentDropdown"
+         hidden>
+
+        <div class="development-information-container">
+
+            <h3>Development Timeline and Team</h3>
+
+            <p class="section-description">
+                Provide information about when development started,
+                your role, team size, project progress, and milestones.
+            </p>
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label for="startDate">Start Date</label>
+                    <input type="date"
+                           id="startDate"
+                           name="startDate">
+                </div>
+
+                <div class="form-group">
+                    <label for="completionDate">
+                        Completion / Release Date
+                    </label>
+                    <input type="date"
+                           id="completionDate"
+                           name="completionDate">
+                </div>
+
+                <div class="form-group">
+                    <label for="yourRole">Developer Role</label>
+                    <input type="text"
+                           id="yourRole"
+                           name="yourRole"
+                           placeholder="Developer, Programmer, Designer...">
+                </div>
+
+                <div class="form-group">
+                    <label for="teamSize">Team Size</label>
+                    <input type="number"
+                           id="teamSize"
+                           name="teamSize"
+                           min="1"
+                           step="1"
+                           placeholder="Number of team members">
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label for="developmentAdditional">
+                    Development Information
+                </label>
+                <textarea id="developmentAdditional"
+                          name="developmentAdditional"
+                          rows="5"
+                          placeholder="Describe the development process, workflow, team collaboration, and how the project progressed..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="developmentUpdates">Development Updates</label>
+                <textarea id="developmentUpdates"
+                          name="developmentUpdates"
+                          rows="5"
+                          placeholder="Enter development updates, progress reports, changes, and important project news..."></textarea>
+                <small>Enter each update on a separate line or paragraph.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="milestones">Development Milestones</label>
+                <textarea id="milestones"
+                          name="milestones"
+                          rows="5"
+                          placeholder="List important development milestones and their target dates..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="completedMilestones">Completed Milestones</label>
+                <textarea id="completedMilestones"
+                          name="completedMilestones"
+                          rows="5"
+                          placeholder="List milestones that have already been completed..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="upcomingMilestones">Upcoming Milestones</label>
+                <textarea id="upcomingMilestones"
+                          name="upcomingMilestones"
+                          rows="5"
+                          placeholder="List planned milestones, upcoming tasks, and future development goals..."></textarea>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<script>
+(function () {
+    "use strict";
+
+    const section = document.getElementById(
+        "developmentInformationSection"
+    );
+
+    if (!section || section.dataset.developmentInfoInitialized === "true") {
+        return;
+    }
+
+    const header = section.querySelector(".dropdown-header");
+    const content = section.querySelector("#developmentDropdown");
+
+    if (!header || !content) return;
+
+    section.dataset.developmentInfoInitialized = "true";
+
+    header.addEventListener("click", function (event) {
+        event.stopPropagation();
+
+        const isOpen =
+            header.getAttribute("aria-expanded") === "true";
+
+        header.setAttribute("aria-expanded", String(!isOpen));
+        content.hidden = isOpen;
+    });
+
+    header.setAttribute("aria-expanded", "false");
+    content.hidden = true;
+})();
+</script>

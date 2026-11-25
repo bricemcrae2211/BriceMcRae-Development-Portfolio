@@ -1,0 +1,410 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Projects</title>
+
+    <link rel="stylesheet" href="my-projects.css">
+    <link rel="stylesheet" href="all-project-information.css">
+
+    <!-- ACCOUNT SCRIPTS -->
+    <script src="../js/account/sign-up.js" defer></script>
+    <script src="../js/account/account.js" defer></script>
+
+    <!-- GLOBAL PROJECT DEBUG STATUS -->
+    <script src="../portfoliomain/project-card-debug-status.js" defer></script>
+
+    <!-- PROJECT INFORMATION -->
+    <script src="project-info.js" defer></script>
+    <script src="project-loader.js" defer></script>
+    <script src="project-debug.js" defer></script>
+    <script src="project-analysis.js" defer></script>
+    <script src="my-projects.js" defer></script>
+
+    <!-- PROJECT DATA VISIBILITY -->
+    <script>
+
+        "use strict";
+
+        /* =====================================
+           CHECK THE ONE GLOBAL STATUS
+        ===================================== */
+
+        function isProjectDebugEnabled() {
+
+            return window.projectDebugStatus === true;
+
+        }
+
+
+        /* =====================================
+           UPDATE PROJECT PAGE VISIBILITY
+        ===================================== */
+
+        window.updateProjectPageVisibility = function () {
+
+            const section =
+                document.getElementById("projectsSection");
+
+            if (!section) return;
+
+            const enabled = isProjectDebugEnabled();
+
+            /* PROJECT DATA STATUS */
+
+            section.setAttribute(
+                "data-project-data",
+                enabled ? "on" : "off"
+            );
+
+            /* ELEMENTS CONTROLLED BY DEBUG STATUS */
+
+            const elementsToToggle = [
+
+                "projectLoader",
+                "projectCount",
+                "projectsEmpty",
+                "projectError",
+                "debugControls",
+                "debugAndInformation"
+
+            ];
+
+            elementsToToggle.forEach(function (id) {
+
+                const element = document.getElementById(id);
+
+                if (!element) return;
+
+                element.hidden = !enabled;
+
+            });
+
+            /* HIDE DEBUG WINDOW WHEN DISABLED */
+
+            if (!enabled) {
+
+                const debugWindow =
+                    document.getElementById("debugWindow");
+
+                if (debugWindow) {
+
+                    debugWindow.hidden = true;
+
+                }
+
+            }
+
+            /* UPDATE ALL PROJECT CARD DEBUG */
+
+            if (
+                typeof window.updateAllProjectCardDebug === "function"
+            ) {
+
+                window.updateAllProjectCardDebug();
+
+            }
+
+            console.log(
+                "[PROJECT DATA]",
+                enabled ? "ON" : "OFF"
+            );
+
+        };
+
+
+        /* =====================================
+           LISTEN FOR THE ONE STATUS CHANGE
+        ===================================== */
+
+        window.addEventListener(
+            "projectDebugStatusChanged",
+            function () {
+
+                window.updateProjectPageVisibility();
+
+            }
+        );
+
+
+        /* =====================================
+           INITIALIZE
+        ===================================== */
+
+        function initializeProjectDataVisibility() {
+
+            window.updateProjectPageVisibility();
+
+        }
+
+        if (document.readyState === "loading") {
+
+            document.addEventListener(
+                "DOMContentLoaded",
+                initializeProjectDataVisibility
+            );
+
+        } else {
+
+            initializeProjectDataVisibility();
+
+        }
+
+    </script>
+
+</head>
+
+
+<body>
+
+    <section id="projectsSection" data-project-data="off">
+
+        <!-- PROJECT HEADER -->
+
+        <header id="projectsHeader">
+
+            <div id="projectsHeaderContent">
+
+                <div>
+
+                    <h1>My Projects</h1>
+
+                    <p>
+                        Browse my game development and programming projects.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <div id="projectsContent">
+
+            <!-- PROJECT LOADER -->
+
+            <div id="projectLoader">
+
+                <div
+                    id="projectLoadStatus"
+                    role="status"
+                    aria-live="polite"
+                >
+                    Loading project information...
+                </div>
+
+                <div id="projectStatistics">
+
+                    <div class="projectStatistic">
+
+                        <span class="projectStatisticLabel">
+                            JSON Files Found
+                        </span>
+
+                        <span
+                            class="projectStatisticValue"
+                            id="jsonFoundCount"
+                        >
+                            0
+                        </span>
+
+                    </div>
+
+
+                    <div class="projectStatistic">
+
+                        <span class="projectStatisticLabel">
+                            Valid JSON Files
+                        </span>
+
+                        <span
+                            class="projectStatisticValue"
+                            id="validProjectCount"
+                        >
+                            0
+                        </span>
+
+                    </div>
+
+
+                    <div class="projectStatistic">
+
+                        <span class="projectStatisticLabel">
+                            Invalid JSON Files
+                        </span>
+
+                        <span
+                            class="projectStatisticValue"
+                            id="invalidProjectCount"
+                        >
+                            0
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT COUNT -->
+
+            <div id="projectCount">
+                0 projects
+            </div>
+
+
+            <!-- PROJECT GRID -->
+
+            <div
+                id="projectCardsContainer"
+                class="projectMasonry"
+            ></div>
+
+
+            <!-- EMPTY MESSAGE -->
+
+            <div id="projectsEmpty" hidden>
+
+                No projects were found.
+
+            </div>
+
+
+            <!-- ERROR MESSAGE -->
+
+            <div id="projectError" hidden></div>
+
+
+            <!-- DEBUG CONTROLS -->
+
+            <div id="debugControls">
+
+                <button
+                    id="analyzeButton"
+                    class="projectControlButton"
+                    type="button"
+                >
+                    Analyze Projects
+                </button>
+
+            </div>
+
+
+            <!-- DEBUG AND COMPLETE INFORMATION -->
+
+            <div id="debugAndInformation">
+
+                <!-- PROJECT DEBUG WINDOW -->
+
+                <section id="debugWindow" hidden>
+
+                    <div id="debugHeader">
+
+                        <h2>Project Debug Analysis</h2>
+
+                        <span id="debugStatus">
+                            Waiting for analysis...
+                        </span>
+
+                    </div>
+
+
+                    <div id="debugSummary"></div>
+
+
+                    <div class="debugGroup">
+
+                        <h3 id="debugGoodHeading">
+                            GOOD
+                        </h3>
+
+                        <div
+                            id="debugGoodList"
+                            class="debugList"
+                        ></div>
+
+                    </div>
+
+
+                    <div class="debugGroup">
+
+                        <h3 id="debugBadHeading">
+                            BAD
+                        </h3>
+
+                        <div
+                            id="debugBadList"
+                            class="debugList"
+                        ></div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ALL PROJECT INFORMATION -->
+
+                <section id="allProjectInformation">
+
+                    <div id="allProjectInformationHeader">
+
+                        <div>
+
+                            <h2>All Project Information</h2>
+
+                            <p>
+                                Complete information from every loaded project JSON file.
+                            </p>
+
+                        </div>
+
+
+                        <span id="allProjectInformationCount">
+                            0 projects
+                        </span>
+
+                    </div>
+
+
+                    <!-- INFORMATION SEARCH -->
+
+                    <div id="projectInformationSearchContainer">
+
+                        <input
+                            type="search"
+                            id="projectInformationSearch"
+                            placeholder="Search project information..."
+                            aria-label="Search all project information"
+                        >
+
+                    </div>
+
+
+                    <!-- INFORMATION CONTENT -->
+
+                    <div id="allProjectInformationContent">
+
+                        <p>
+                            Project information will appear here after loading.
+                        </p>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>

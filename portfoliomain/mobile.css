@@ -1,0 +1,461 @@
+
+/* =====================================
+   BRICE MCRAE PORTFOLIO
+   COMPLETE RESPONSIVE CSS
+
+   INCLUDES:
+   - Tablet
+   - Mobile
+   - Small phones
+   - Very small phones
+
+   FULL-WIDTH LAYOUT
+===================================== */
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media screen and (max-width: 1000px) {
+
+    .page-layout {
+        width: 100%;
+    }
+
+    .page-layout > main {
+        padding: 12px;
+    }
+
+    .introduction {
+        height: 350px;
+        min-height: 350px;
+    }
+
+    .introduction-content {
+        padding: 20px;
+    }
+
+    .introduction-content h1 {
+        font-size: clamp(24px, 6vw, 48px);
+    }
+
+    .introduction-content p {
+        font-size: clamp(12px, 2.5vw, 18px);
+    }
+
+    .information-sections {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .page-layout video,
+    .demo-reel-container video,
+    .demo-upload-container video {
+        max-height: 500px;
+    }
+
+    .page-advertisement {
+        margin: 20px 0;
+    }
+
+    .page-advertisement .ad-box,
+    .ad-box {
+        height: clamp(110px, 25vw, 200px);
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media screen and (max-width: 700px) {
+
+    body {
+        font-size: 15px;
+    }
+
+
+    /* HEADER */
+
+    header {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 15px;
+        padding: 18px 12px;
+    }
+
+    .logo {
+        font-size: 23px;
+        text-align: center;
+    }
+
+
+    /* HEADER ACTIONS */
+
+    .header-actions {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        width: 100%;
+        gap: 10px;
+    }
+
+    .header-action-button {
+        min-width: 110px;
+        min-height: 40px;
+
+        padding: 8px 12px;
+    }
+
+
+    /* NAVIGATION */
+
+    .main-navigation {
+        display: flex;
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 5px;
+        padding: 10px;
+    }
+
+    .main-navigation a {
+        display: block;
+
+        width: 100%;
+        padding: 10px;
+
+        text-align: center;
+
+        background: #292929;
+        border-radius: 5px;
+    }
+
+
+    /* COVER */
+
+    .introduction {
+        height: 320px;
+        min-height: 320px;
+
+        margin-bottom: 15px;
+    }
+
+    .introduction-content {
+        padding: 15px;
+    }
+
+    .introduction-content h1 {
+        font-size: 32px;
+        letter-spacing: 2px;
+    }
+
+    .introduction-content p {
+        font-size: 17px;
+    }
+
+
+    /* FULL-WIDTH PAGE */
+
+    .page-layout {
+        display: block;
+
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .page-layout > main {
+        width: 100%;
+        max-width: 100%;
+
+        padding: 8px;
+    }
+
+
+    /* VERTICAL ADVERTISEMENTS */
+
+    .page-advertisement {
+        width: 100%;
+
+        margin: 15px 0;
+        padding: 8px;
+    }
+
+    .advertisement-loader {
+        gap: 10px;
+    }
+
+    .advertisement-loader .ad-box,
+    .page-advertisement .ad-box {
+        height: clamp(90px, 30vw, 160px);
+
+        padding: 3px;
+        border-radius: 4px;
+    }
+
+    .advertisement-loader .ad-placeholder {
+        padding: 3px;
+        font-size: 10px;
+    }
+
+
+    /* ADVERTISEMENT ERRORS */
+
+    .advertisement-error {
+        padding: 6px;
+        border-radius: 4px;
+    }
+
+    .advertisement-error h3 {
+        font-size: 11px;
+    }
+
+    .advertisement-error p {
+        font-size: 10px;
+    }
+
+    .advertisement-error button {
+        padding: 5px;
+        font-size: 10px;
+    }
+
+
+    /* CONTENT SECTIONS */
+
+    .page-section,
+    .demo-reel-container,
+    .demo-upload-container,
+    .about-me,
+    .contact,
+    .future-game-development {
+        padding: 12px;
+        margin-bottom: 15px;
+    }
+
+    .section-title {
+        font-size: 21px;
+    }
+
+
+    /* ABOUT AND CONTACT */
+
+    .information-sections {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+
+    /* ABOUT GRID */
+
+    .about-information {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 10px;
+    }
+
+
+    /* CONTACT GRID */
+
+    .contact-information {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        grid-template-rows: repeat(3, auto);
+
+        gap: 10px;
+    }
+
+
+    /* INFORMATION BOXES */
+
+    .information-item,
+    .contact-item {
+        padding: 10px;
+    }
+
+
+    /* VIDEOS */
+
+    .page-layout video,
+    .demo-reel-container video,
+    .demo-upload-container video {
+        max-height: 400px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 25px 12px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media screen and (max-width: 500px) {
+
+    .logo {
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+
+    .header-actions {
+        gap: 8px;
+    }
+
+    .header-action-button {
+        min-width: 100px;
+        font-size: 13px;
+    }
+
+    .introduction {
+        height: 280px;
+        min-height: 280px;
+    }
+
+    .introduction-content {
+        padding: 12px;
+    }
+
+    .introduction-content h1 {
+        font-size: 28px;
+        letter-spacing: 2px;
+    }
+
+    .introduction-content p {
+        font-size: 16px;
+    }
+
+    .page-layout > main {
+        padding: 5px;
+    }
+
+    .page-advertisement {
+        margin: 12px 0;
+        padding: 6px;
+    }
+
+    .advertisement-loader .ad-box,
+    .page-advertisement .ad-box {
+        height: 100px;
+    }
+
+    .page-section,
+    .demo-reel-container,
+    .demo-upload-container,
+    .about-me,
+    .contact,
+    .future-game-development {
+        padding: 10px;
+    }
+
+    .page-layout video,
+    .demo-reel-container video,
+    .demo-upload-container video {
+        max-height: 350px;
+    }
+
+
+    /* KEEP ABOUT IN TWO COLUMNS */
+
+    .about-information {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 8px;
+    }
+
+
+    /* KEEP CONTACT IN TWO COLUMNS */
+
+    .contact-information {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        grid-template-rows: repeat(3, auto);
+
+        gap: 8px;
+    }
+
+
+    /* SMALL INFORMATION BOXES */
+
+    .information-item,
+    .contact-item {
+        padding: 8px;
+    }
+
+    .information-item h3,
+    .contact-item h3 {
+        font-size: 15px;
+    }
+
+    .information-item p,
+    .contact-item p {
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media screen and (max-width: 350px) {
+
+    .header-actions {
+        flex-direction: column;
+    }
+
+    .header-action-button {
+        width: 100%;
+    }
+
+    .introduction-content h1 {
+        font-size: 23px;
+    }
+
+    .page-layout > main {
+        padding: 4px;
+    }
+
+    .page-advertisement {
+        padding: 4px;
+    }
+
+
+    /* KEEP ABOUT IN TWO COLUMNS */
+
+    .about-information {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    /* KEEP CONTACT IN TWO COLUMNS */
+
+    .contact-information {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+}

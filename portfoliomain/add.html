@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ad Space</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            padding: 30px 20px;
+            font-family: Arial, sans-serif;
+            background: transparent;
+        }
+
+        .ad-box {
+            width: 100%;
+            max-width: 940px;
+            height: 300px;
+            margin: 0 auto;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: #151515;
+            border: 1px solid #444;
+            border-radius: 8px;
+        }
+
+        .ad-placeholder {
+            width: 250px;
+            height: 150px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: #777;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 12px;
+            }
+
+            .ad-box {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="ad-box">
+        <div class="ad-placeholder">
+            Ad Space
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+
+<!-- =====================================================
+     SECTION 06: TECHNICAL OVERVIEW
+     COMPLETE HTML, CSS AND JAVASCRIPT
+===================================================== -->
+<link rel="stylesheet" href="sections/css/15-external-links-downloads.css">
+
+<section class="project-section dropdown-section"
+         id="technicalOverviewSection">
+
+    <button type="button"
+            class="dropdown-header"
+            aria-expanded="false"
+            aria-controls="technicalDropdown">
+
+        <span>6. Technical Overview</span>
+        <span class="dropdown-arrow">▼</span>
+
+    </button>
+
+    <div class="dropdown-content"
+         id="technicalDropdown"
+         hidden>
+
+        <div class="technical-overview-container">
+
+            <h3>Technical Information</h3>
+
+            <p class="section-description">
+                Explain the technologies, programming languages,
+                architecture, systems, and technical implementation
+                used to develop your project.
+            </p>
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label for="languages">Programming Languages</label>
+                    <input type="text"
+                           id="languages"
+                           name="languages"
+                           placeholder="C#, C++, JavaScript...">
+                </div>
+
+                <div class="form-group">
+                    <label for="technologies">Technologies and Tools</label>
+                    <input type="text"
+                           id="technologies"
+                           name="technologies"
+                           placeholder="Git, Visual Studio, Blender...">
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label for="technicalAdditional">Technical Overview</label>
+                <textarea id="technicalAdditional"
+                          name="technicalAdditional"
+                          rows="5"
+                          placeholder="Explain how the project was developed and describe the technologies used..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="technicalArchitecture">
+                    Software Architecture
+                </label>
+                <textarea id="technicalArchitecture"
+                          name="technicalArchitecture"
+                          rows="5"
+                          placeholder="Describe the software architecture, project structure, components, and how different systems communicate..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="technicalPerformance">
+                    Performance and Optimization
+                </label>
+                <textarea id="technicalPerformance"
+                          name="technicalPerformance"
+                          rows="5"
+                          placeholder="Describe performance considerations, optimization techniques, and improvements..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="technicalSystems">Technical Systems</label>
+                <textarea id="technicalSystems"
+                          name="technicalSystems"
+                          rows="5"
+                          placeholder="Describe the major technical systems and how they work..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="technicalImplementation">
+                    Implementation Details
+                </label>
+                <textarea id="technicalImplementation"
+                          name="technicalImplementation"
+                          rows="5"
+                          placeholder="Explain how individual features, mechanics, and technical systems were implemented..."></textarea>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<script>
+(function () {
+    "use strict";
+
+    const section = document.getElementById(
+        "technicalOverviewSection"
+    );
+
+    if (!section || section.dataset.technicalOverviewInitialized === "true") {
+        return;
+    }
+
+    const header = section.querySelector(".dropdown-header");
+    const content = section.querySelector("#technicalDropdown");
+
+    if (!header || !content) return;
+
+    section.dataset.technicalOverviewInitialized = "true";
+
+    header.addEventListener("click", function (event) {
+        event.stopPropagation();
+
+        const isOpen =
+            header.getAttribute("aria-expanded") === "true";
+
+        header.setAttribute("aria-expanded", String(!isOpen));
+        content.hidden = isOpen;
+    });
+
+    header.setAttribute("aria-expanded", "false");
+    content.hidden = true;
+})();
+</script>

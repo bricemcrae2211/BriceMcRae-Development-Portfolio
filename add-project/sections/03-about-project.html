@@ -1,0 +1,73 @@
+<!-- =====================================================
+     SECTION 01: ABOUT THE PROJECT
+===================================================== -->
+
+<link rel="stylesheet" href="sections/css/15-external-links-downloads.css">
+
+<section class="project-section dropdown-section"
+         id="aboutProjectSection">
+
+    <button type="button"
+            class="dropdown-header"
+            aria-expanded="false"
+            aria-controls="aboutProjectDropdown">
+
+        <span>1. About the Project</span>
+        <span class="dropdown-arrow">▼</span>
+
+    </button>
+
+    <div class="dropdown-content"
+         id="aboutProjectDropdown"
+         hidden>
+
+        <div class="form-group">
+            <label for="about">About the Project</label>
+            <textarea id="about"
+                      name="about"
+                      placeholder="Describe your project..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="projectPurpose">Project Purpose</label>
+            <textarea id="projectPurpose"
+                      name="projectPurpose"
+                      placeholder="What is the purpose of this project?"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="projectGoals">Project Goals</label>
+            <textarea id="projectGoals"
+                      name="projectGoals"
+                      placeholder="Describe the main goals of this project..."></textarea>
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+(function () {
+    "use strict";
+
+    const section = document.getElementById("aboutProjectSection");
+
+    if (!section || section.dataset.dropdownInitialized === "true") {
+        return;
+    }
+
+    section.dataset.dropdownInitialized = "true";
+
+    const header = section.querySelector(".dropdown-header");
+    const content = section.querySelector(".dropdown-content");
+
+    if (!header || !content) return;
+
+    header.addEventListener("click", function () {
+        const isExpanded = header.getAttribute("aria-expanded") === "true";
+
+        header.setAttribute("aria-expanded", String(!isExpanded));
+        content.hidden = isExpanded;
+    });
+})();
+</script>

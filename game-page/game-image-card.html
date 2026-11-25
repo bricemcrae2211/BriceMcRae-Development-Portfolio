@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Game Image Card</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .screenshot-card {
+            display: flex;
+            flex-direction: column;
+
+            width: 100%;
+            min-width: 0;
+            height: 100%;
+
+            overflow: hidden;
+
+            background: #1c1c1c;
+            border: 1px solid #333;
+            border-radius: 12px;
+
+            padding: 10px;
+
+            transition: 0.25s ease;
+        }
+
+        .screenshot-card:hover {
+            border-color: #666;
+            transform: translateY(-3px);
+        }
+
+        /* TITLE AT TOP */
+
+        .screenshot-card-title {
+            order: 1;
+
+            margin: 0 0 10px;
+
+            color: white;
+            font-size: 17px;
+            font-weight: 600;
+
+            overflow-wrap: anywhere;
+        }
+
+        /* IMAGE IN MIDDLE */
+
+        .screenshot-card-image-container {
+            order: 2;
+
+            width: 100%;
+            min-height: 100px;
+
+            overflow: hidden;
+            border-radius: 8px;
+            background: #111;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .screenshot-card-image {
+            display: block;
+
+            width: 100%;
+            height: auto;
+            max-height: 350px;
+
+            object-fit: contain;
+        }
+
+        .screenshot-card-image-missing {
+            display: none;
+
+            width: 100%;
+            min-height: 100px;
+
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            color: #888;
+            font-size: 13px;
+        }
+
+        /* DESCRIPTION AT BOTTOM */
+
+        .screenshot-card-description {
+            order: 3;
+
+            margin: 10px 0 0;
+
+            color: #aaa;
+            font-size: 13px;
+            line-height: 1.6;
+
+            overflow-wrap: anywhere;
+        }
+    </style>
+</head>
+
+<body>
+
+    <article class="screenshot-card">
+
+        <h3 class="screenshot-card-title">
+            Screenshot Title
+        </h3>
+
+        <div class="screenshot-card-image-container">
+
+            <img
+                class="screenshot-card-image"
+                alt="Game screenshot"
+                loading="lazy"
+                decoding="async"
+            >
+
+            <div class="screenshot-card-image-missing">
+                Image unavailable
+            </div>
+
+        </div>
+
+        <p class="screenshot-card-description">
+            Screenshot description.
+        </p>
+
+    </article>
+
+</body>
+</html>

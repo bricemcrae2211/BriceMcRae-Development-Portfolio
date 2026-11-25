@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Project</title>
+<link rel="stylesheet" href="../portfoliomain/main.css">
+<link rel="stylesheet" href="add-project.css">
+<style>
+.page-header{background:#171717;padding:25px;border-radius:10px;margin-bottom:20px}
+.page-header h1{margin-top:0}
+textarea{width:100%;min-height:42px;height:42px;resize:none;overflow-y:hidden;box-sizing:border-box;line-height:1.5}
+.short-description,.long-description{min-height:42px;height:42px}
+.screenshot-preview-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:12px;margin-top:15px}
+.screenshot-preview-grid img{width:100%;height:110px;object-fit:cover;border-radius:6px}
+.image-preview{min-height:150px;display:flex;align-items:center;justify-content:center}
+.image-preview img{max-width:100%;max-height:350px;object-fit:contain}
+.image-buttons{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px;margin-bottom:15px}
+.section-loading,.section-error{padding:15px;margin:12px 0;border-radius:6px;background:#222;color:#fff}
+</style>
+<script src="../js/project-data.js" defer></script>
+<script src="../js/dropdown/dropdown.js" defer></script>
+<script src="../js/import.js" defer></script>
+<script src="../js/export.js" defer></script>
+<script src="js/add-project.js" defer></script>
+</head>
+<body>
+<main class="add-project-container">
+<header class="page-header">
+<h1>Add Project</h1>
+<p>Add a new game, software, or development project to your portfolio.</p>
+</header>
+
+<form id="projectForm">
+<div id="projectSections">
+<div class="section-loading">Loading project sections...</div>
+</div>
+
+<div class="form-buttons">
+<button type="button" class="import-button" id="importButton">Import JSON</button>
+<button type="button" class="export-button" id="exportButton">Export JSON</button>
+<button type="button" class="save-button" id="saveProjectButton">Save Project</button>
+<button type="button" class="cancel-button" id="cancelProjectButton">Cancel</button>
+</div>
+<input type="file" id="importProjectFile" accept=".json,application/json" hidden>
+</form>
+</main>
+</body>
+</html>

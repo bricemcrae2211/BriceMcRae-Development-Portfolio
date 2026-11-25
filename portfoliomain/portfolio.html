@@ -1,0 +1,739 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Brice McRae Portfolio">
+    <meta name="author" content="Brice McRae">
+
+    <title>Brice McRae - Portfolio</title>
+
+    <!-- =====================================
+         STYLESHEETS
+    ====================================== -->
+
+   <link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="./admin-toolbar.css">
+    <link rel="stylesheet" href="./account-name.css">
+
+
+
+    <!-- =====================================
+         ACCOUNT JAVASCRIPT
+    ====================================== -->
+
+    <script src="../js/account/account-status.js" defer></script>
+    <script src="../js/account/save-account-status.js" defer></script>
+<script src="project-card-debug-status.js" defer></script>
+<script src="project-debug-button.js" defer></script>
+    <script src="../js/account/account-name-display.js" defer></script>
+    <script src="../js/account/account-overlay.js" defer></script>
+    <script src="../js/account/sign-out.js" defer></script>
+
+
+    <!-- =====================================
+         PORTFOLIO JAVASCRIPT
+    ====================================== -->
+
+    <script src="../js/portfolio/portfolio-loader.js" defer></script>
+    <script src="../js/portfolio/advertisement-loader.js" defer></script>
+    <script src="../js/portfolio/top-debug-message.js" defer></script>
+
+
+    <!-- =====================================
+         ADMIN JAVASCRIPT
+    ====================================== -->
+
+    <script src="../js/portfolio/admin-button-controller.js" defer></script>
+    <script src="../js/portfolio/admin-page-controller.js" defer></script>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================
+         ACCOUNT OVERLAY
+    ====================================== -->
+
+    <div id="accountOverlay" aria-hidden="true">
+
+        <iframe
+            id="accountFrame"
+            title="Account"
+            src="../account/account.html">
+        </iframe>
+
+    </div>
+
+
+    <!-- =====================================
+         TOP DEBUG MESSAGE
+    ====================================== -->
+
+    <div
+        id="topDebugMessage"
+        class="top-debug-message"
+        role="status"
+        aria-live="polite"
+        hidden>
+
+        <span id="topDebugMessageText">
+            DEBUG MESSAGE
+        </span>
+
+        <button
+            type="button"
+            id="closeTopDebugMessage"
+            aria-label="Close debug message">
+            &times;
+        </button>
+
+    </div>
+
+
+    <!-- =====================================
+         HEADER
+    ====================================== -->
+
+    <header id="top">
+
+        <a href="#top" class="logo">
+            BRICE MCRAE
+        </a>
+
+        <div class="header-actions">
+
+            <!-- ACCOUNT NAME -->
+
+            <span
+                id="accountNameDisplay"
+                class="account-name-display"
+                aria-live="polite">
+
+                Signed Out
+
+            </span>
+
+
+            <!-- ACCOUNT BUTTON -->
+
+            <button
+                type="button"
+                id="accountButton"
+                class="header-action-button account-button">
+
+                Sign In
+
+            </button>
+
+
+            <!-- ADMIN BUTTON -->
+
+            <button
+                type="button"
+                id="adminToggle"
+                class="header-action-button admin-toggle-button"
+                aria-pressed="false"
+                hidden>
+
+                ADMIN : OFF
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================
+         NAVIGATION
+    ====================================== -->
+
+    <nav
+        class="main-navigation"
+        aria-label="Main navigation">
+
+        <a href="#top">
+            Home
+        </a>
+
+        <a href="#projectsSectionContainer">
+            My Projects
+        </a>
+
+        <a href="#futureGameDevelopmentContainer">
+            My Future
+        </a>
+
+        <a href="#demoReelContainer">
+            Demo
+        </a>
+
+        <a href="#aboutContact">
+            About &amp; Contact
+        </a>
+
+    </nav>
+
+
+    <!-- =====================================
+         ADMIN TOOLBAR
+    ====================================== -->
+
+    <section
+        id="adminToolbar"
+        class="admin-toolbar"
+        aria-label="Administrator toolbar"
+        hidden>
+
+        <div class="admin-toolbar-title">
+
+            PORTFOLIO ADMINISTRATION
+
+        </div>
+
+        <div class="admin-toolbar-actions">
+
+            <span
+                id="adminToolbarStatus"
+                class="admin-toolbar-status">
+
+                ADMIN INACTIVE
+
+            </span>
+
+            <button
+                type="button"
+                id="toolbarAddProjectButton"
+                aria-expanded="false">
+
+                + Add Project
+
+            </button>
+
+            <button
+                type="button"
+                id="toolbarUploadVideoButton">
+
+                Upload Video
+
+            </button>
+
+            <button
+                type="button"
+                id="toolbarDebugButton"
+                class="admin-debug-button"
+                aria-expanded="false">
+
+                Debug Tools
+
+            </button>
+
+        </div>
+
+
+        <!-- ADMIN DEBUG PANEL -->
+
+        <div
+            id="adminDebugPanel"
+            class="admin-debug-panel"
+            hidden>
+
+            <h3>
+                Admin Debug Information
+            </h3>
+
+            <p>
+                Admin Status:
+
+                <strong id="debugAdminStatus">
+                    OFF
+                </strong>
+            </p>
+
+            <p>
+                Project Administration:
+
+                <strong id="debugProjectStatus">
+                    CLOSED
+                </strong>
+            </p>
+
+            <p>
+                Video Upload:
+
+                <strong id="debugVideoStatus">
+                    HIDDEN
+                </strong>
+            </p>
+
+            <p>
+                Admin Storage:
+
+                <strong id="debugStorageStatus">
+                    OFF
+                </strong>
+            </p>
+
+            <button
+                type="button"
+                id="debugRefreshButton">
+
+                Refresh Debug
+
+            </button>
+
+            <button
+                type="button"
+                id="debugDisableButton">
+
+                Disable Admin
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         COVER IMAGE
+    ====================================== -->
+
+    <section class="page-section introduction">
+
+        <div class="introduction-image">
+
+            <img
+                src="../cover-photo/portfolio-cover.jpg"
+                alt="Portfolio cover image">
+
+        </div>
+
+        <div class="introduction-content">
+
+            <h1>
+                BRICE MCRAE
+            </h1>
+
+            <p>
+                Welcome to my portfolio.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         MAIN PAGE LAYOUT
+    ====================================== -->
+
+    <div class="page-layout">
+
+
+        <!-- =================================
+             LEFT ADVERTISEMENTS
+        ================================== -->
+
+        <aside
+            class="side-ad side-ad-left"
+            aria-label="Left advertisements">
+
+            <div
+                id="leftAdvertisementContainer"
+                class="advertisement-loader">
+
+                <div class="advertisement-slot" id="leftAd1">
+                    Loading advertisement 1...
+                </div>
+
+                <div class="advertisement-slot" id="leftAd2">
+                    Loading advertisement 2...
+                </div>
+
+                <div class="advertisement-slot" id="leftAd3">
+                    Loading advertisement 3...
+                </div>
+
+                <div class="advertisement-slot" id="leftAd4">
+                    Loading advertisement 4...
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =================================
+             MAIN CONTENT
+        ================================== -->
+
+        <main>
+
+
+            <!-- =================================
+                 MY PROJECTS
+            ================================== -->
+
+            <section
+                id="projectsSectionContainer"
+                class="projects-container"
+                aria-label="My Projects">
+
+                <p>
+                    Loading projects...
+                </p>
+
+            </section>
+
+
+            <!-- =================================
+                 PROJECT ADMINISTRATION
+            ================================== -->
+
+            <section
+                id="addProjectContainer"
+                class="projects-container"
+                hidden>
+
+                <p>
+                    Loading project administration...
+                </p>
+
+            </section>
+
+
+            <!-- =================================
+                 FUTURE GAME DEVELOPMENT
+            ================================== -->
+
+            <section
+                id="futureGameDevelopmentContainer"
+                class="page-section future-game-development">
+
+                <p>
+                    Loading future game development...
+                </p>
+
+            </section>
+
+
+            <!-- =================================
+                 DEMO REEL
+            ================================== -->
+
+            <section
+                id="demoReelContainer"
+                class="demo-reel-container">
+
+                <p>
+                    Loading demo reel...
+                </p>
+
+            </section>
+
+
+            <!-- =================================
+                 DEMO REEL ADMINISTRATION
+            ================================== -->
+
+            <section
+                id="demoReelUploadContainer"
+                class="demo-upload-container"
+                hidden>
+
+                <p>
+                    Loading demo reel administration...
+                </p>
+
+            </section>
+
+
+            <!-- =================================
+                 ABOUT AND CONTACT
+            ================================== -->
+
+            <div
+                class="information-sections"
+                id="aboutContact">
+
+
+                <!-- ABOUT ME -->
+
+                <section
+                    class="about-me"
+                    id="about">
+
+                    <h2 class="section-title">
+                        About Me
+                    </h2>
+
+                    <p>
+                        Hello! My name is Brice McRae.
+                        Welcome to my personal portfolio.
+                    </p>
+
+                    <p>
+                        This is where I share information about myself,
+                        my background, interests, experience, and goals.
+                    </p>
+
+                    <div class="about-information">
+
+                        <div class="information-item">
+
+                            <h3>
+                                Occupation
+                            </h3>
+
+                            <p>
+                                Add occupation here
+                            </p>
+
+                        </div>
+
+                        <div class="information-item">
+
+                            <h3>
+                                Education
+                            </h3>
+
+                            <p>
+                                Add education here
+                            </p>
+
+                        </div>
+
+                        <div class="information-item">
+
+                            <h3>
+                                Interests
+                            </h3>
+
+                            <p>
+                                Add interests here
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- CONTACT -->
+
+                <section
+                    class="contact"
+                    id="contact">
+
+                    <h2 class="section-title">
+                        Contact
+                    </h2>
+
+                    <p>
+                        Interested in my work or have a professional opportunity?
+                        Feel free to get in touch using the information below.
+                    </p>
+
+                    <div class="contact-information">
+
+                        <div class="contact-item">
+
+                            <h3>Email</h3>
+
+                            <p>
+                                Add professional email here
+                            </p>
+
+                        </div>
+
+                        <div class="contact-item">
+
+                            <h3>Location</h3>
+
+                            <p>
+                                Calgary, Alberta, Canada
+                            </p>
+
+                        </div>
+
+                        <div class="contact-item">
+
+                            <h3>Portfolio</h3>
+
+                            <p>
+                                <a
+                                    href="https://bricemcrae.itch.io/"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+
+                                    View My Portfolio
+
+                                </a>
+                            </p>
+
+                        </div>
+
+                        <div class="contact-item">
+
+                            <h3>GitHub</h3>
+
+                            <p>
+                                Add GitHub profile here
+                            </p>
+
+                        </div>
+
+                        <div class="contact-item">
+
+                            <h3>LinkedIn</h3>
+
+                            <p>
+                                Add LinkedIn profile here
+                            </p>
+
+                        </div>
+
+                        <div class="contact-item">
+
+                            <h3>Professional Availability</h3>
+
+                            <p>
+                                Open to opportunities in game development,
+                                Unity programming, C# programming, software
+                                development, and QA testing.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- =================================
+                 ADDITIONAL INFORMATION
+            ================================== -->
+
+            <section class="page-section additional-information">
+
+                <h2 class="section-title">
+                    More Information
+                </h2>
+
+                <p>
+                    Additional information about me, my work,
+                    interests, experience, and future projects
+                    will be added here.
+                </p>
+
+            </section>
+
+        </main>
+
+
+        <!-- =================================
+             RIGHT ADVERTISEMENTS
+        ================================== -->
+
+        <aside
+            class="side-ad side-ad-right"
+            aria-label="Right advertisements">
+
+            <div
+                id="rightAdvertisementContainer"
+                class="advertisement-loader">
+
+                <div class="advertisement-slot" id="rightAd1">
+                    Loading advertisement 1...
+                </div>
+
+                <div class="advertisement-slot" id="rightAd2">
+                    Loading advertisement 2...
+                </div>
+
+                <div class="advertisement-slot" id="rightAd3">
+                    Loading advertisement 3...
+                </div>
+
+                <div class="advertisement-slot" id="rightAd4">
+                    Loading advertisement 4...
+                </div>
+
+                <div class="advertisement-slot" id="rightAd5">
+                    Loading advertisement 5...
+                </div>
+
+                <div class="advertisement-slot" id="rightAd6">
+                    Loading advertisement 6...
+                </div>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer>
+
+        <div class="footer-links">
+
+            <a href="#top">
+                Back to Top
+            </a>
+
+            <a
+                href="https://github.com/bricemcrae2211"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                GitHub
+
+            </a>
+
+            <a
+                href="https://www.linkedin.com/in/brice-mcrae-017860365/"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                LinkedIn
+
+            </a>
+
+            <a href="#aboutContact">
+                About &amp; Contact
+            </a>
+
+            <a href="../ads.html">
+                Advertisements
+            </a>
+
+        </div>
+
+        <p>
+            &copy; 2026 Brice McRae.
+            All rights reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

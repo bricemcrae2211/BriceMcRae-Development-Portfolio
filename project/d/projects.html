@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Projects</title>
+
+    <link rel="stylesheet" href="my-projects.css">
+
+    <script src="my-projects.js" defer></script>
+
+</head>
+
+<body>
+
+    <section id="projectsSection">
+
+        <header id="projectsHeader">
+
+            <h1>My Projects</h1>
+
+            <p>Browse my game development and programming projects.</p>
+
+        </header>
+
+        <div id="projectsContent">
+
+            <div id="projectLoader">
+
+                <div id="projectLoadStatus">
+                    Loading project information...
+                </div>
+
+                <div id="projectStatistics">
+
+                    <div class="projectStatistic">
+
+                        <span class="projectStatisticLabel">
+                            JSON Files Found
+                        </span>
+
+                        <span class="projectStatisticValue" id="jsonFoundCount">
+                            0
+                        </span>
+
+                    </div>
+
+                    <div class="projectStatistic">
+
+                        <span class="projectStatisticLabel">
+                            Valid JSON Files
+                        </span>
+
+                        <span class="projectStatisticValue" id="validProjectCount">
+                            0
+                        </span>
+
+                    </div>
+
+                    <div class="projectStatistic">
+
+                        <span class="projectStatisticLabel">
+                            Invalid JSON Files
+                        </span>
+
+                        <span class="projectStatisticValue" id="invalidProjectCount">
+                            0
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="projectCount">0 projects</div>
+
+            <div id="projectCardsContainer" class="projectMasonry"></div>
+
+            <div id="projectsEmpty" hidden>
+                No projects were found.
+            </div>
+
+            <div id="projectError" hidden></div>
+
+            <div id="debugControls">
+
+                <button
+                    id="projectDataToggle"
+                    class="projectControlButton"
+                    type="button"
+                    aria-expanded="false">
+
+                    Show Project Data
+
+                </button>
+
+                <button
+                    id="analyzeButton"
+                    class="projectControlButton"
+                    type="button">
+
+                    Analyze Projects
+
+                </button>
+
+            </div>
+
+            <section id="debugWindow" hidden>
+
+                <div id="debugHeader">
+
+                    <h2>Project Debug Analysis</h2>
+
+                    <span id="debugStatus">
+                        Waiting for analysis...
+                    </span>
+
+                </div>
+
+                <div id="debugSummary"></div>
+
+                <div class="debugGroup">
+
+                    <h3 id="debugGoodHeading">GOOD</h3>
+
+                    <div id="debugGoodList" class="debugList"></div>
+
+                </div>
+
+                <div class="debugGroup">
+
+                    <h3 id="debugBadHeading">BAD</h3>
+
+                    <div id="debugBadList" class="debugList"></div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,358 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Project</title>
+
+
+    <!-- =================================================
+         STYLESHEETS
+    ================================================== -->
+
+    <link rel="stylesheet" href="../portfoliomain/main.css">
+    <link rel="stylesheet" href="add-project.css">
+
+
+    <!-- =================================================
+         PAGE STYLES
+    ================================================== -->
+
+    <style>
+
+        .page-header {
+            background: #171717;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .page-header h1 {
+            margin-top: 0;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 42px;
+            height: 42px;
+            resize: none;
+            overflow-y: hidden;
+            box-sizing: border-box;
+            line-height: 1.5;
+        }
+
+        .short-description,
+        .long-description {
+            min-height: 42px;
+            height: 42px;
+        }
+
+        .screenshot-preview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .screenshot-preview-grid img {
+            width: 100%;
+            height: 110px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .image-preview {
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .image-preview img {
+            max-width: 100%;
+            max-height: 350px;
+            object-fit: contain;
+        }
+
+        .image-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+
+        .section-loading,
+        .section-error {
+            padding: 15px;
+            margin: 12px 0;
+            border-radius: 6px;
+            background: #222;
+            color: #fff;
+        }
+
+
+        /* =============================================
+           LOADED PROJECT SECTIONS
+        ============================================== */
+
+        #projectSections {
+            width: 100%;
+        }
+
+        #projectSections > section,
+        #projectSections > div {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        #projectSections .project-section-content {
+            width: 100%;
+        }
+
+    </style>
+
+
+    <!-- =================================================
+         PROJECT STATE
+    ================================================== -->
+
+    <script src="add-project/project-state.js" defer></script>
+
+
+    <!-- =================================================
+         PROJECT HANDLERS
+    ================================================== -->
+
+    <script src="add-project/textarea-handler.js" defer></script>
+
+    <script src="add-project/dropdown-handler.js" defer></script>
+
+
+    <!-- =================================================
+         IMAGE SYSTEM
+    ================================================== -->
+
+    <script src="add-project/image-reader.js" defer></script>
+
+    <script src="add-project/image-preview.js" defer></script>
+
+    <script src="add-project/image-controls.js" defer></script>
+
+
+    <!-- =================================================
+         PROJECT DATA SYSTEM
+    ================================================== -->
+
+    <script src="add-project/project-collector.js" defer></script>
+
+
+    <!-- =================================================
+         PROJECT ACTIONS
+    ================================================== -->
+
+    <script src="add-project/project-save.js" defer></script>
+
+
+    <!-- JSZIP LIBRARY -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+
+    <!-- PROJECT EXPORT -->
+
+    <script src="add-project/project-export.js" defer></script>
+
+
+
+<!-- =================================================
+     PROJECT DEBUG SYSTEM
+================================================== -->
+
+<script src="add-project/project-debug.js" defer></script>
+
+
+<!-- =================================================
+     PROJECT INFORMATION IMPORTER
+================================================== -->
+
+<script src="add-project/project-information-importer.js" defer></script>
+
+
+<!-- =================================================
+     PROJECT MEDIA IMPORTER
+================================================== -->
+
+<script src="add-project/project-media-importer.js" defer></script>
+
+
+<!-- =================================================
+     MAIN PROJECT BUTTON CONTROLLER
+================================================== -->
+
+<script src="add-project/project-button-controller.js" defer></script>
+    <!-- PROJECT IMPORT -->
+    <script src="add-project/project-import.js" defer></script>
+
+    <!-- PROJECT BUTTONS -->
+
+    <script src="add-project/project-buttons.js" defer></script>
+
+
+    <!-- =================================================
+         MAIN CONTROLLER
+    ================================================== -->
+
+    <script src="js/add-project.js" defer></script>
+
+
+    <!-- =================================================
+         HTML SECTION LOADER
+    ================================================== -->
+
+    <script src="js/add-project-layout-loader.js" defer></script>
+
+
+</head>
+
+
+<body>
+
+    <main class="add-project-container">
+
+
+        <!-- =========================================
+             PAGE TITLE
+        ========================================== -->
+
+        <header class="page-header">
+
+            <h1>Add Project</h1>
+
+            <p>
+                Add a new game, software, or development
+                project to your portfolio.
+            </p>
+
+        </header>
+
+
+        <!-- =========================================
+             PROJECT FORM
+        ========================================== -->
+
+        <form id="projectForm">
+
+
+            <!-- =====================================
+                 ALL PROJECT SECTIONS
+
+                 The section loader automatically loads
+                 every HTML section into this container.
+
+                 Supports section files containing:
+                 - A complete section element
+                 - Multiple top-level elements
+                 - Headings
+                 - Paragraphs
+                 - Labels
+                 - Inputs
+                 - Textareas
+                 - Select elements
+                 - Buttons
+                 - Images
+                 - Lists
+                 - Nested objects of HTML markup
+            ====================================== -->
+
+            <div id="projectSections">
+
+                <div class="section-loading">
+
+                    Loading all project sections...
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 FORM BUTTONS
+            ====================================== -->
+
+            <div class="form-buttons">
+
+
+                <!-- IMPORT JSON -->
+
+                <button
+                    type="button"
+                    class="import-button"
+                    id="importButton">
+
+                    Import JSON
+
+                </button>
+
+
+                <!-- EXPORT JSON -->
+
+                <button
+                    type="button"
+                    class="export-button"
+                    id="exportButton">
+
+                    Export JSON
+
+                </button>
+
+
+                <!-- SAVE PROJECT -->
+
+                <button
+                    type="button"
+                    class="save-button"
+                    id="saveProjectButton">
+
+                    Save Project
+
+                </button>
+
+
+                <!-- CANCEL -->
+
+                <button
+                    type="button"
+                    class="cancel-button"
+                    id="cancelProjectButton">
+
+                    Cancel
+
+                </button>
+
+
+            </div>
+
+
+            <!-- =====================================
+                 HIDDEN JSON IMPORT INPUT
+            ====================================== -->
+
+            <input
+                type="file"
+                id="importProjectFile"
+                accept=".json,application/json"
+                hidden>
+
+
+        </form>
+
+    </main>
+
+</body>
+
+</html>

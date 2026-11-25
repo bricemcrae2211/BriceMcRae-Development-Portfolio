@@ -1,0 +1,377 @@
+{
+    "projectTitle": "asfasfas",
+    "shortDescription": "Echoes of the Fallen is a third-person fantasy action RPG where players explore a forgotten kingdom, battle dangerous creatures, and uncover the secrets of an ancient civilization.",
+    "longDescription": "Echoes of the Fallen is a fantasy action RPG set in the ruined kingdom of Eldoria. Players explore abandoned cities, enchanted forests, forgotten temples, and underground fortresses while fighting increasingly dangerous enemies. Discover ancient weapons, unlock magical abilities, complete quests, and uncover the truth behind the mysterious destruction of the kingdom.",
+    "about": "Echoes of the Fallen is an exploration-focused fantasy action RPG combining challenging combat, environmental storytelling, character progression, and a large interconnected world.",
+    "projectPurpose": "The purpose of this project is to create an immersive fantasy adventure that combines exploration, combat, storytelling, and character progression.",
+    "projectGoals": "Create an engaging fantasy world, develop responsive combat, implement intelligent enemies, provide meaningful character progression, and deliver an enjoyable single-player experience.",
+    "projectCategory": "Video Game",
+    "gameGenre": "Action RPG",
+    "gameSubgenre": "Fantasy Adventure, Soulslike",
+    "gameType": "3D Action Role-Playing Game",
+    "gamePerspective": "Third-Person",
+    "gameMode": "Single Player",
+    "engine": "Unity",
+    "engineVersion": "6000.3.9f1",
+    "projectStatus": "In Development",
+    "releaseStatus": "Unreleased",
+    "platforms": "Windows PC, PlayStation 5, Xbox Series X/S",
+    "story": "The kingdom of Eldoria was destroyed when an ancient magical artifact shattered beneath its capital. Hundreds of years later, a mysterious warrior awakens in the ruins with no memory of their past. Guided by strange voices, the player must discover what happened to the kingdom and stop an ancient force from awakening beneath the world.",
+    "worldDescription": "The game takes place in Eldoria, a fantasy kingdom containing abandoned settlements, enchanted forests, underground ruins, snowy mountain regions, ancient fortresses, and dangerous wilderness.",
+    "worldHistory": "Eldoria was once a powerful kingdom protected by five magical guardians. After the guardians disappeared, the kingdom's rulers attempted to control an ancient artifact. The experiment destroyed the capital and released dangerous magical creatures throughout the land.",
+    "characters": "The main character is a forgotten warrior searching for their identity. Supporting characters include Elara, a mysterious guide; Rowan, a travelling merchant; Valen, an ancient guardian knight; and the Hollow King, the primary antagonist.",
+    "gameplay": "Players explore interconnected environments, fight enemies using melee weapons and magical abilities, collect equipment, complete quests, discover hidden locations, and defeat powerful bosses.",
+    "gameplayLoop": "Explore an area, discover enemies and resources, fight through encounters, collect rewards, upgrade equipment, unlock abilities, and progress toward the next major location.",
+    "mechanics": "Player movement, running, jumping, dodging, blocking, melee combat, magical attacks, enemy AI, health management, stamina management, inventory management, equipment upgrades, quest tracking, checkpoints, and boss encounters.",
+    "multiplayer": "Single-player only. No multiplayer functionality is planned for the initial version.",
+    "features": "Large fantasy environments, third-person combat, magical abilities, weapon upgrades, challenging boss fights, exploration, hidden treasures, quest progression, enemy variety, environmental storytelling, and character progression.",
+    "gameTags": "Fantasy, Action RPG, Adventure, Third-Person, Exploration, Combat, Magic, Boss Battles, Single Player, Unity",
+    "uniqueFeatures": "A magical relic system allows players to combine different elemental abilities. Certain combinations unlock special attacks and create different combat strategies.",
+    "languages": "C#",
+    "technologies": "Unity, C#, Universal Render Pipeline, NavMesh, ScriptableObjects, Unity Input System",
+    "technicalAdditional": "The project uses modular gameplay systems to separate player controls, combat, enemy behaviour, inventory, and character progression.",
+    "technicalArchitecture": "The game uses a component-based architecture built around Unity MonoBehaviours and ScriptableObjects. Player, enemy, combat, inventory, and quest systems are separated into reusable components.",
+    "technicalPerformance": "Performance improvements include object pooling, optimized physics checks, reduced unnecessary Update calls, texture compression, level-of-detail settings, and optimized lighting.",
+    "technicalSystems": "Player controller, camera controller, combat system, enemy AI, health system, stamina system, inventory, equipment, quest system, dialogue system, save system, checkpoint system, and boss encounters.",
+    "technicalImplementation": "Gameplay systems are implemented using C#. Enemy navigation uses Unity NavMesh. Configurable weapons, abilities, and items use ScriptableObjects. Player input is handled through Unity's Input System.",
+    "technicalChallenges": "Developing reliable enemy behaviour, preventing combat input conflicts, maintaining consistent player movement, optimizing larger environments, and integrating multiple gameplay systems.",
+    "challengeSolutions": "Gameplay systems were separated into smaller components, shared references were managed through controlled interfaces, repeated objects were pooled, and combat interactions were tested independently before integration.",
+    "lessonsLearned": "Learned how to structure larger Unity projects, develop reusable gameplay components, implement enemy AI, optimize scenes, manage project files, and coordinate development across multiple systems.",
+    "startDate": "2025-03-15",
+    "completionDate": "2026-11-30",
+    "yourRole": "Lead Gameplay Programmer",
+    "teamSize": "8",
+    "developmentAdditional": "The project was developed by a fictional multidisciplinary team using an iterative development process. Gameplay features were implemented, tested, and improved throughout development.",
+    "developmentUpdates": "The player controller and basic combat systems have been implemented. Enemy encounters, exploration areas, and progression systems are being expanded. Final testing and optimization are planned before release.",
+    "milestones": "Project planning, prototype development, player controller, combat implementation, enemy AI, world creation, progression systems, audio integration, optimization, and final testing.",
+    "completedMilestones": "Initial project setup, player movement, camera controls, basic melee combat, health system, enemy prototype, inventory prototype, and first playable environment.",
+    "upcomingMilestones": "Complete the main story, add remaining boss encounters, implement save functionality, finish environment art, improve audio, perform optimization, and prepare a public demo.",
+    "contributions": "Designed and implemented player movement, combat interactions, enemy behaviour, gameplay systems, and several technical improvements.",
+    "developmentCredits": "Echoes of the Fallen Development Team. All credits are fictional testing information.",
+    "individualResponsibilities": "Gameplay programming, player controller development, combat implementation, enemy AI programming, debugging, and gameplay testing.",
+    "teamInformation": "The fictional development team consists of programmers, environment artists, character artists, designers, and audio contributors.",
+    "teamMembers": "Alex Morgan - Project Lead; Jamie Carter - Gameplay Programmer; Taylor Reed - Environment Artist; Jordan Blake - Character Artist; Casey Brooks - UI Designer; Morgan Lee - Level Designer; Riley Adams - Audio Designer; Sam Parker - QA Tester.",
+    "teamResponsibilities": "Project Lead: project coordination. Programmers: gameplay and technical systems. Artists: characters and environments. UI Designer: menus and interface. Level Designer: world layout. Audio Designer: sound and music. QA Tester: testing and bug reports.",
+    "developmentTools": "Unity Editor, Visual Studio, Git, GitHub, Blender, Photoshop, Audacity, and Trello.",
+    "versionControl": "Git and GitHub are used for source control, collaboration, change tracking, and project backups.",
+    "softwareTools": "Unity, Visual Studio 2022, Blender, Adobe Photoshop, Audacity, GitHub Desktop, and Trello.",
+    "learning": "The project provided experience with gameplay programming, modular architecture, artificial intelligence, combat design, level development, optimization, and collaborative software development.",
+    "skillsDeveloped": "C# programming, Unity development, debugging, Git version control, enemy AI, gameplay architecture, combat systems, performance optimization, teamwork, and project planning.",
+    "knowledgeGained": "Improved understanding of Unity's component system, ScriptableObjects, navigation systems, physics, animation integration, scene management, and software development workflows.",
+    "future": "The long-term goal is to complete the main story, improve gameplay balance, add more environments, and release a polished PC version.",
+    "plannedFeatures": "Additional boss encounters, new weapons, elemental combinations, expanded quest lines, additional environments, improved character customization, and New Game Plus.",
+    "knownIssues": "Some enemy animations may occasionally fail to transition correctly. Certain environmental objects require additional collision testing. Performance may decrease in scenes containing large numbers of enemies.",
+    "minimumRequirements": "OS: Windows 10 64-bit; CPU: Intel Core i5-8400 or AMD Ryzen 5 2600; RAM: 8 GB; GPU: NVIDIA GTX 1060 or AMD RX 580; Storage: 25 GB available space.",
+    "recommendedRequirements": "OS: Windows 11 64-bit; CPU: Intel Core i7-10700 or AMD Ryzen 7 3700X; RAM: 16 GB; GPU: NVIDIA RTX 3060 or AMD RX 6700 XT; Storage: 25 GB SSD space.",
+    "websiteLink": "https://example.com/echoes-of-the-fallen",
+    "githubLink": "https://github.com/example/echoes-of-the-fallen",
+    "storeLink": "https://store.steampowered.com/app/0000000/Echoes_of_the_Fallen/",
+    "documentationLink": "https://example.com/echoes-of-the-fallen/documentation",
+    "videoLink": "https://www.youtube.com/watch?v=00000000000",
+    "gameVideos": "Gameplay Trailer, Combat Demonstration, Development Update, Environment Showcase, Technical Demonstration.",
+    "videoDescription": "Gameplay recordings demonstrate exploration, combat, magical abilities, enemy encounters, development progress, and technical systems.",
+    "downloadLink": "https://example.com/downloads/echoes-of-the-fallen",
+    "demoLink": "https://example.com/demo/echoes-of-the-fallen",
+    "downloadInformation": "A fictional Windows PC build is planned for testing. No actual download is available.",
+    "credits": "Echoes of the Fallen is a fictional testing project. All developer and contributor credits are placeholder information.",
+    "musicCredits": "Alex Rivers - Original Soundtrack. Fictional test credit.",
+    "assetCredits": "Fallen Kingdom Asset Collection. Fictional placeholder environment, character, and interface assets.",
+    "supportedLanguages": "English, French, German, Spanish, Japanese",
+    "additionalInformation": "This project contains fictional information intended to test project descriptions, information sections, links, technical details, development information, image galleries, and video galleries.",
+    "additionalNotes": "All names, dates, URLs, credits, platforms, requirements, and development details are fictional test data. External links are placeholders and are not verified.",
+    "projectId": "project_1795501471259_mzhp7k8",
+    "title": "asfasfas",
+    "projectImages": {
+        "cover": "asfasfas/images/cover images/cover_1.png",
+        "screenshots": [
+            {
+                "name": "Gameplay Screenshot 01",
+                "path": "project_1795071175192_tdp2p37/image/screenshots/screenshot_01.png",
+                "tag": "gameplay"
+            },
+            {
+                "name": "Gameplay Screenshot 02",
+                "path": "project_1795071175192_tdp2p37/image/screenshots/screenshot_02.png",
+                "tag": "gameplay"
+            },
+            {
+                "name": "Gameplay Screenshot 03",
+                "path": "project_1795071175192_tdp2p37/image/screenshots/screenshot_03.png",
+                "tag": "gameplay"
+            },
+            {
+                "name": "Gameplay Screenshot 04",
+                "path": "project_1795071175192_tdp2p37/image/screenshots/screenshot_04.png",
+                "tag": "gameplay"
+            },
+            {
+                "name": "Gameplay Screenshot 05",
+                "path": "project_1795071175192_tdp2p37/image/screenshots/screenshot_05.png",
+                "tag": "gameplay"
+            },
+            {
+                "name": "Gameplay Screenshot 06",
+                "path": "project_1795071175192_tdp2p37/image/screenshots/screenshot_06.png",
+                "tag": "gameplay"
+            },
+            {
+                "name": "Gameplay Screenshot 07",
+                "path": "project_1795071175192_tdp2p37/image/screenshots/screenshot_07.png",
+                "tag": "gameplay"
+            },
+            {
+                "name": "Gameplay Screenshot 08",
+                "path": "project_1795071175192_tdp2p37/image/screenshots/screenshot_08.png",
+                "tag": "gameplay"
+            },
+            {
+                "name": "Gameplay Screenshot 09",
+                "path": "project_1795071175192_tdp2p37/image/screenshots/screenshot_09.png",
+                "tag": "gameplay"
+            },
+            {
+                "name": "Gameplay Screenshot 10",
+                "path": "project_1795071175192_tdp2p37/image/screenshots/screenshot_10.png",
+                "tag": "gameplay"
+            }
+        ],
+        "gameplayImages": [],
+        "environmentImages": [
+            {
+                "name": "Environment Image 01",
+                "path": "project_1795071175192_tdp2p37/image/environment/environment_01.png",
+                "tag": "environment"
+            },
+            {
+                "name": "Environment Image 02",
+                "path": "project_1795071175192_tdp2p37/image/environment/environment_02.png",
+                "tag": "environment"
+            },
+            {
+                "name": "Environment Image 03",
+                "path": "project_1795071175192_tdp2p37/image/environment/environment_03.png",
+                "tag": "environment"
+            },
+            {
+                "name": "Environment Image 04",
+                "path": "project_1795071175192_tdp2p37/image/environment/environment_04.png",
+                "tag": "environment"
+            },
+            {
+                "name": "Environment Image 05",
+                "path": "project_1795071175192_tdp2p37/image/environment/environment_05.png",
+                "tag": "environment"
+            },
+            {
+                "name": "Environment Image 06",
+                "path": "project_1795071175192_tdp2p37/image/environment/environment_06.png",
+                "tag": "environment"
+            },
+            {
+                "name": "Environment Image 07",
+                "path": "project_1795071175192_tdp2p37/image/environment/environment_07.png",
+                "tag": "environment"
+            },
+            {
+                "name": "Environment Image 08",
+                "path": "project_1795071175192_tdp2p37/image/environment/environment_08.png",
+                "tag": "environment"
+            },
+            {
+                "name": "Environment Image 09",
+                "path": "project_1795071175192_tdp2p37/image/environment/environment_09.png",
+                "tag": "environment"
+            },
+            {
+                "name": "Environment Image 10",
+                "path": "project_1795071175192_tdp2p37/image/environment/environment_10.png",
+                "tag": "environment"
+            }
+        ],
+        "characterImages": [
+            {
+                "name": "Character Image 01",
+                "path": "project_1795071175192_tdp2p37/image/characters/character_01.png",
+                "tag": "character"
+            },
+            {
+                "name": "Character Image 02",
+                "path": "project_1795071175192_tdp2p37/image/characters/character_02.png",
+                "tag": "character"
+            },
+            {
+                "name": "Character Image 03",
+                "path": "project_1795071175192_tdp2p37/image/characters/character_03.png",
+                "tag": "character"
+            },
+            {
+                "name": "Character Image 04",
+                "path": "project_1795071175192_tdp2p37/image/characters/character_04.png",
+                "tag": "character"
+            },
+            {
+                "name": "Character Image 05",
+                "path": "project_1795071175192_tdp2p37/image/characters/character_05.png",
+                "tag": "character"
+            }
+        ],
+        "uiImages": [
+            {
+                "name": "User Interface Image 01",
+                "path": "project_1795071175192_tdp2p37/image/ui/ui_01.png",
+                "tag": "ui"
+            },
+            {
+                "name": "User Interface Image 02",
+                "path": "project_1795071175192_tdp2p37/image/ui/ui_02.png",
+                "tag": "ui"
+            },
+            {
+                "name": "User Interface Image 03",
+                "path": "project_1795071175192_tdp2p37/image/ui/ui_03.png",
+                "tag": "ui"
+            },
+            {
+                "name": "User Interface Image 04",
+                "path": "project_1795071175192_tdp2p37/image/ui/ui_04.png",
+                "tag": "ui"
+            },
+            {
+                "name": "User Interface Image 05",
+                "path": "project_1795071175192_tdp2p37/image/ui/ui_05.png",
+                "tag": "ui"
+            }
+        ],
+        "technicalImages": [
+            {
+                "name": "Technical Image 01",
+                "path": "project_1795071175192_tdp2p37/image/technical/technical_01.png",
+                "tag": "technical"
+            },
+            {
+                "name": "Technical Image 02",
+                "path": "project_1795071175192_tdp2p37/image/technical/technical_02.png",
+                "tag": "technical"
+            },
+            {
+                "name": "Technical Image 03",
+                "path": "project_1795071175192_tdp2p37/image/technical/technical_03.png",
+                "tag": "technical"
+            },
+            {
+                "name": "Technical Image 04",
+                "path": "project_1795071175192_tdp2p37/image/technical/technical_04.png",
+                "tag": "technical"
+            },
+            {
+                "name": "Technical Image 05",
+                "path": "project_1795071175192_tdp2p37/image/technical/technical_05.png",
+                "tag": "technical"
+            },
+            {
+                "name": "Technical Image 06",
+                "path": "project_1795071175192_tdp2p37/image/technical/technical_06.png",
+                "tag": "technical"
+            },
+            {
+                "name": "Technical Image 07",
+                "path": "project_1795071175192_tdp2p37/image/technical/technical_07.png",
+                "tag": "technical"
+            },
+            {
+                "name": "Technical Image 08",
+                "path": "project_1795071175192_tdp2p37/image/technical/technical_08.png",
+                "tag": "technical"
+            },
+            {
+                "name": "Technical Image 09",
+                "path": "project_1795071175192_tdp2p37/image/technical/technical_09.png",
+                "tag": "technical"
+            },
+            {
+                "name": "Technical Image 10",
+                "path": "project_1795071175192_tdp2p37/image/technical/technical_10.png",
+                "tag": "technical"
+            }
+        ],
+        "others": []
+    },
+    "projectVideos": {
+        "gameplayVideos": [
+            {
+                "name": "Gameplay Video 01",
+                "description": "A gameplay recording showcasing the core gameplay mechanics and player interactions.",
+                "path": "project_1795071175192_tdp2p37/video/gameplay/gameplay_01.mp4",
+                "tag": "gameplay"
+            },
+            {
+                "name": "Gameplay Video 02",
+                "description": "A gameplay recording demonstrating additional gameplay features and in-game activities.",
+                "path": "project_1795071175192_tdp2p37/video/gameplay/gameplay_02.mp4",
+                "tag": "gameplay"
+            },
+            {
+                "name": "Gameplay Video 03",
+                "description": "A gameplay recording highlighting different situations, mechanics, and player experiences.",
+                "path": "project_1795071175192_tdp2p37/video/gameplay/gameplay_03.mp4",
+                "tag": "gameplay"
+            },
+            {
+                "name": "Gameplay Video 04",
+                "description": "A gameplay recording showing further examples of the game's features and gameplay.",
+                "path": "project_1795071175192_tdp2p37/video/gameplay/gameplay_04.mp4",
+                "tag": "gameplay"
+            }
+        ],
+        "developmentVideos": [
+            {
+                "name": "Development Video 01",
+                "description": "A behind-the-scenes look at the game's development process and project progress.",
+                "path": "project_1795071175192_tdp2p37/video/development/development_01.mp4",
+                "tag": "development"
+            },
+            {
+                "name": "Development Video 02",
+                "description": "A development recording showcasing additional work, improvements, and changes made to the project.",
+                "path": "project_1795071175192_tdp2p37/video/development/development_02.mp4",
+                "tag": "development"
+            }
+        ],
+        "technicalDemonstrations": [
+            {
+                "name": "Technical Demonstration 01",
+                "description": "A technical demonstration showcasing the systems, tools, and functionality used in the project.",
+                "path": "project_1795071175192_tdp2p37/video/technical/technical_01.mp4",
+                "tag": "technical"
+            },
+            {
+                "name": "Technical Demonstration 02",
+                "description": "A technical demonstration highlighting additional programming features and technical implementations.",
+                "path": "project_1795071175192_tdp2p37/video/technical/technical_02.mp4",
+                "tag": "technical"
+            }
+        ],
+        "trailers": [
+            {
+                "name": "Project Trailer 01",
+                "description": "An introduction to the project, showcasing its gameplay, visuals, and main features.",
+                "path": "project_1795071175192_tdp2p37/video/trailers/trailer_01.mp4",
+                "tag": "trailer"
+            },
+            {
+                "name": "Project Trailer 02",
+                "description": "A second project trailer highlighting additional content, features, and presentation.",
+                "path": "project_1795071175192_tdp2p37/video/trailers/trailer_02.mp4",
+                "tag": "trailer"
+            }
+        ],
+        "others": []
+    },
+    "coverImage": "asfasfas/images/cover images/cover_1.png",
+    "screenshots": [],
+    "createdAt": "2026-11-24T06:24:31.259Z",
+    "updatedAt": "2026-11-24T06:24:31.264Z",
+    "exportFolder": "asfasfas",
+    "exportFormat": "GitHub Project Folder",
+    "lastSaved": "2026-11-24T06:24:48.260Z"
+}

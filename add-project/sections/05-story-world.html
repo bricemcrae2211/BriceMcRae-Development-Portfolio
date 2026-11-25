@@ -1,0 +1,80 @@
+<!-- =====================================================
+     SECTION 03: STORY AND WORLD
+===================================================== -->
+
+<link rel="stylesheet" href="sections/css/15-external-links-downloads.css">
+
+<section class="project-section dropdown-section"
+         id="storyWorldSection"> 
+
+    <button type="button"
+            class="dropdown-header"
+            aria-expanded="false"
+            aria-controls="storyDropdown">
+
+        <span>3. Story and World</span>
+        <span class="dropdown-arrow">▼</span>
+
+    </button>
+
+    <div class="dropdown-content"
+         id="storyDropdown"
+         hidden>
+
+        <div class="form-group">
+            <label for="story">Story</label>
+            <textarea id="story"
+                      name="story"
+                      placeholder="Describe the project's story..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="worldDescription">World Description</label>
+            <textarea id="worldDescription"
+                      name="worldDescription"
+                      placeholder="Describe the world and its setting..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="worldHistory">World History</label>
+            <textarea id="worldHistory"
+                      name="worldHistory"
+                      placeholder="Describe the history of the world..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="characters">Characters</label>
+            <textarea id="characters"
+                      name="characters"
+                      placeholder="Describe the important characters..."></textarea>
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+(function () {
+    "use strict";
+
+    const section = document.getElementById("storyWorldSection");
+
+    if (!section || section.dataset.dropdownInitialized === "true") {
+        return;
+    }
+
+    section.dataset.dropdownInitialized = "true";
+
+    const header = section.querySelector(".dropdown-header");
+    const content = section.querySelector(".dropdown-content");
+
+    if (!header || !content) return;
+
+    header.addEventListener("click", function () {
+        const isExpanded = header.getAttribute("aria-expanded") === "true";
+
+        header.setAttribute("aria-expanded", String(!isExpanded));
+        content.hidden = isExpanded;
+    });
+})();
+</script>

@@ -1,0 +1,489 @@
+
+/* =====================================
+   GLOBAL STYLES
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    min-height: 100%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+
+    color: #f1f1f1;
+
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+
+    overflow-x: hidden;
+}
+
+/* =====================================
+   MAIN CONTENT
+===================================== */
+
+main {
+    display: block;
+
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+
+    height: auto;
+    min-height: 0;
+
+    margin: 0;
+    padding: 0;
+}
+
+/* =====================================
+   FUTURE GAME DEVELOPMENT
+===================================== */
+
+.future-game-development {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+
+    height: auto;
+    min-height: 0;
+
+    margin: 0;
+    padding: clamp(20px, 4vw, 50px);
+
+}
+
+/* =====================================
+   PAGE HEADING
+===================================== */
+
+.future-heading {
+    width: 100%;
+    min-width: 0;
+
+    height: auto;
+    margin: 0;
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #333;
+}
+
+.future-heading h1 {
+    margin: 0 0 15px;
+
+    color: #fff;
+
+    font-size: clamp(25px, 4vw, 38px);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: 1px;
+
+    overflow-wrap: break-word;
+}
+
+.future-heading p {
+    width: 100%;
+    max-width: none;
+
+    margin: 0;
+
+    color: #aaa;
+
+    font-size: clamp(14px, 1.5vw, 17px);
+    line-height: 1.8;
+}
+
+.section-title {
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+/* =====================================
+   EXPANDABLE SECTIONS
+===================================== */
+
+.future-section {
+    display: block;
+
+    width: 100%;
+    min-width: 0;
+
+    height: auto;
+    min-height: 0;
+
+    margin: 0;
+
+    background: #1a1a1a;
+
+    border: 1px solid #303030;
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.future-section:hover {
+    background: #202020;
+    border-color: #555;
+}
+
+/* =====================================
+   EXPANDABLE SECTION HEADINGS
+===================================== */
+
+.future-section summary {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    min-width: 0;
+
+    min-height: 0;
+    height: auto;
+
+    padding: 17px 50px 17px 20px;
+
+    cursor: pointer;
+    list-style: none;
+
+    color: #fff;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+/* Remove default browser marker */
+
+.future-section summary::-webkit-details-marker {
+    display: none;
+}
+
+.future-section summary::marker {
+    content: "";
+}
+
+/* Custom expand icon */
+
+.future-section summary::after {
+    content: "+";
+
+    position: absolute;
+    right: 20px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #aaa;
+
+    font-size: 25px;
+    font-weight: normal;
+
+    transition:
+        transform 0.2s ease,
+        color 0.2s ease;
+}
+
+/* Expanded icon */
+
+.future-section[open] summary::after {
+    content: "−";
+    color: #fff;
+}
+
+/* Section heading */
+
+.future-section summary h2 {
+    display: block;
+
+    width: 100%;
+    min-width: 0;
+
+    margin: 0;
+
+    color: #f5f5f5;
+
+    font-size: clamp(15px, 2vw, 18px);
+    font-weight: 700;
+
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+/* Hover heading */
+
+.future-section summary:hover {
+    background: #282828;
+}
+
+.future-section summary:hover h2 {
+    color: #fff;
+}
+
+.future-section summary:hover::after {
+    color: #fff;
+}
+
+/* Keyboard accessibility */
+
+.future-section summary:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: -3px;
+}
+
+/* =====================================
+   EXPANDED SECTION CONTENT
+===================================== */
+
+.future-section-content {
+    display: block;
+
+    width: 100%;
+    min-width: 0;
+
+    height: auto;
+    min-height: 0;
+
+    padding: 5px 20px 22px;
+
+    border-top: 1px solid #303030;
+}
+
+.future-section-content p {
+    margin: 0 0 15px;
+
+    color: #bcbcbc;
+
+    font-size: 15px;
+    line-height: 1.9;
+
+    overflow-wrap: anywhere;
+}
+
+.future-section-content p:last-child {
+    margin-bottom: 0;
+}
+
+.future-section-content ul {
+    margin: 0 0 15px;
+    padding-left: 25px;
+
+    color: #bcbcbc;
+
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.future-section-content li {
+    padding-left: 3px;
+    overflow-wrap: anywhere;
+}
+
+/* =====================================
+   EXPANDED SECTION APPEARANCE
+===================================== */
+
+.future-section[open] {
+    background: #1d1d1d;
+    border-color: #505050;
+}
+
+.future-section[open] summary {
+    background: #242424;
+}
+
+.future-section[open] summary h2 {
+    color: #fff;
+}
+
+/* =====================================
+   REMOVE UNNECESSARY EMPTY SPACE
+===================================== */
+
+.future-game-development > * {
+    flex-shrink: 0;
+}
+
+.future-game-development > *:last-child {
+    margin-bottom: 0;
+}
+
+.future-section:last-child {
+    margin-bottom: 0;
+}
+
+/* Backgrounds follow content */
+
+body,
+main,
+.future-game-development {
+    height: auto;
+}
+
+/* =====================================
+   TABLET RESPONSIVE
+===================================== */
+
+@media (max-width: 800px) {
+
+    .future-game-development {
+        padding: 30px 22px;
+        gap: 18px;
+    }
+
+    .future-heading {
+        padding-bottom: 17px;
+    }
+
+    .future-section summary {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+}
+
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width: 550px) {
+
+    .future-game-development {
+        padding: 22px 14px;
+        gap: 15px;
+    }
+
+    .future-heading h1 {
+        font-size: clamp(23px, 7vw, 30px);
+    }
+
+    .future-heading p {
+        font-size: 14px;
+    }
+
+    .future-section {
+        border-radius: 6px;
+    }
+
+    .future-section summary {
+        padding: 15px 42px 15px 14px;
+    }
+
+    .future-section summary h2 {
+        font-size: 15px;
+    }
+
+    .future-section summary::after {
+        right: 14px;
+        font-size: 22px;
+    }
+
+    .future-section-content {
+        padding: 12px 14px 18px;
+    }
+
+    .future-section-content p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .future-section-content ul {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+}
+
+/* =====================================
+   SMALL MOBILE
+===================================== */
+
+@media (max-width: 350px) {
+
+    .future-game-development {
+        padding: 18px 10px;
+        gap: 12px;
+    }
+
+    .future-heading h1 {
+        font-size: 22px;
+    }
+
+    .future-section summary {
+        padding: 13px 38px 13px 12px;
+    }
+
+    .future-section summary h2 {
+        font-size: 14px;
+    }
+
+    .future-section-content {
+        padding: 10px 12px 15px;
+    }
+
+    .future-section-content p {
+        font-size: 13px;
+    }
+
+    .future-section-content ul {
+        font-size: 13px;
+    }
+}
+
+/* =====================================
+   RESPONSIVE WIDTH SAFETY
+===================================== */
+
+main,
+.future-game-development,
+.future-heading,
+.future-section,
+.future-section summary,
+.future-section-content {
+    min-width: 0;
+}
+
+.future-game-development p,
+.future-game-development h1,
+.future-game-development h2,
+.future-game-development li {
+    overflow-wrap: anywhere;
+}
+
+/* =====================================
+   REDUCED MOTION ACCESSIBILITY
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}

@@ -1,0 +1,437 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Demo Reel Video Upload</title>
+
+    <link rel="stylesheet" href="demo-reel-upload.css">
+</head>
+
+<body>
+
+    <div class="upload-container">
+
+        <!-- =========================================
+             DESCRIPTION BOX
+        ========================================== -->
+
+        <div class="upload-description">
+
+            <div class="upload-description-heading">
+                <span class="upload-description-label">
+                    PORTFOLIO MEDIA
+                </span>
+
+                <h2>Update Demo Reel</h2>
+            </div>
+
+            <p>
+                Upload a new Demo Reel video to replace the current
+                version displayed on your portfolio. Select a video
+                from your device or drag and drop it into the upload
+                area below.
+            </p>
+
+            <div class="upload-requirements">
+
+                <div class="requirement-item">
+                    <span class="requirement-icon">MP4</span>
+                    <span>Video format</span>
+                </div>
+
+                <div class="requirement-item">
+                    <span class="requirement-icon">1 GB</span>
+                    <span>Maximum file size</span>
+                </div>
+
+                <div class="requirement-item">
+                    <span class="requirement-icon">↻</span>
+                    <span>Replaces existing video</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================================
+             FILE INPUT
+        ========================================== -->
+
+        <input
+            type="file"
+            id="videoFile"
+            accept="video/*"
+        >
+
+
+        <!-- =========================================
+             FILE SELECTION PANEL
+        ========================================== -->
+
+        <div class="file-panel">
+
+            <button
+                class="file-button"
+                type="button"
+                id="chooseButton">
+
+                Choose File
+
+            </button>
+
+            <div class="file-info" id="fileInfo">
+
+                <div class="file-name" id="fileName">
+                    No file selected
+                </div>
+
+                <div class="file-details" id="fileDetails">
+                    Drag and drop a video here or choose a file
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================================
+             UPLOAD BUTTON
+        ========================================== -->
+
+        <button
+            class="upload-button"
+            type="button"
+            id="uploadButton"
+            disabled>
+
+            Upload Video
+
+        </button>
+
+
+        <!-- =========================================
+             UPLOAD STATUS
+        ========================================== -->
+
+        <p
+            id="uploadStatus"
+            role="status"
+            aria-live="polite">
+        </p>
+
+    </div>
+
+
+    <!-- =============================================
+         VIDEO UPLOAD JAVASCRIPT
+    ============================================== -->
+
+    <script>
+
+        "use strict";
+
+        /* =========================================
+           ELEMENTS
+        ========================================== */
+
+        const videoFile = document.getElementById("videoFile");
+        const chooseButton = document.getElementById("chooseButton");
+        const fileInfo = document.getElementById("fileInfo");
+        const fileName = document.getElementById("fileName");
+        const fileDetails = document.getElementById("fileDetails");
+        const uploadButton = document.getElementById("uploadButton");
+        const uploadStatus = document.getElementById("uploadStatus");
+
+
+        /* =========================================
+           SETTINGS
+        ========================================== */
+
+        const MAX_FILE_SIZE = 1024 * 1024 * 1024;
+
+        const UPLOAD_URL = "/api/admin/replace-video";
+
+        let selectedVideo = null;
+        let uploading = false;
+
+
+        /* =========================================
+           FILE SIZE FORMAT
+        ========================================== */
+
+        function formatFileSize(bytes) {
+
+            if (bytes >= 1024 * 1024 * 1024) {
+                return (bytes / (1024 * 1024 * 1024)).toFixed(2) + " GB";
+            }
+
+            if (bytes >= 1024 * 1024) {
+                return (bytes / (1024 * 1024)).toFixed(2) + " MB";
+            }
+
+            return (bytes / 1024).toFixed(2) + " KB";
+
+        }
+
+
+        /* =========================================
+           RESET FILE SELECTION
+        ========================================== */
+
+        function resetFileSelection() {
+
+            selectedVideo = null;
+
+            videoFile.value = "";
+
+            fileName.textContent = "No file selected";
+
+            fileDetails.textContent =
+                "Drag and drop a video here or choose a file";
+
+            uploadButton.disabled = true;
+
+        }
+
+
+        /* =========================================
+           SELECT VIDEO
+        ========================================== */
+
+        function showFile(file) {
+
+            if (!file || uploading) {
+                return;
+            }
+
+            if (!file.type || !file.type.startsWith("video/")) {
+
+                uploadStatus.textContent =
+                    "Please select a supported video file.";
+
+                return;
+
+            }
+
+            if (file.size > MAX_FILE_SIZE) {
+
+                uploadStatus.textContent =
+                    "The video exceeds the 1 GB upload limit.";
+
+                return;
+
+            }
+
+            if (file.size === 0) {
+
+                uploadStatus.textContent =
+                    "The selected file is empty.";
+
+                return;
+
+            }
+
+            selectedVideo = file;
+
+            const transfer = new DataTransfer();
+
+            transfer.items.add(file);
+
+            videoFile.files = transfer.files;
+
+            fileName.textContent = file.name;
+
+            fileDetails.textContent =
+                "Size: " + formatFileSize(file.size) +
+                " | Type: " + file.type;
+
+            uploadStatus.textContent = "";
+            uploadStatus.className = "";
+
+            uploadButton.disabled = false;
+
+            console.log("[VIDEO] Selected:", file.name);
+
+        }
+
+
+        /* =========================================
+           CHOOSE FILE
+        ========================================== */
+
+        chooseButton.addEventListener("click", function () {
+
+            if (!uploading) {
+                videoFile.click();
+            }
+
+        });
+
+
+        videoFile.addEventListener("change", function () {
+
+            if (videoFile.files.length > 0) {
+                showFile(videoFile.files[0]);
+            }
+
+        });
+
+
+        /* =========================================
+           DRAG AND DROP
+        ========================================== */
+
+        fileInfo.addEventListener("dragover", function (event) {
+
+            event.preventDefault();
+
+            if (!uploading) {
+                fileInfo.classList.add("dragover");
+            }
+
+        });
+
+
+        fileInfo.addEventListener("dragleave", function (event) {
+
+            if (!fileInfo.contains(event.relatedTarget)) {
+                fileInfo.classList.remove("dragover");
+            }
+
+        });
+
+
+        fileInfo.addEventListener("drop", function (event) {
+
+            event.preventDefault();
+
+            fileInfo.classList.remove("dragover");
+
+            if (uploading) {
+                return;
+            }
+
+            const file = event.dataTransfer.files[0];
+
+            if (file) {
+                showFile(file);
+            }
+
+        });
+
+
+        /* =========================================
+           UPLOAD VIDEO TO NODE SERVER
+        ========================================== */
+
+        uploadButton.addEventListener("click", async function () {
+
+            if (!selectedVideo || uploading) {
+                return;
+            }
+
+            uploading = true;
+
+            uploadButton.disabled = true;
+            chooseButton.disabled = true;
+
+            uploadStatus.className = "";
+
+            uploadStatus.textContent =
+                "Uploading video. Please wait...";
+
+            const formData = new FormData();
+
+            formData.append(
+                "video",
+                selectedVideo,
+                selectedVideo.name
+            );
+
+            try {
+
+                console.log("[VIDEO] Sending video to server...");
+
+                const response = await fetch(UPLOAD_URL, {
+                    method: "POST",
+                    body: formData,
+                    cache: "no-store"
+                });
+
+                const responseText = await response.text();
+
+                let result;
+
+                try {
+
+                    result = JSON.parse(responseText);
+
+                } catch (error) {
+
+                    throw new Error(
+                        "The server returned an invalid response. Check your Node.js server."
+                    );
+
+                }
+
+                if (!response.ok || !result.success) {
+
+                    throw new Error(
+                        result.message ||
+                        "The server could not upload the video."
+                    );
+
+                }
+
+                console.log("[VIDEO] Upload successful.");
+                console.log("[VIDEO] Saved file:", result.video);
+
+                uploadStatus.className = "upload-success";
+
+                uploadStatus.textContent =
+                    "Success! Your video was saved as demo-reel.mp4.";
+
+                resetFileSelection();
+
+                fileDetails.textContent =
+                    "Your new Demo Reel has been saved.";
+
+            } catch (error) {
+
+                console.error("[VIDEO] Upload failed:", error);
+
+                uploadStatus.className = "upload-error";
+
+                uploadStatus.textContent =
+                    "Upload failed: " + error.message;
+
+            } finally {
+
+                uploading = false;
+
+                uploadButton.disabled = !selectedVideo;
+
+                chooseButton.disabled = false;
+
+            }
+
+        });
+
+
+        /* =========================================
+           CONNECTION MESSAGE
+        ========================================== */
+
+        console.log(
+            "[VIDEO] Connected to " + UPLOAD_URL
+        );
+
+    </script>
+
+</body>
+</html>

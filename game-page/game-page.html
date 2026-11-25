@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Game details and development information - Brice McRae">
+    <meta name="author" content="Brice McRae">
+
+    <title>Game Details | Brice McRae</title>
+
+    <link rel="stylesheet" href="game-details.css">
+    <link rel="stylesheet" href="game-cover-image.css">
+
+    <!-- ACCOUNT JAVASCRIPT -->
+    <script src="../js/account/account-admin-button-off.js" defer></script>
+    <script src="../js/account/account-status.js" defer></script>
+    <script src="../js/account/save-account-status.js" defer></script>
+    <script src="../js/account/account-name-display.js" defer></script>
+    <script src="../js/account/account-overlay.js" defer></script>
+    <script src="../js/account/sign-out.js" defer></script>
+    <script src="../js/account/account-admin-button-off.js" defer></script>
+
+    <!-- GAME INFORMATION DEFINITIONS -->
+    <!-- <script src="game-page-information.js" defer></script> -->
+
+    <!-- LOAD THE 33 SECTION HTML FILES -->
+    <script src="game-section-loader.js" defer></script>
+
+    <!-- LOAD PROJECT JSON INFORMATION -->
+    <!-- <script src="game-information-loader/game-information-loader.js" defer></script> -->
+
+    <!-- PROJECT COVER IMAGE LOADER -->
+    <script src="cover-photo-loader.js" defer></script>
+
+    <!-- GALLERY SLOT LOADER -->
+    <script src="game-image-slot-loader.js" defer></script>
+
+    <!-- CARD HTML LOADER -->
+    <script src="game-image-card-loader.js" defer></script>
+
+    <!-- CARD IMAGE LOADER -->
+    <script src="game-image-card-image-loader.js" defer></script>
+
+    <!-- CARD INFORMATION LOADER -->
+    <!-- <script src="game-image-card-information-loader.js" defer></script> -->
+
+    <!-- OTHER GAME IMAGE FUNCTIONALITY -->
+    <!-- <script src="project-image-loader.js" defer></script> -->
+
+    <!-- JSON DEBUG -->
+<!-- PROJECT INFORMATION LOADER -->
+<script src="project-information-loader.js" defer></script>
+<script src="js/project-link-writer.js" defer></script>
+
+<!-- ABOUT INFORMATION WRITER -->
+<script src="js/project-information-writer.js" defer></script>
+
+<!-- JSON DEBUG -->
+<script src="json-debug.js" defer></script>
+
+        <script src="../js/portfolio/admin-button-controller.js" defer></script>
+
+    <!-- ADVERTISEMENT JAVASCRIPT -->
+    <script src="../js/portfolio/advertisement-loader.js" defer></script>
+
+
+</head>
+
+<body id="top">
+
+    <!-- JSON DEBUG -->
+    <section id="jsonDebug">
+
+        <button
+            type="button"
+            id="jsonDebugToggle"
+            aria-expanded="false">
+            SHOW JSON DEBUG
+        </button>
+
+        <div id="jsonDebugPanel" hidden>
+            <h2>JSON DEBUG</h2>
+            <pre id="jsonDebugOutput">No JSON data available.</pre>
+        </div>
+
+    </section>
+
+    <!-- ACCOUNT OVERLAY -->
+    <div id="accountOverlay" aria-hidden="true">
+
+        <iframe
+            id="accountFrame"
+            title="Account"
+            src="../account/account.html">
+        </iframe>
+
+    </div>
+
+    <!-- HEADER -->
+    <header class="site-header">
+
+        <div class="header-brand">
+
+            <a href="../index.html" class="logo">
+                BRICE MCRAE
+            </a>
+
+            <span class="header-subtitle">
+                GAME DEVELOPMENT PORTFOLIO
+            </span>
+
+        </div>
+
+        <div class="header-actions">
+
+            <span
+                id="accountNameDisplay"
+                class="account-name-display"
+                aria-live="polite">
+                Signed Out
+            </span>
+
+            <button
+                type="button"
+                id="accountButton"
+                class="header-action-button account-button">
+                Sign In
+            </button>
+
+            <button
+                type="button"
+                id="adminToggle"
+                class="header-action-button admin-toggle-button"
+                aria-pressed="false"
+                hidden>
+                ADMIN : OFF
+            </button>
+
+        </div>
+
+    </header>
+
+    <!-- MAIN NAVIGATION -->
+    <nav class="main-navigation" aria-label="Main navigation">
+
+        <a href="../index.html">Home</a>
+        <a href="#overview">Overview</a>
+        <a href="#story">Story</a>
+        <a href="#gameplay">Gameplay</a>
+        <a href="#features">Features</a>
+        <a href="#technical">Technical</a>
+        <a href="#development">Development</a>
+        <a href="#gallery">Gallery</a>
+
+    </nav>
+<section class="game-section" id="about">
+
+    <h2>About This Game</h2>
+
+    <div id="aboutGameContent">
+        <p>Loading game information...</p>
+    </div>
+
+</section>
+    <!-- ADMINISTRATION TOOLBAR -->
+    <section
+        id="adminToolbar"
+        class="admin-toolbar"
+        aria-label="Game page administration"
+        hidden>
+
+        <div class="admin-toolbar-title">
+            GAME PAGE ADMINISTRATION
+        </div>
+
+        <div class="admin-toolbar-actions">
+
+            <span
+                id="adminToolbarStatus"
+                class="admin-toolbar-status"
+                aria-live="polite">
+                ADMIN INACTIVE
+            </span>
+
+            <button type="button" id="adminEditGameButton">
+                Edit Game Information
+            </button>
+
+            <button type="button" id="adminManageScreenshotsButton">
+                Manage Screenshots
+            </button>
+
+            <button type="button" id="adminManageVideosButton">
+                Manage Game Videos
+            </button>
+
+            <button type="button" id="adminManageDownloadsButton">
+                Manage Downloads
+            </button>
+
+            <button type="button" id="adminManageContentButton">
+                Manage Game Content
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- THREE-COLUMN PAGE LAYOUT -->
+    <div class="page-layout">
+
+        <!-- LEFT ADVERTISEMENTS -->
+        <aside class="side-ad side-ad-left" aria-label="Left advertisements">
+
+            <div
+                id="leftAdvertisementContainer"
+                class="advertisement-loader">
+
+                <div class="advertisement-slot" id="leftAd1"></div>
+                <div class="advertisement-slot" id="leftAd2"></div>
+                <div class="advertisement-slot" id="leftAd3"></div>
+                <div class="advertisement-slot" id="leftAd4"></div>
+
+            </div>
+
+        </aside>
+
+        <!-- MAIN GAME PAGE -->
+        <main class="game-page">
+
+            <!-- GAME BANNER -->
+            <section class="game-banner" id="overview">
+
+                <div class="game-banner-background"></div>
+
+                <div class="game-banner-content">
+
+                    <div class="game-tags" id="gameTags">
+
+                        <span class="game-tag">NA</span>
+
+                    </div>
+
+                    <h1 id="gameTitle">
+                        NA
+                    </h1>
+
+                    <p id="gameDescription">
+                        NA
+                    </p>
+
+                </div>
+
+            </section>
+
+            <!-- GAME CONTENT LAYOUT -->
+            <div class="game-layout">
+
+                <!-- GAME SIDEBAR -->
+                <aside class="game-sidebar">
+
+                    <!-- GAME COVER -->
+                    <section class="game-cover-section">
+
+                        <div class="game-cover-container" id="gameCoverContainer">
+
+                            <img
+                                id="coverImage"
+                                class="game-cover-image"
+                                alt="Game cover"
+                                loading="eager"
+                                decoding="async"
+                                hidden
+                            >
+
+                            <img
+                                id="coverImageMissing"
+                                class="cover-image-missing"
+                                alt="Game cover unavailable"
+                                hidden
+                            >
+
+                        </div>
+
+                    </section>
+
+                    <!-- GAME INFORMATION -->
+                    <section class="game-sidebar-section">
+
+                        <h2>Game Information</h2>
+
+                        <div class="information-list" id="gameSidebarInformation">
+
+                            <div class="information-row">
+                                <span>Developer</span>
+                                <strong id="sidebarDeveloper">NA</strong>
+                            </div>
+
+                            <div class="information-row">
+                                <span>Engine</span>
+                                <strong id="sidebarEngine">NA</strong>
+                            </div>
+
+                            <div class="information-row">
+                                <span>Language</span>
+                                <strong id="sidebarLanguage">NA</strong>
+                            </div>
+
+                            <div class="information-row">
+                                <span>Platform</span>
+                                <strong id="sidebarPlatform">NA</strong>
+                            </div>
+
+                            <div class="information-row">
+                                <span>Release Date</span>
+                                <strong id="sidebarReleaseDate">NA</strong>
+                            </div>
+
+                            <div class="information-row">
+                                <span>Status</span>
+                                <strong id="sidebarStatus">NA</strong>
+                            </div>
+
+                            <div class="information-row">
+                                <span>Genre</span>
+                                <strong id="sidebarGenre">NA</strong>
+                            </div>
+
+                            <div class="information-row">
+                                <span>Game Mode</span>
+                                <strong id="sidebarGameMode">NA</strong>
+                            </div>
+
+                            <div class="information-row">
+                                <span>Perspective</span>
+                                <strong id="sidebarPerspective">NA</strong>
+                            </div>
+
+                            <div class="information-row">
+                                <span>Age Rating</span>
+                                <strong id="sidebarAgeRating">NA</strong>
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                    <!-- QUICK NAVIGATION -->
+                    <section class="game-sidebar-section">
+
+                        <h2>Quick Navigation</h2>
+
+                        <div class="sidebar-navigation">
+
+                            <a href="#about">About This Game</a>
+                            <a href="#story">Story and World</a>
+                            <a href="#gameplay">Gameplay</a>
+                            <a href="#features">Game Features</a>
+                            <a href="#characters">Characters</a>
+                            <a href="#abilities">Abilities</a>
+                            <a href="#anchors">Special Ability System</a>
+                            <a href="#combat">Combat System</a>
+                            <a href="#enemies">Enemy AI</a>
+                            <a href="#progression">Progression</a>
+                            <a href="#arena">Arena and Environment</a>
+                            <a href="#camera">Camera Systems</a>
+                            <a href="#controls">Controls</a>
+                            <a href="#technical">Technical Overview</a>
+                            <a href="#technicalSystems">Technical Systems</a>
+                            <a href="#challenges">Technical Challenges</a>
+                            <a href="#development">Development</a>
+                            <a href="#milestones">Milestones</a>
+                            <a href="#contributions">Contributions</a>
+                            <a href="#team">Team</a>
+                            <a href="#tools">Development Tools</a>
+                            <a href="#learning">Learning Outcomes</a>
+                            <a href="#future">Future Development</a>
+                            <a href="#requirements">Requirements</a>
+                            <a href="#links">External Links</a>
+                            <a href="#downloads">Downloads</a>
+                            <a href="#credits">Credits</a>
+                            <a href="#gallery">Gallery</a>
+                            <a href="#videos">Videos</a>
+                            <a href="#documents">Documents</a>
+                            <a href="#additional">Additional Information</a>
+                            <a href="#ratings">Ratings</a>
+                            <a href="#comments">Comments</a>
+
+                        </div>
+
+                    </section>
+
+                    <!-- DEVELOPMENT DETAILS -->
+                    <section class="game-sidebar-section">
+
+                        <h2>Development Details</h2>
+
+                        <div class="information-list" id="gameDevelopmentInformation">
+
+                            <div class="information-row">
+                                <span>Project Type</span>
+                                <strong id="sidebarProjectType">NA</strong>
+                            </div>
+
+                            <div class="information-row">
+                                <span>Developer</span>
+                                <strong id="sidebarDevelopmentRole">NA</strong>
+                            </div>
+
+                            <div class="information-row">
+                                <span>Team Size</span>
+                                <strong id="sidebarTeamSize">NA</strong>
+                            </div>
+
+                            <div class="information-row">
+                                <span>Build</span>
+                                <strong id="sidebarBuild">NA</strong>
+                            </div>
+
+                            <div class="information-row">
+                                <span>Last Updated</span>
+                                <strong id="sidebarLastUpdated">NA</strong>
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                </aside>
+
+                <!-- MAIN GAME INFORMATION -->
+                <main class="game-main-content" id="gameSectionsContainer">
+
+                    <div id="gameSectionsLoading">
+                        Loading game information...
+                    </div>
+
+                </main>
+
+            </div>
+
+        </main>
+
+        <!-- RIGHT ADVERTISEMENTS -->
+        <aside class="side-ad side-ad-right" aria-label="Right advertisements">
+
+            <div
+                id="rightAdvertisementContainer"
+                class="advertisement-loader">
+
+                <div class="advertisement-slot" id="rightAd1"></div>
+                <div class="advertisement-slot" id="rightAd2"></div>
+                <div class="advertisement-slot" id="rightAd3"></div>
+                <div class="advertisement-slot" id="rightAd4"></div>
+                <div class="advertisement-slot" id="rightAd5"></div>
+                <div class="advertisement-slot" id="rightAd6"></div>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div class="footer-brand">
+
+            <a href="../index.html" class="footer-logo">
+                BRICE MCRAE
+            </a>
+
+            <p>
+                Game Development and Programming Portfolio
+            </p>
+
+        </div>
+
+        <div class="footer-navigation">
+
+            <a href="../index.html">Home</a>
+            <a href="../index.html#projectsSectionContainer">Projects</a>
+            <a href="../index.html#aboutContact">About</a>
+            <a href="../index.html#contact">Contact</a>
+            <a href="../ads.html">Advertisements</a>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 Brice McRae. All rights reserved.
+            </p>
+
+            <a href="#top" class="footer-return">
+                Back to Top ↑
+            </a>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

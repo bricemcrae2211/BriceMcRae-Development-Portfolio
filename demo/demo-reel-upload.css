@@ -1,0 +1,355 @@
+/* =========================================
+   DEMO REEL UPLOAD
+========================================= */
+
+.upload-container,
+.upload-container * {
+    box-sizing: border-box;
+}
+
+.upload-container {
+    width: 100%;
+    min-height: 200px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    padding: 25px;
+
+    background: #080b10;
+
+    border: 1px solid #354052;
+    border-radius: 10px;
+
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+}
+
+
+/* =========================================
+   DEMO REEL DESCRIPTION BOX
+========================================= */
+
+.upload-container .upload-description {
+    width: 100%;
+
+    padding: 22px 24px;
+
+    background: linear-gradient(
+        135deg,
+        #111b2a,
+        #0c121d
+    );
+
+    border: 1px solid #354b68;
+    border-left: 4px solid #3987df;
+
+    border-radius: 8px;
+
+    text-align: left;
+}
+
+
+/* DESCRIPTION HEADING */
+
+.upload-container .upload-description-heading {
+    margin-bottom: 12px;
+}
+
+.upload-container .upload-description-label {
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    color: #69a9ff;
+
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.upload-container .upload-description h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+
+/* DESCRIPTION TEXT */
+
+.upload-container .upload-description p {
+    margin: 0;
+
+    max-width: 750px;
+
+    color: #b4c0d0;
+
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* UPLOAD REQUIREMENTS */
+
+.upload-container .upload-requirements {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 20px;
+    padding-top: 16px;
+
+    border-top: 1px solid #29384c;
+}
+
+.upload-container .requirement-item {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 8px 12px;
+
+    background: #151f2d;
+
+    border: 1px solid #293c54;
+    border-radius: 5px;
+
+    color: #c3cede;
+
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.upload-container .requirement-icon {
+    color: #69a9ff;
+
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   HIDE DEFAULT FILE INPUT
+========================================= */
+
+.upload-container #videoFile {
+    display: none;
+}
+
+
+/* =========================================
+   FILE PANEL
+========================================= */
+
+.upload-container .file-panel {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 15px;
+
+    background: #111722;
+
+    border: 1px solid #354052;
+    border-radius: 8px;
+}
+
+
+/* =========================================
+   CHOOSE FILE BUTTON
+========================================= */
+
+.upload-container .file-button {
+    flex-shrink: 0;
+
+    padding: 12px 20px;
+
+    background: #26364d;
+    color: #ffffff;
+
+    border: 1px solid #526985;
+    border-radius: 6px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+.upload-container .file-button:hover {
+    background: #354c6b;
+}
+
+.upload-container .file-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   FILE INFORMATION
+========================================= */
+
+.upload-container .file-info {
+    flex: 1;
+    min-width: 0;
+
+    padding: 15px;
+
+    background: #0b111b;
+
+    border: 1px dashed #526985;
+    border-radius: 6px;
+
+    text-align: center;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.upload-container .file-info.dragover {
+    background: #17283d;
+    border-color: #69a9ff;
+}
+
+.upload-container .file-name {
+    overflow-wrap: anywhere;
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.upload-container .file-details {
+    margin-top: 7px;
+
+    color: #aab3c2;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   UPLOAD BUTTON
+========================================= */
+
+.upload-container .upload-button {
+    width: 100%;
+
+    padding: 14px 20px;
+
+    background: #2367b5;
+    color: #ffffff;
+
+    border: 1px solid #3987df;
+    border-radius: 6px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.upload-container .upload-button:hover:not(:disabled) {
+    background: #3180d6;
+}
+
+.upload-container .upload-button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   UPLOAD STATUS
+========================================= */
+
+.upload-container #uploadStatus {
+    width: 100%;
+
+    min-height: 20px;
+
+    margin: 0;
+
+    text-align: center;
+
+    color: #aab3c2;
+
+    font-size: 13px;
+    line-height: 1.5;
+
+    overflow-wrap: anywhere;
+}
+
+.upload-container #uploadStatus.upload-success {
+    color: #65d995;
+}
+
+.upload-container #uploadStatus.upload-error {
+    color: #ff7777;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .upload-container {
+        padding: 15px;
+        gap: 14px;
+    }
+
+    .upload-container .upload-description {
+        padding: 18px;
+    }
+
+    .upload-container .upload-description h2 {
+        font-size: 19px;
+    }
+
+    .upload-container .upload-requirements {
+        flex-direction: column;
+    }
+
+    .upload-container .requirement-item {
+        width: 100%;
+    }
+
+    .upload-container .file-panel {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .upload-container .file-button {
+        width: 100%;
+    }
+
+    .upload-container .file-info {
+        width: 100%;
+    }
+
+}

@@ -1,0 +1,95 @@
+
+<!-- =====================================================
+     SECTION 10: DEVELOPMENT TOOLS AND LEARNING
+     COMPLETE HTML, CSS AND JAVASCRIPT
+===================================================== -->
+
+<link rel="stylesheet" href="sections/css/15-external-links-downloads.css">
+
+<section class="project-section dropdown-section"
+         id="toolsSection">
+
+    <button type="button"
+            class="dropdown-header"
+            aria-expanded="false"
+            aria-controls="toolsDropdown">
+
+        <span>10. Development Tools and Learning</span>
+        <span class="dropdown-arrow">▼</span>
+
+    </button>
+
+    <div class="dropdown-content"
+         id="toolsDropdown"
+         hidden>
+
+        <div class="form-group">
+            <label for="developmentTools">Development Tools</label>
+            <textarea id="developmentTools"
+                      placeholder="List development tools..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="versionControl">Version Control</label>
+            <textarea id="versionControl"
+                      placeholder="Describe Git or other version control..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="softwareTools">Software and Applications</label>
+            <textarea id="softwareTools"
+                      placeholder="List software and applications..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="learning">Learning Outcomes</label>
+            <textarea id="learning"
+                      placeholder="Describe what you learned..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="skillsDeveloped">Skills Developed</label>
+            <textarea id="skillsDeveloped"
+                      placeholder="List skills developed..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="knowledgeGained">Knowledge Gained</label>
+            <textarea id="knowledgeGained"
+                      placeholder="Describe knowledge gained..."></textarea>
+        </div>
+
+    </div>
+</section>
+
+<script>
+(function () {
+    "use strict";
+
+    const section = document.getElementById("toolsSection");
+
+    if (!section || section.dataset.toolsInitialized === "true") {
+        return;
+    }
+
+    const header = section.querySelector(".dropdown-header");
+    const content = section.querySelector("#toolsDropdown");
+
+    if (!header || !content) return;
+
+    section.dataset.toolsInitialized = "true";
+
+    header.addEventListener("click", function (event) {
+        event.stopPropagation();
+
+        const isOpen =
+            header.getAttribute("aria-expanded") === "true";
+
+        header.setAttribute("aria-expanded", String(!isOpen));
+        content.hidden = isOpen;
+    });
+
+    header.setAttribute("aria-expanded", "false");
+    content.hidden = true;
+})();
+</script>

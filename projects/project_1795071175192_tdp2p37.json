@@ -1,0 +1,597 @@
+
+{
+    "projectTitle": "Anchor Bound",
+    "shortDescription": "A third-person, 2.5D wave-based roguelike set in an ancient Mesoamerican-inspired world. Choose your Anchor, unlock powerful abilities, and survive increasingly dangerous waves of enemies.",
+    "longDescription": "Anchor Bound is a wave-based roguelike set in a mysterious ancient Mesoamerican-inspired world, drawing inspiration from the cultures, mythology, architecture, temples, warriors, and landscapes of the Maya eras.\n\nEnter a dangerous world filled with ancient ruins, massive stone temples, forgotten civilizations, dense jungles, sacred grounds, and powerful enemies. Fight your way through wave after wave of increasingly dangerous foes using your weapons, normal attacks, and powerful combat abilities.\n\nAt the heart of the game are three mysterious Anchor types. During your journey, you can bind yourself to an Anchor and gain access to powerful abilities that change the way you fight. Each Anchor offers its own unique powers, combat possibilities, and strategies, allowing you to experiment with different playstyles as you survive longer and face stronger enemies.\n\nFight normally with your weapons, combine attacks with Anchor powers, or build your entire combat strategy around the abilities granted by your chosen Anchor. Every wave provides another opportunity to become stronger, experiment with abilities, and prepare for what comes next.\n\nAs the waves progress, enemies become stronger, more numerous, and more dangerous. You will need to manage your abilities, position yourself carefully, learn enemy attack patterns, and make strategic decisions about how you use your Anchor powers.\n\nAnchor Bound is built around fast, repeatable survival runs where every attempt gives you another opportunity to improve your strategy and push further into the battlefield. Enter the ancient world, survive as many waves as possible, discover the power of the Anchors, and see how far you can push your warrior before the enemies overwhelm you.\n\nChoose your Anchor. Enter the battlefield. Survive the waves. Become powerful enough to face what waits beyond them.",
+
+    "projectCategory": "Game Development",
+    "gameGenre": "Roguelike",
+    "gameSubgenre": "Wave-Based Survival",
+    "gameType": "2.5D Game",
+    "gamePerspective": "Third Person",
+    "gameMode": "Single Player",
+    "ageRating": "Everyone",
+
+    "engine": "Unity",
+    "engineVersion": "6000.3.9f1",
+    "programmingLanguages": "C#",
+    "languages": "C#",
+    "technologies": "Unity Editor, Visual Studio, Git, GitHub",
+
+    "projectStatus": "In Development",
+    "releaseStatus": "Not Released",
+    "platforms": "PC (Windows, Linux, macOS), PlayStation 4, PlayStation 5, PlayStation 5 Pro, Xbox One, Xbox One S, Xbox One X, Xbox Series S, Xbox Series X, Nintendo Switch, Nintendo Switch 2, Steam Deck.",
+
+    "story": "Explore a mysterious ancient Mesoamerican-inspired world filled with forgotten civilizations, ancient ruins, massive temples, and dangerous enemies. Discover the powers of three mysterious Anchors while fighting to survive increasingly difficult waves.",
+
+    "worldDescription": "A mysterious ancient Mesoamerican-inspired world featuring massive stone temples, forgotten civilizations, ancient ruins, dense jungles, sacred grounds, and dangerous battlefields inspired by Maya-era cultures and landscapes.",
+    "worldSetting": "Ancient Mesoamerican-inspired fantasy world",
+    "worldTheme": "Ancient civilizations, mythology, temples, jungles, and forgotten ruins",
+
+    "environmentTypes": [
+        "Ancient ruins",
+        "Massive stone temples",
+        "Dense jungles",
+        "Sacred grounds",
+        "Ancient battlefields"
+    ],
+
+    "characters": "The player controls a warrior who must survive increasingly dangerous enemies using weapons, combat abilities, and the powers of three mysterious Anchors.",
+
+    "playerCharacter": {
+        "description": "A warrior fighting to survive increasingly difficult waves of enemies.",
+        "abilities": [
+            "Player Movement",
+            "Dash",
+            "Tether Mechanics",
+            "Normal Weapon Attacks",
+            "Long-Range or Power Attacks",
+            "Anchor Abilities"
+        ]
+    },
+
+    "gameplay": "Fight increasingly difficult waves of enemies using normal weapon attacks, combat mechanics, and powerful Anchor abilities. Experiment with different combat strategies, manage your abilities, and survive as many waves as possible.",
+
+    "gameplayLoop": [
+        "Enter the battlefield",
+        "Fight incoming enemies",
+        "Use weapons and combat abilities",
+        "Utilize Anchor powers",
+        "Survive increasingly difficult waves",
+        "Continue fighting against stronger enemies"
+    ],
+
+    "gameplayFeatures": [
+        "Wave-Based Combat",
+        "Arena-Based Gameplay",
+        "Third-Person Movement",
+        "Weapon Combat",
+        "Anchor Abilities",
+        "Enemy Progression",
+        "Survival Gameplay"
+    ],
+
+    "mechanics": "Wave-based combat, weapon attacks, Anchor binding, special abilities, player movement, tether mechanics, dash mechanics, enemy AI, enemy progression, camera movement, arena camera transitions, combat positioning, ability management, and survival gameplay.",
+
+    "combatSystem": "The combat system combines normal weapon attacks, long-range or power attacks, player movement, dash mechanics, tether mechanics, and special Anchor abilities. Players can combine their available combat options to fight enemies and survive increasingly difficult waves.",
+
+    "anchorSystem": {
+        "description": "The game features three mysterious Anchor types that provide access to unique abilities and different combat possibilities.",
+        "anchorCount": 3,
+        "anchorTypes": [],
+        "anchorAbilities": [],
+        "anchorMechanics": ""
+    },
+
+    "playerMovement": {
+        "description": "Third-person player movement designed for navigating combat arenas and positioning during encounters.",
+        "movementMechanics": [
+            "Player Movement",
+            "Dash Mechanics",
+            "Tether Mechanics"
+        ]
+    },
+
+    "enemyAI": {
+        "description": "Enemy AI systems support the wave-based combat experience, providing enemies that challenge the player as encounters become increasingly difficult.",
+        "enemyTypes": [],
+        "enemyBehaviors": [],
+        "enemyProgression": "Enemies become stronger, more numerous, and more dangerous as the waves progress."
+    },
+
+    "progressionSystem": "Wave-based difficulty progression where enemies become stronger, more numerous, and increasingly dangerous as the player survives longer.",
+
+    "arenaSystem": {
+        "description": "Arena-based combat environments where players fight successive waves of enemies.",
+        "arenaFeatures": [
+            "Arena-Based Combat",
+            "Camera Panning",
+            "Camera Transitions",
+            "Door Camera Transitions"
+        ],
+        "arenaTypes": []
+    },
+
+    "cameraSystem": "The camera systems support third-person gameplay and arena navigation. Development contributions included arena camera panning, camera transitions toward doors, and camera movement into a pause-menu 3D map.",
+
+    "controls": "WASD: Movement. Left Shift: Tether. Space: Dash. Right Mouse Button: Long-range or Power Attack. Left Mouse Button: Normal Attack.",
+    "multiplayer": "Single-player experience. No multiplayer functionality specified.",
+
+    "features": "Three mysterious Anchor types, unique Anchor abilities, wave-based combat, increasingly difficult enemies, ancient Mesoamerican-inspired environments, repeatable survival runs, third-person gameplay, arena-based combat, and multiple combat strategies.",
+
+    "gameTags": "Roguelike\nWave Survival\nSurvival\nAction\nFantasy\nAncient\nMesoamerican\nCombat\nAbilities\nSingleplayer\nThird Person\n2.5D\nUnity\nAnchor Abilities\nEnemy AI\nArena Combat\nWave-Based Combat",
+
+    "technicalOverview": "Developed using Unity and C#, with gameplay programming contributions across player movement, combat systems, Anchor abilities, enemy AI, tether mechanics, dash mechanics, and camera systems.",
+
+    "technicalSystems": [
+        {
+            "name": "Player Movement",
+            "description": "Contributed to the player movement systems used to navigate the game's combat environments."
+        },
+        {
+            "name": "Combat Systems",
+            "description": "Worked on combat gameplay, including player attacks and interconnected combat mechanics."
+        },
+        {
+            "name": "Anchor Abilities",
+            "description": "Contributed to the implementation of special abilities associated with the game's Anchor system."
+        },
+        {
+            "name": "Enemy AI",
+            "description": "Contributed to enemy AI functionality supporting the game's wave-based combat."
+        },
+        {
+            "name": "Tether Mechanics",
+            "description": "Worked on the player's tether mechanics as part of the movement and gameplay systems."
+        },
+        {
+            "name": "Dash Mechanics",
+            "description": "Contributed to dash functionality used in player movement and combat."
+        },
+        {
+            "name": "Camera Systems",
+            "description": "Worked on camera functionality, arena camera panning, door transitions, and pause-menu 3D map camera movement."
+        }
+    ],
+
+    "technicalAdditional": "Developed as part of a 15-person team. Contributed to general programming and gameplay development, working on player movement, combat systems, Anchor abilities, enemy AI, tether mechanics, dash mechanics, and camera systems. Also contributed to arena camera panning, camera transitions toward doors, and camera movement into a pause-menu 3D map.",
+
+    "technicalChallenges": "Addressed development challenges involving performance optimization, integrating different gameplay systems, and coordinating interconnected mechanics within a team-based development environment. Worked on bringing different gameplay systems together while maintaining a functional and consistent player experience.",
+
+    "technicalPerformance": "",
+    "technicalOptimizations": [],
+    "technicalAchievements": [],
+
+    "developmentProcess": "Developed as part of a collaborative 15-person game development team. Contributed to programming and gameplay development across multiple interconnected systems.",
+
+    "developmentMethodology": "",
+    "developmentAdditional": "",
+    "developmentUpdates": [],
+    "developmentMilestones": [],
+
+    "developmentChallenges": [
+        "Integrating interconnected gameplay systems",
+        "Coordinating gameplay functionality across a team-based development environment",
+        "Maintaining consistency between player movement, combat, and camera systems",
+        "Addressing performance and gameplay implementation challenges"
+    ],
+
+    "yourRole": "General Programmer",
+    "teamSize": "15",
+
+    "individualContributions": [
+        {
+            "category": "Player Movement",
+            "details": "Contributed to player movement and gameplay functionality."
+        },
+        {
+            "category": "Combat Development",
+            "details": "Worked on combat systems, player attacks, and gameplay interactions."
+        },
+        {
+            "category": "Anchor Abilities",
+            "details": "Contributed to the development of Anchor abilities and related gameplay functionality."
+        },
+        {
+            "category": "Enemy AI",
+            "details": "Contributed to enemy AI development."
+        },
+        {
+            "category": "Tether Mechanics",
+            "details": "Worked on the player's tether mechanics."
+        },
+        {
+            "category": "Dash Mechanics",
+            "details": "Worked on player dash functionality."
+        },
+        {
+            "category": "Camera Development",
+            "details": "Contributed to arena camera panning, camera transitions toward doors, and camera movement into the pause-menu 3D map."
+        }
+    ],
+
+    "teamContributions": "Developed as part of a 15-person team, contributing to general programming and gameplay development while working with interconnected game systems.",
+
+    "developmentTools": [
+        "Unity Editor",
+        "Visual Studio",
+        "Git",
+        "GitHub"
+    ],
+
+    "learningOutcomes": "",
+    "projectAchievements": [],
+    "projectCredits": "",
+    "knownLimitations": [
+        "The project is currently in development.",
+        "The game has not been officially released.",
+        "Listed console and PC platforms represent intended target platforms rather than confirmed compatibility."
+    ],
+
+    "futureDevelopment": "",
+    "minimumRequirements": "",
+    "recommendedRequirements": "",
+
+    "startDate": "2025-10-01",
+    "completionDate": "",
+
+    "websiteLink": "",
+    "githubLink": "",
+    "storeLink": "https://bricemcrae.itch.io/anchorbound",
+    "videoLink": "",
+    "documentationLink": "",
+    "downloadLink": "",
+    "demoLink": "",
+
+    "externalLinks": [
+        {
+            "name": "itch.io",
+            "type": "Store Page",
+            "url": "https://bricemcrae.itch.io/anchorbound"
+        }
+    ],
+
+    "supportedLanguages": "",
+    "musicCredits": "",
+
+    "additionalInformation": "Downloadable ZIP file: AnchorboundInTo.zip (441 MB). Free to download with optional donations. The game is currently in development and has not been officially released. The listed PC and console platforms represent intended target platforms, not confirmed compatibility or available builds.",
+
+    "projectShowcase": {
+        "enableGallery": true,
+        "enableVideoShowcase": true,
+        "enableTechnicalShowcase": true,
+        "enableDevelopmentShowcase": true,
+        "galleryDescription": "",
+        "videoDescription": "",
+        "technicalShowcaseDescription": ""
+    },
+
+    "projectImages": {
+        "coverImage": "project_1795071175192_tdp2p37/image/cover/coverimage",
+
+        "screenshots": [
+            {
+                "name": "Gameplay Screenshot 01",
+                "path": "project_1795071175192_tdp2p37/image/screenshots/screenshot_01.png",
+                "tag": "gameplay"
+            },
+            {
+                "name": "Gameplay Screenshot 02",
+                "path": "project_1795071175192_tdp2p37/image/screenshots/screenshot_02.png",
+                "tag": "gameplay"
+            },
+            {
+                "name": "Gameplay Screenshot 03",
+                "path": "project_1795071175192_tdp2p37/image/screenshots/screenshot_03.png",
+                "tag": "gameplay"
+            },
+            {
+                "name": "Gameplay Screenshot 04",
+                "path": "project_1795071175192_tdp2p37/image/screenshots/screenshot_04.png",
+                "tag": "gameplay"
+            },
+            {
+                "name": "Gameplay Screenshot 05",
+                "path": "project_1795071175192_tdp2p37/image/screenshots/screenshot_05.png",
+                "tag": "gameplay"
+            },
+            {
+                "name": "Gameplay Screenshot 06",
+                "path": "project_1795071175192_tdp2p37/image/screenshots/screenshot_06.png",
+                "tag": "gameplay"
+            },
+            {
+                "name": "Gameplay Screenshot 07",
+                "path": "project_1795071175192_tdp2p37/image/screenshots/screenshot_07.png",
+                "tag": "gameplay"
+            },
+            {
+                "name": "Gameplay Screenshot 08",
+                "path": "project_1795071175192_tdp2p37/image/screenshots/screenshot_08.png",
+                "tag": "gameplay"
+            },
+            {
+                "name": "Gameplay Screenshot 09",
+                "path": "project_1795071175192_tdp2p37/image/screenshots/screenshot_09.png",
+                "tag": "gameplay"
+            },
+            {
+                "name": "Gameplay Screenshot 10",
+                "path": "project_1795071175192_tdp2p37/image/screenshots/screenshot_10.png",
+                "tag": "gameplay"
+            }
+        ],
+
+        "gameplayImages": [],
+
+        "environmentImages": [
+            {
+                "name": "Environment Image 01",
+                "path": "project_1795071175192_tdp2p37/image/environment/environment_01.png",
+                "tag": "environment"
+            },
+            {
+                "name": "Environment Image 02",
+                "path": "project_1795071175192_tdp2p37/image/environment/environment_02.png",
+                "tag": "environment"
+            },
+            {
+                "name": "Environment Image 03",
+                "path": "project_1795071175192_tdp2p37/image/environment/environment_03.png",
+                "tag": "environment"
+            },
+            {
+                "name": "Environment Image 04",
+                "path": "project_1795071175192_tdp2p37/image/environment/environment_04.png",
+                "tag": "environment"
+            },
+            {
+                "name": "Environment Image 05",
+                "path": "project_1795071175192_tdp2p37/image/environment/environment_05.png",
+                "tag": "environment"
+            },
+            {
+                "name": "Environment Image 06",
+                "path": "project_1795071175192_tdp2p37/image/environment/environment_06.png",
+                "tag": "environment"
+            },
+            {
+                "name": "Environment Image 07",
+                "path": "project_1795071175192_tdp2p37/image/environment/environment_07.png",
+                "tag": "environment"
+            },
+            {
+                "name": "Environment Image 08",
+                "path": "project_1795071175192_tdp2p37/image/environment/environment_08.png",
+                "tag": "environment"
+            },
+            {
+                "name": "Environment Image 09",
+                "path": "project_1795071175192_tdp2p37/image/environment/environment_09.png",
+                "tag": "environment"
+            },
+            {
+                "name": "Environment Image 10",
+                "path": "project_1795071175192_tdp2p37/image/environment/environment_10.png",
+                "tag": "environment"
+            }
+        ],
+
+        "characterImages": [
+            {
+                "name": "Character Image 01",
+                "path": "project_1795071175192_tdp2p37/image/characters/character_01.png",
+                "tag": "character"
+            },
+            {
+                "name": "Character Image 02",
+                "path": "project_1795071175192_tdp2p37/image/characters/character_02.png",
+                "tag": "character"
+            },
+            {
+                "name": "Character Image 03",
+                "path": "project_1795071175192_tdp2p37/image/characters/character_03.png",
+                "tag": "character"
+            },
+            {
+                "name": "Character Image 04",
+                "path": "project_1795071175192_tdp2p37/image/characters/character_04.png",
+                "tag": "character"
+            },
+            {
+                "name": "Character Image 05",
+                "path": "project_1795071175192_tdp2p37/image/characters/character_05.png",
+                "tag": "character"
+            }
+        ],
+
+        "uiImages": [
+            {
+                "name": "User Interface Image 01",
+                "path": "project_1795071175192_tdp2p37/image/ui/ui_01.png",
+                "tag": "ui"
+            },
+            {
+                "name": "User Interface Image 02",
+                "path": "project_1795071175192_tdp2p37/image/ui/ui_02.png",
+                "tag": "ui"
+            },
+            {
+                "name": "User Interface Image 03",
+                "path": "project_1795071175192_tdp2p37/image/ui/ui_03.png",
+                "tag": "ui"
+            },
+            {
+                "name": "User Interface Image 04",
+                "path": "project_1795071175192_tdp2p37/image/ui/ui_04.png",
+                "tag": "ui"
+            },
+            {
+                "name": "User Interface Image 05",
+                "path": "project_1795071175192_tdp2p37/image/ui/ui_05.png",
+                "tag": "ui"
+            }
+        ],
+
+        "technicalImages": [
+            {
+                "name": "Technical Image 01",
+                "path": "project_1795071175192_tdp2p37/image/technical/technical_01.png",
+                "tag": "technical"
+            },
+            {
+                "name": "Technical Image 02",
+                "path": "project_1795071175192_tdp2p37/image/technical/technical_02.png",
+                "tag": "technical"
+            },
+            {
+                "name": "Technical Image 03",
+                "path": "project_1795071175192_tdp2p37/image/technical/technical_03.png",
+                "tag": "technical"
+            },
+            {
+                "name": "Technical Image 04",
+                "path": "project_1795071175192_tdp2p37/image/technical/technical_04.png",
+                "tag": "technical"
+            },
+            {
+                "name": "Technical Image 05",
+                "path": "project_1795071175192_tdp2p37/image/technical/technical_05.png",
+                "tag": "technical"
+            },
+            {
+                "name": "Technical Image 06",
+                "path": "project_1795071175192_tdp2p37/image/technical/technical_06.png",
+                "tag": "technical"
+            },
+            {
+                "name": "Technical Image 07",
+                "path": "project_1795071175192_tdp2p37/image/technical/technical_07.png",
+                "tag": "technical"
+            },
+            {
+                "name": "Technical Image 08",
+                "path": "project_1795071175192_tdp2p37/image/technical/technical_08.png",
+                "tag": "technical"
+            },
+            {
+                "name": "Technical Image 09",
+                "path": "project_1795071175192_tdp2p37/image/technical/technical_09.png",
+                "tag": "technical"
+            },
+            {
+                "name": "Technical Image 10",
+                "path": "project_1795071175192_tdp2p37/image/technical/technical_10.png",
+                "tag": "technical"
+            }
+        ],
+
+        "others": []
+    },
+
+"projectVideos": {
+    "gameplayVideos": [
+        {
+            "name": "Gameplay Video 01",
+            "description": "A gameplay recording showcasing the core gameplay mechanics and player interactions.",
+            "path": "project_1795071175192_tdp2p37/video/gameplay/gameplay_01.mp4",
+            "tag": "gameplay"
+        },
+        {
+            "name": "Gameplay Video 02",
+            "description": "A gameplay recording demonstrating additional gameplay features and in-game activities.",
+            "path": "project_1795071175192_tdp2p37/video/gameplay/gameplay_02.mp4",
+            "tag": "gameplay"
+        },
+        {
+            "name": "Gameplay Video 03",
+            "description": "A gameplay recording highlighting different situations, mechanics, and player experiences.",
+            "path": "project_1795071175192_tdp2p37/video/gameplay/gameplay_03.mp4",
+            "tag": "gameplay"
+        },
+        {
+            "name": "Gameplay Video 04",
+            "description": "A gameplay recording showing further examples of the game's features and gameplay.",
+            "path": "project_1795071175192_tdp2p37/video/gameplay/gameplay_04.mp4",
+            "tag": "gameplay"
+        }
+    ],
+
+    "developmentVideos": [
+        {
+            "name": "Development Video 01",
+            "description": "A behind-the-scenes look at the game's development process and project progress.",
+            "path": "project_1795071175192_tdp2p37/video/development/development_01.mp4",
+            "tag": "development"
+        },
+        {
+            "name": "Development Video 02",
+            "description": "A development recording showcasing additional work, improvements, and changes made to the project.",
+            "path": "project_1795071175192_tdp2p37/video/development/development_02.mp4",
+            "tag": "development"
+        }
+    ],
+
+    "technicalDemonstrations": [
+        {
+            "name": "Technical Demonstration 01",
+            "description": "A technical demonstration showcasing the systems, tools, and functionality used in the project.",
+            "path": "project_1795071175192_tdp2p37/video/technical/technical_01.mp4",
+            "tag": "technical"
+        },
+        {
+            "name": "Technical Demonstration 02",
+            "description": "A technical demonstration highlighting additional programming features and technical implementations.",
+            "path": "project_1795071175192_tdp2p37/video/technical/technical_02.mp4",
+            "tag": "technical"
+        }
+    ],
+
+    "trailers": [
+        {
+            "name": "Project Trailer 01",
+            "description": "An introduction to the project, showcasing its gameplay, visuals, and main features.",
+            "path": "project_1795071175192_tdp2p37/video/trailers/trailer_01.mp4",
+            "tag": "trailer"
+        },
+        {
+            "name": "Project Trailer 02",
+            "description": "A second project trailer highlighting additional content, features, and presentation.",
+            "path": "project_1795071175192_tdp2p37/video/trailers/trailer_02.mp4",
+            "tag": "trailer"
+        }
+    ],
+
+    "others": []
+},
+    "projectDocuments": [],
+
+    "projectPageSections": [
+        "Overview",
+        "Game Information",
+        "Story and World",
+        "Gameplay",
+        "Gameplay Loop",
+        "Anchor System",
+        "Combat System",
+        "Player Abilities",
+        "Enemy AI",
+        "Arena System",
+        "Camera Systems",
+        "Technical Overview",
+        "Technical Systems",
+        "Individual Contributions",
+        "Development Process",
+        "Development Challenges",
+        "Development Tools",
+        "Gallery",
+        "Videos",
+        "Additional Information"
+    ],
+
+    "projectId": "project_1795071175192_tdp2p37",
+    "title": "Anchor Bound",
+
+    "createdAt": "2026-11-19T06:52:55.192Z",
+    "updatedAt": "2026-11-19T06:52:55.192Z"
+}

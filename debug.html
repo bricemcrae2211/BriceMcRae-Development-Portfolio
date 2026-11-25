@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Debug Console</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 25px;
+    background: #101216;
+    color: #e5e7eb;
+    font-family: Arial, sans-serif;
+}
+
+.debug-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.debug-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.debug-header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.debug-description {
+    color: #9ca3af;
+    margin-top: 8px;
+}
+
+.debug-status {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 5px;
+    background: #202b25;
+    color: #86efac;
+    font-size: 12px;
+}
+
+.debug-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    border: 1px solid #3b414b;
+    background: #252a33;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+button:hover {
+    background: #343b47;
+}
+
+button.danger {
+    background: #572323;
+    border-color: #853333;
+}
+
+button.danger:hover {
+    background: #713030;
+}
+
+.debug-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    padding: 17px;
+    background: #191d24;
+    border: 1px solid #303640;
+    border-radius: 7px;
+}
+
+.stat-label {
+    color: #9ca3af;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.stat-number {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.debug-panel {
+    background: #191d24;
+    border: 1px solid #303640;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.debug-panel-header {
+    padding: 15px;
+    border-bottom: 1px solid #303640;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.debug-panel-header h2 {
+    margin: 0;
+    font-size: 17px;
+}
+
+.debug-filters {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+select,
+input,
+textarea {
+    background: #101216;
+    color: white;
+    border: 1px solid #3b414b;
+    border-radius: 5px;
+    padding: 9px;
+    outline: none;
+}
+
+.debug-log {
+    min-height: 350px;
+    max-height: 600px;
+    overflow-y: auto;
+    padding: 15px;
+}
+
+.debug-entry {
+    padding: 12px;
+    margin-bottom: 10px;
+    background: #11151b;
+    border-left: 4px solid #64748b;
+    border-radius: 4px;
+}
+
+.debug-entry.success {
+    border-left-color: #22c55e;
+}
+
+.debug-entry.error {
+    border-left-color: #ef4444;
+}
+
+.debug-entry.warning {
+    border-left-color: #eab308;
+}
+
+.debug-entry.info {
+    border-left-color: #3b82f6;
+}
+
+.debug-entry-title {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.debug-type {
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.debug-time {
+    color: #9ca3af;
+    font-size: 11px;
+}
+
+.debug-message {
+    font-size: 13px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.debug-details {
+    margin-top: 10px;
+}
+
+.debug-details summary {
+    color: #93c5fd;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.debug-details pre {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    background: #090c10;
+    padding: 12px;
+    border-radius: 5px;
+    color: #cbd5e1;
+    font-size: 12px;
+}
+
+.debug-empty {
+    color: #9ca3af;
+    text-align: center;
+    padding: 50px 15px;
+}
+
+.manual-entry {
+    margin-top: 20px;
+    padding: 18px;
+    background: #191d24;
+    border: 1px solid #303640;
+    border-radius: 7px;
+}
+
+.manual-entry h2 {
+    margin-top: 0;
+    font-size: 17px;
+}
+
+.manual-entry label {
+    display: block;
+    font-size: 12px;
+    color: #9ca3af;
+    margin: 12px 0 6px;
+}
+
+.manual-entry input,
+.manual-entry textarea,
+.manual-entry select {
+    width: 100%;
+}
+
+.manual-entry textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+@media (max-width: 700px) {
+    body {
+        padding: 12px;
+    }
+
+    .debug-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<main class="debug-container">
+
+    <header class="debug-header">
+        <div>
+            <h1>Debug Console</h1>
+            <p class="debug-description">
+                Standalone debugging activity and error viewer.
+            </p>
+        </div>
+
+        <span class="debug-status">STANDALONE MODE</span>
+    </header>
+
+    <section class="debug-toolbar">
+
+        <button id="exportLogButton">
+            Export Debug Log
+        </button>
+
+        <button id="copyLogButton">
+            Copy Debug Log
+        </button>
+
+        <button id="clearLogButton" class="danger">
+            Clear Log
+        </button>
+
+    </section>
+
+    <section class="debug-stats">
+
+        <div class="stat-card">
+            <div class="stat-label">Total Messages</div>
+            <div class="stat-number" id="totalCount">0</div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-label">Successful</div>
+            <div class="stat-number" id="successCount">0</div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-label">Warnings</div>
+            <div class="stat-number" id="warningCount">0</div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-label">Errors</div>
+            <div class="stat-number" id="errorCount">0</div>
+        </div>
+
+    </section>
+
+    <section class="debug-panel">
+
+        <div class="debug-panel-header">
+
+            <h2>Activity History</h2>
+
+            <div class="debug-filters">
+
+                <select id="typeFilter">
+                    <option value="all">All Messages</option>
+                    <option value="info">Information</option>
+                    <option value="success">Success</option>
+                    <option value="warning">Warnings</option>
+                    <option value="error">Errors</option>
+                </select>
+
+                <input
+                    type="text"
+                    id="searchFilter"
+                    placeholder="Search messages..."
+                >
+
+            </div>
+
+        </div>
+
+        <div class="debug-log" id="debugLog">
+
+            <div class="debug-empty">
+                No debug messages yet.
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="manual-entry">
+
+        <h2>Manual Debug Message</h2>
+
+        <label for="manualType">Message Type</label>
+
+        <select id="manualType">
+            <option value="info">Information</option>
+            <option value="success">Success</option>
+            <option value="warning">Warning</option>
+            <option value="error">Error</option>
+        </select>
+
+        <label for="manualMessage">Message</label>
+
+        <input
+            type="text"
+            id="manualMessage"
+            placeholder="Enter a debug message..."
+        >
+
+        <label for="manualDetails">Details</label>
+
+        <textarea
+            id="manualDetails"
+            placeholder="Enter additional information, error details, or notes..."
+        ></textarea>
+
+        <br><br>
+
+        <button id="addManualMessageButton">
+            Add Debug Message
+        </button>
+
+    </section>
+
+</main>
+
+<script src="debug.js"></script>
+
+</body>
+</html>
