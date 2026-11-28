@@ -68,7 +68,7 @@
             "../demo/demo-reel-upload.html",
 
         futureGameDevelopment:
-            "../future-game-development/future-game-development.html"
+            "../../future-game-development/future-game-development.html"
 
     };
 
