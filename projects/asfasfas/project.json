@@ -89,15 +89,44 @@
         "character": [],
         "ui": [],
         "technical": [],
-        "extra": []
+        "extra": [
+            "images/extra/CK3_Historical_Map_Maker.png"
+        ]
     },
     "projectVideos": {
-        "gameplayVideos": [],
+        "gameplayVideos": [
+            {
+                "id": 21,
+                "name": "qable-sample-720p-10s.webm",
+                "title": "",
+                "path": "videos/gameplayvideos/qable-sample-720p-10s.webm",
+                "tags": "",
+                "description": "",
+                "exportFullPath": "videos/gameplayvideos/qable-sample-720p-10s.webm"
+            }
+        ],
         "developmentVideos": [],
         "technicalDemonstrations": [],
         "trailers": [],
         "others": [],
-        "additionalVideos": []
+        "mainVideo": {
+            "id": "mainVideo",
+            "path": "blob:http://127.0.0.1:5502/b6b0afdc-fb97-4786-99fd-3930d7334755",
+            "title": "",
+            "tags": "",
+            "description": "",
+            "isMainVideo": true
+        },
+        "additionalVideos": [
+            {
+                "id": 21,
+                "path": "blob:http://127.0.0.1:5502/e3dd9510-c7e4-4195-8a1a-ad456b1bd054",
+                "title": "",
+                "category": "gameplayVideos",
+                "tags": "",
+                "description": ""
+            }
+        ]
     },
     "projectDownloads": [],
     "coverImage": "asfasfas/images/cover images/cover_1.png",
@@ -1720,14 +1749,40 @@
         }
     ],
     "videoData": {
-        "mainVideo": null,
-        "gameplayVideos": [],
+        "mainVideo": {
+            "id": "mainVideo",
+            "name": "qable-sample-1080p-10s.webm",
+            "title": "",
+            "path": "videos/mainVideo/qable-sample-1080p-10s.webm",
+            "tags": "",
+            "description": "",
+            "exportFullPath": "videos/mainVideo/qable-sample-1080p-10s.webm"
+        },
+        "gameplayVideos": [
+            {
+                "id": 21,
+                "name": "qable-sample-720p-10s.webm",
+                "title": "",
+                "path": "videos/gameplayvideos/qable-sample-720p-10s.webm",
+                "tags": "",
+                "description": "",
+                "exportFullPath": "videos/gameplayvideos/qable-sample-720p-10s.webm"
+            }
+        ],
         "developmentVideos": [],
         "technicalDemonstrations": [],
         "trailers": [],
         "others": []
     },
-    "mainVideo": null,
+    "mainVideo": {
+        "id": "mainVideo",
+        "name": "qable-sample-1080p-10s.webm",
+        "title": "",
+        "path": "videos/mainVideo/qable-sample-1080p-10s.webm",
+        "tags": "",
+        "description": "",
+        "exportFullPath": "videos/mainVideo/qable-sample-1080p-10s.webm"
+    },
     "formInformation": {
         "projectTitle": "asfasfas",
         "shortDescription": "Echoes of the Fallen is a third-person fantasy action RPG where players explore a forgotten kingdom, battle dangerous creatures, and uncover the secrets of an ancient civilization.",
@@ -1832,12 +1887,18 @@
         "mainVideoTags": "",
         "mainVideoDescription": ""
     },
-    "exportedAt": "2026-11-28T03:37:05.943Z",
+    "exportedAt": "2026-11-28T03:38:18.761Z",
     "projectDownloadLinks": [],
     "formFields": {
         "projectTitle": "asfasfas",
         "shortDescription": "Echoes of the Fallen is a third-person fantasy action RPG where players explore a forgotten kingdom, battle dangerous creatures, and uncover the secrets of an ancient civilization.",
         "longDescription": "Echoes of the Fallen is a fantasy action RPG set in the ruined kingdom of Eldoria. Players explore abandoned cities, enchanted forests, forgotten temples, and underground fortresses while fighting increasingly dangerous enemies. Discover ancient weapons, unlock magical abilities, complete quests, and uncover the truth behind the mysterious destruction of the kingdom.",
+        "unnamedField_3": "",
+        "unnamedField_4": "",
+        "unnamedField_5": "",
+        "unnamedField_6": "",
+        "unnamedField_7": "",
+        "unnamedField_8": "",
         "about": "Echoes of the Fallen is an exploration-focused fantasy action RPG combining challenging combat, environmental storytelling, character progression, and a large interconnected world.",
         "projectPurpose": "The purpose of this project is to create an immersive fantasy adventure that combines exploration, combat, storytelling, and character progression.",
         "projectGoals": "Create an engaging fantasy world, develop responsive combat, implement intelligent enemies, provide meaningful character progression, and deliver an enjoyable single-player experience.",
@@ -1931,16 +1992,49 @@
         "downloadDescriptionInput": "",
         "mainVideoTitle": "",
         "mainVideoTags": "",
-        "mainVideoDescription": ""
+        "mainVideoDescription": "",
+        "unnamedField_103": "",
+        "unnamedField_104": "",
+        "unnamedField_105": ""
     },
     "exportedFiles": {
-        "images": [],
-        "videos": [],
+        "images": [
+            {
+                "name": "CK3_Historical_Map_Maker.png",
+                "path": "images/extra/CK3_Historical_Map_Maker.png",
+                "size": 3005319,
+                "type": "image/png"
+            }
+        ],
+        "videos": [
+            {
+                "name": "qable-sample-1080p-10s.webm",
+                "path": "videos/mainVideo/qable-sample-1080p-10s.webm",
+                "size": 3079403,
+                "type": "video/webm",
+                "videoTag": "",
+                "videoCategory": "",
+                "sourceKey": "mainVideo",
+                "isMainVideo": true,
+                "isAdditional": false
+            },
+            {
+                "name": "qable-sample-720p-10s.webm",
+                "path": "videos/gameplayvideos/qable-sample-720p-10s.webm",
+                "size": 1723374,
+                "type": "video/webm",
+                "videoTag": "",
+                "videoCategory": "gameplayVideos",
+                "sourceKey": "additionalVideos",
+                "isMainVideo": false,
+                "isAdditional": false
+            }
+        ],
         "downloads": []
     },
     "saveReport": {
         "status": "IN PROGRESS",
-        "startedAt": "2026-11-28T03:37:03.358Z",
+        "startedAt": "2026-11-28T03:38:10.500Z",
         "completedAt": null,
         "project": "asfasfas",
         "projectJSON": {
@@ -1950,16 +2044,44 @@
             "error": ""
         },
         "totals": {
-            "imagesFound": 0,
-            "imagesUploaded": 0,
-            "videosFound": 0,
-            "videosUploaded": 0,
+            "imagesFound": 1,
+            "imagesUploaded": 1,
+            "videosFound": 2,
+            "videosUploaded": 2,
             "downloadsFound": 0,
             "downloadsUploaded": 0,
             "skipped": 0,
             "failed": 0
         },
-        "uploaded": [],
+        "uploaded": [
+            {
+                "type": "IMAGE",
+                "name": "CK3_Historical_Map_Maker.png",
+                "path": "images/extra/CK3_Historical_Map_Maker.png",
+                "size": 3005319,
+                "sizeMB": 2.87,
+                "mimeType": "image/png",
+                "html_url": "https://github.com/bricemcrae2211/BriceMcRae-Development-Portfolio.io/blob/main/projects/asfasfas/images/extra/CK3_Historical_Map_Maker.png"
+            },
+            {
+                "type": "VIDEO",
+                "name": "qable-sample-1080p-10s.webm",
+                "path": "videos/mainVideo/qable-sample-1080p-10s.webm",
+                "size": 3079403,
+                "sizeMB": 2.94,
+                "mimeType": "video/webm",
+                "html_url": "https://github.com/bricemcrae2211/BriceMcRae-Development-Portfolio.io/blob/main/projects/asfasfas/videos/mainVideo/qable-sample-1080p-10s.webm"
+            },
+            {
+                "type": "VIDEO",
+                "name": "qable-sample-720p-10s.webm",
+                "path": "videos/gameplayvideos/qable-sample-720p-10s.webm",
+                "size": 1723374,
+                "sizeMB": 1.64,
+                "mimeType": "video/webm",
+                "html_url": "https://github.com/bricemcrae2211/BriceMcRae-Development-Portfolio.io/blob/main/projects/asfasfas/videos/gameplayvideos/qable-sample-720p-10s.webm"
+            }
+        ],
         "skipped": [],
         "failed": [],
         "warnings": []
