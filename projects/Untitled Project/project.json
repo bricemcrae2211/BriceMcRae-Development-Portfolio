@@ -139,7 +139,7 @@
         "extra": []
     },
     "exportFormat": "GitHub Project Folder",
-    "exportedAt": "2026-11-28T03:35:47.408Z",
+    "exportedAt": "2026-11-28T04:10:27.217Z",
     "projectDownloadLinks": [],
     "formFields": {
         "projectTitle": "",
@@ -247,7 +247,7 @@
     },
     "saveReport": {
         "status": "IN PROGRESS",
-        "startedAt": "2026-11-28T03:35:40.167Z",
+        "startedAt": "2026-11-28T04:10:19.527Z",
         "completedAt": null,
         "project": "Untitled Project",
         "projectJSON": {
@@ -270,7 +270,7 @@
         "skipped": [],
         "failed": [],
         "warnings": [
-            "Project title was missing. The folder name will be Untitled Project."
+            "Project title was missing. Folder name set to Untitled Project."
         ]
     }
 }
