@@ -89,378 +89,46 @@
         "character": [],
         "ui": [],
         "technical": [],
-        "extra": []
+        "extra": [
+            "images/cover images/cover_1.png",
+            "images/screenshots/screenshot_01.png",
+            "images/screenshots/screenshot_02.png",
+            "images/screenshots/screenshot_03.png",
+            "images/screenshots/screenshot_04.jpeg"
+        ]
     },
     "projectVideos": {
         "gameplayVideos": [
             {
-                "id": 1,
-                "name": "Gameplay Video 01",
-                "title": "Gameplay Video 01",
-                "path": "asfasfas/videos/gameplay/gameplay_01.mp4",
-                "file": "asfasfas/videos/gameplay/gameplay_01.mp4",
+                "id": 21,
+                "name": "qable-sample-720p-10s.webm",
+                "title": "",
+                "path": "videos/gameplayvideos/qable-sample-720p-10s.webm",
                 "tags": "",
-                "description": "A gameplay recording showcasing the core gameplay mechanics and player interactions."
-            },
-            {
-                "id": 2,
-                "name": "Gameplay Video 02",
-                "title": "Gameplay Video 02",
-                "path": "asfasfas/videos/gameplay/gameplay_02.mp4",
-                "file": "asfasfas/videos/gameplay/gameplay_02.mp4",
-                "tags": "",
-                "description": "A gameplay recording demonstrating additional gameplay features and in-game activities."
-            },
-            {
-                "id": 3,
-                "name": "Gameplay Video 03",
-                "title": "Gameplay Video 03",
-                "path": "asfasfas/videos/gameplay/gameplay_03.mp4",
-                "file": "asfasfas/videos/gameplay/gameplay_03.mp4",
-                "tags": "",
-                "description": "A gameplay recording highlighting different situations, mechanics, and player experiences."
-            },
-            {
-                "id": 4,
-                "name": "Gameplay Video 04",
-                "title": "Gameplay Video 04",
-                "path": "asfasfas/videos/gameplay/gameplay_04.mp4",
-                "file": "asfasfas/videos/gameplay/gameplay_04.mp4",
-                "tags": "",
-                "description": "A gameplay recording showing further examples of the game's features and gameplay."
-            },
-            {
-                "id": 1,
-                "name": "Gameplay Video 01",
-                "title": "Gameplay Video 01",
-                "path": "asfasfas/videos/gameplay/gameplay_01.mp4",
-                "file": "asfasfas/videos/gameplay/gameplay_01.mp4",
-                "tags": "",
-                "description": "A gameplay recording showcasing the core gameplay mechanics and player interactions."
-            },
-            {
-                "id": 2,
-                "name": "Gameplay Video 02",
-                "title": "Gameplay Video 02",
-                "path": "asfasfas/videos/gameplay/gameplay_02.mp4",
-                "file": "asfasfas/videos/gameplay/gameplay_02.mp4",
-                "tags": "",
-                "description": "A gameplay recording demonstrating additional gameplay features and in-game activities."
-            },
-            {
-                "id": 3,
-                "name": "Gameplay Video 03",
-                "title": "Gameplay Video 03",
-                "path": "asfasfas/videos/gameplay/gameplay_03.mp4",
-                "file": "asfasfas/videos/gameplay/gameplay_03.mp4",
-                "tags": "",
-                "description": "A gameplay recording highlighting different situations, mechanics, and player experiences."
-            },
-            {
-                "id": 4,
-                "name": "Gameplay Video 04",
-                "title": "Gameplay Video 04",
-                "path": "asfasfas/videos/gameplay/gameplay_04.mp4",
-                "file": "asfasfas/videos/gameplay/gameplay_04.mp4",
-                "tags": "",
-                "description": "A gameplay recording showing further examples of the game's features and gameplay."
+                "description": "",
+                "exportFullPath": "videos/gameplayvideos/qable-sample-720p-10s.webm"
             }
         ],
-        "developmentVideos": [
-            {
-                "id": 5,
-                "name": "Development Video 01",
-                "title": "Development Video 01",
-                "path": "asfasfas/videos/development/development_01.mp4",
-                "file": "asfasfas/videos/development/development_01.mp4",
-                "tags": "",
-                "description": "A behind-the-scenes look at the game's development process and project progress."
-            },
-            {
-                "id": 6,
-                "name": "Development Video 02",
-                "title": "Development Video 02",
-                "path": "asfasfas/videos/development/development_02.mp4",
-                "file": "asfasfas/videos/development/development_02.mp4",
-                "tags": "",
-                "description": "A development recording showcasing additional work, improvements, and changes made to the project."
-            },
-            {
-                "id": 5,
-                "name": "Development Video 01",
-                "title": "Development Video 01",
-                "path": "asfasfas/videos/development/development_01.mp4",
-                "file": "asfasfas/videos/development/development_01.mp4",
-                "tags": "",
-                "description": "A behind-the-scenes look at the game's development process and project progress."
-            },
-            {
-                "id": 6,
-                "name": "Development Video 02",
-                "title": "Development Video 02",
-                "path": "asfasfas/videos/development/development_02.mp4",
-                "file": "asfasfas/videos/development/development_02.mp4",
-                "tags": "",
-                "description": "A development recording showcasing additional work, improvements, and changes made to the project."
-            }
-        ],
-        "technicalDemonstrations": [
-            {
-                "id": 7,
-                "name": "Technical Demonstration 01",
-                "title": "Technical Demonstration 01",
-                "path": "asfasfas/videos/technical/technical_01.mp4",
-                "file": "asfasfas/videos/technical/technical_01.mp4",
-                "tags": "",
-                "description": "A technical demonstration showcasing the systems, tools, and functionality used in the project."
-            },
-            {
-                "id": 8,
-                "name": "Technical Demonstration 02",
-                "title": "Technical Demonstration 02",
-                "path": "asfasfas/videos/technical/technical_02.mp4",
-                "file": "asfasfas/videos/technical/technical_02.mp4",
-                "tags": "",
-                "description": "A technical demonstration highlighting additional programming features and technical implementations."
-            },
-            {
-                "id": 7,
-                "name": "Technical Demonstration 01",
-                "title": "Technical Demonstration 01",
-                "path": "asfasfas/videos/technical/technical_01.mp4",
-                "file": "asfasfas/videos/technical/technical_01.mp4",
-                "tags": "",
-                "description": "A technical demonstration showcasing the systems, tools, and functionality used in the project."
-            },
-            {
-                "id": 8,
-                "name": "Technical Demonstration 02",
-                "title": "Technical Demonstration 02",
-                "path": "asfasfas/videos/technical/technical_02.mp4",
-                "file": "asfasfas/videos/technical/technical_02.mp4",
-                "tags": "",
-                "description": "A technical demonstration highlighting additional programming features and technical implementations."
-            }
-        ],
-        "trailers": [
-            {
-                "id": 9,
-                "name": "Project Trailer 01",
-                "title": "Project Trailer 01",
-                "path": "asfasfas/videos/trailers/trailer_01.mp4",
-                "file": "asfasfas/videos/trailers/trailer_01.mp4",
-                "tags": "",
-                "description": "An introduction to the project, showcasing its gameplay, visuals, and main features."
-            },
-            {
-                "id": 10,
-                "name": "Project Trailer 02",
-                "title": "Project Trailer 02",
-                "path": "asfasfas/videos/trailers/trailer_02.mp4",
-                "file": "asfasfas/videos/trailers/trailer_02.mp4",
-                "tags": "",
-                "description": "A second project trailer highlighting additional content, features, and presentation."
-            },
-            {
-                "id": 9,
-                "name": "Project Trailer 01",
-                "title": "Project Trailer 01",
-                "path": "asfasfas/videos/trailers/trailer_01.mp4",
-                "file": "asfasfas/videos/trailers/trailer_01.mp4",
-                "tags": "",
-                "description": "An introduction to the project, showcasing its gameplay, visuals, and main features."
-            },
-            {
-                "id": 10,
-                "name": "Project Trailer 02",
-                "title": "Project Trailer 02",
-                "path": "asfasfas/videos/trailers/trailer_02.mp4",
-                "file": "asfasfas/videos/trailers/trailer_02.mp4",
-                "tags": "",
-                "description": "A second project trailer highlighting additional content, features, and presentation."
-            }
-        ],
+        "developmentVideos": [],
+        "technicalDemonstrations": [],
+        "trailers": [],
         "others": [],
+        "mainVideo": {
+            "id": "mainVideo",
+            "path": "blob:http://127.0.0.1:5502/f80a3d7a-1770-4f74-865a-3c6e259658df",
+            "title": "",
+            "tags": "",
+            "description": "",
+            "isMainVideo": true
+        },
         "additionalVideos": [
             {
-                "id": 1,
-                "file": null,
-                "path": "asfasfas/videos/gameplay/gameplay_01.mp4",
-                "title": "Gameplay Video 01",
+                "id": 21,
+                "path": "blob:http://127.0.0.1:5502/fbd90075-2397-4407-9fba-c9a5e8490fd5",
+                "title": "",
                 "category": "gameplayVideos",
                 "tags": "",
-                "description": "A gameplay recording showcasing the core gameplay mechanics and player interactions."
-            },
-            {
-                "id": 2,
-                "file": null,
-                "path": "asfasfas/videos/gameplay/gameplay_02.mp4",
-                "title": "Gameplay Video 02",
-                "category": "gameplayVideos",
-                "tags": "",
-                "description": "A gameplay recording demonstrating additional gameplay features and in-game activities."
-            },
-            {
-                "id": 3,
-                "file": null,
-                "path": "asfasfas/videos/gameplay/gameplay_03.mp4",
-                "title": "Gameplay Video 03",
-                "category": "gameplayVideos",
-                "tags": "",
-                "description": "A gameplay recording highlighting different situations, mechanics, and player experiences."
-            },
-            {
-                "id": 4,
-                "file": null,
-                "path": "asfasfas/videos/gameplay/gameplay_04.mp4",
-                "title": "Gameplay Video 04",
-                "category": "gameplayVideos",
-                "tags": "",
-                "description": "A gameplay recording showing further examples of the game's features and gameplay."
-            },
-            {
-                "id": 1,
-                "file": null,
-                "path": "asfasfas/videos/gameplay/gameplay_01.mp4",
-                "title": "Gameplay Video 01",
-                "category": "gameplayVideos",
-                "tags": "",
-                "description": "A gameplay recording showcasing the core gameplay mechanics and player interactions."
-            },
-            {
-                "id": 2,
-                "file": null,
-                "path": "asfasfas/videos/gameplay/gameplay_02.mp4",
-                "title": "Gameplay Video 02",
-                "category": "gameplayVideos",
-                "tags": "",
-                "description": "A gameplay recording demonstrating additional gameplay features and in-game activities."
-            },
-            {
-                "id": 3,
-                "file": null,
-                "path": "asfasfas/videos/gameplay/gameplay_03.mp4",
-                "title": "Gameplay Video 03",
-                "category": "gameplayVideos",
-                "tags": "",
-                "description": "A gameplay recording highlighting different situations, mechanics, and player experiences."
-            },
-            {
-                "id": 4,
-                "file": null,
-                "path": "asfasfas/videos/gameplay/gameplay_04.mp4",
-                "title": "Gameplay Video 04",
-                "category": "gameplayVideos",
-                "tags": "",
-                "description": "A gameplay recording showing further examples of the game's features and gameplay."
-            },
-            {
-                "id": 5,
-                "file": null,
-                "path": "asfasfas/videos/development/development_01.mp4",
-                "title": "Development Video 01",
-                "category": "developmentVideos",
-                "tags": "",
-                "description": "A behind-the-scenes look at the game's development process and project progress."
-            },
-            {
-                "id": 6,
-                "file": null,
-                "path": "asfasfas/videos/development/development_02.mp4",
-                "title": "Development Video 02",
-                "category": "developmentVideos",
-                "tags": "",
-                "description": "A development recording showcasing additional work, improvements, and changes made to the project."
-            },
-            {
-                "id": 5,
-                "file": null,
-                "path": "asfasfas/videos/development/development_01.mp4",
-                "title": "Development Video 01",
-                "category": "developmentVideos",
-                "tags": "",
-                "description": "A behind-the-scenes look at the game's development process and project progress."
-            },
-            {
-                "id": 6,
-                "file": null,
-                "path": "asfasfas/videos/development/development_02.mp4",
-                "title": "Development Video 02",
-                "category": "developmentVideos",
-                "tags": "",
-                "description": "A development recording showcasing additional work, improvements, and changes made to the project."
-            },
-            {
-                "id": 7,
-                "file": null,
-                "path": "asfasfas/videos/technical/technical_01.mp4",
-                "title": "Technical Demonstration 01",
-                "category": "technicalDemonstrations",
-                "tags": "",
-                "description": "A technical demonstration showcasing the systems, tools, and functionality used in the project."
-            },
-            {
-                "id": 8,
-                "file": null,
-                "path": "asfasfas/videos/technical/technical_02.mp4",
-                "title": "Technical Demonstration 02",
-                "category": "technicalDemonstrations",
-                "tags": "",
-                "description": "A technical demonstration highlighting additional programming features and technical implementations."
-            },
-            {
-                "id": 7,
-                "file": null,
-                "path": "asfasfas/videos/technical/technical_01.mp4",
-                "title": "Technical Demonstration 01",
-                "category": "technicalDemonstrations",
-                "tags": "",
-                "description": "A technical demonstration showcasing the systems, tools, and functionality used in the project."
-            },
-            {
-                "id": 8,
-                "file": null,
-                "path": "asfasfas/videos/technical/technical_02.mp4",
-                "title": "Technical Demonstration 02",
-                "category": "technicalDemonstrations",
-                "tags": "",
-                "description": "A technical demonstration highlighting additional programming features and technical implementations."
-            },
-            {
-                "id": 9,
-                "file": null,
-                "path": "asfasfas/videos/trailers/trailer_01.mp4",
-                "title": "Project Trailer 01",
-                "category": "trailers",
-                "tags": "",
-                "description": "An introduction to the project, showcasing its gameplay, visuals, and main features."
-            },
-            {
-                "id": 10,
-                "file": null,
-                "path": "asfasfas/videos/trailers/trailer_02.mp4",
-                "title": "Project Trailer 02",
-                "category": "trailers",
-                "tags": "",
-                "description": "A second project trailer highlighting additional content, features, and presentation."
-            },
-            {
-                "id": 9,
-                "file": null,
-                "path": "asfasfas/videos/trailers/trailer_01.mp4",
-                "title": "Project Trailer 01",
-                "category": "trailers",
-                "tags": "",
-                "description": "An introduction to the project, showcasing its gameplay, visuals, and main features."
-            },
-            {
-                "id": 10,
-                "file": null,
-                "path": "asfasfas/videos/trailers/trailer_02.mp4",
-                "title": "Project Trailer 02",
-                "category": "trailers",
-                "tags": "",
-                "description": "A second project trailer highlighting additional content, features, and presentation."
+                "description": ""
             }
         ]
     },
@@ -2085,198 +1753,40 @@
         }
     ],
     "videoData": {
-        "mainVideo": null,
+        "mainVideo": {
+            "id": "mainVideo",
+            "name": "qable-sample-720p-10s.webm",
+            "title": "",
+            "path": "videos/gameplayvideos/qable-sample-720p-10s.webm",
+            "tags": "",
+            "description": "",
+            "exportFullPath": "videos/gameplayvideos/qable-sample-720p-10s.webm"
+        },
         "gameplayVideos": [
             {
-                "id": 1,
-                "name": "Gameplay Video 01",
-                "title": "Gameplay Video 01",
-                "path": "asfasfas/videos/gameplay/gameplay_01.mp4",
-                "file": "asfasfas/videos/gameplay/gameplay_01.mp4",
+                "id": 21,
+                "name": "qable-sample-720p-10s.webm",
+                "title": "",
+                "path": "videos/gameplayvideos/qable-sample-720p-10s.webm",
                 "tags": "",
-                "description": "A gameplay recording showcasing the core gameplay mechanics and player interactions."
-            },
-            {
-                "id": 2,
-                "name": "Gameplay Video 02",
-                "title": "Gameplay Video 02",
-                "path": "asfasfas/videos/gameplay/gameplay_02.mp4",
-                "file": "asfasfas/videos/gameplay/gameplay_02.mp4",
-                "tags": "",
-                "description": "A gameplay recording demonstrating additional gameplay features and in-game activities."
-            },
-            {
-                "id": 3,
-                "name": "Gameplay Video 03",
-                "title": "Gameplay Video 03",
-                "path": "asfasfas/videos/gameplay/gameplay_03.mp4",
-                "file": "asfasfas/videos/gameplay/gameplay_03.mp4",
-                "tags": "",
-                "description": "A gameplay recording highlighting different situations, mechanics, and player experiences."
-            },
-            {
-                "id": 4,
-                "name": "Gameplay Video 04",
-                "title": "Gameplay Video 04",
-                "path": "asfasfas/videos/gameplay/gameplay_04.mp4",
-                "file": "asfasfas/videos/gameplay/gameplay_04.mp4",
-                "tags": "",
-                "description": "A gameplay recording showing further examples of the game's features and gameplay."
-            },
-            {
-                "id": 1,
-                "name": "Gameplay Video 01",
-                "title": "Gameplay Video 01",
-                "path": "asfasfas/videos/gameplay/gameplay_01.mp4",
-                "file": "asfasfas/videos/gameplay/gameplay_01.mp4",
-                "tags": "",
-                "description": "A gameplay recording showcasing the core gameplay mechanics and player interactions."
-            },
-            {
-                "id": 2,
-                "name": "Gameplay Video 02",
-                "title": "Gameplay Video 02",
-                "path": "asfasfas/videos/gameplay/gameplay_02.mp4",
-                "file": "asfasfas/videos/gameplay/gameplay_02.mp4",
-                "tags": "",
-                "description": "A gameplay recording demonstrating additional gameplay features and in-game activities."
-            },
-            {
-                "id": 3,
-                "name": "Gameplay Video 03",
-                "title": "Gameplay Video 03",
-                "path": "asfasfas/videos/gameplay/gameplay_03.mp4",
-                "file": "asfasfas/videos/gameplay/gameplay_03.mp4",
-                "tags": "",
-                "description": "A gameplay recording highlighting different situations, mechanics, and player experiences."
-            },
-            {
-                "id": 4,
-                "name": "Gameplay Video 04",
-                "title": "Gameplay Video 04",
-                "path": "asfasfas/videos/gameplay/gameplay_04.mp4",
-                "file": "asfasfas/videos/gameplay/gameplay_04.mp4",
-                "tags": "",
-                "description": "A gameplay recording showing further examples of the game's features and gameplay."
+                "description": "",
+                "exportFullPath": "videos/gameplayvideos/qable-sample-720p-10s.webm"
             }
         ],
-        "developmentVideos": [
-            {
-                "id": 5,
-                "name": "Development Video 01",
-                "title": "Development Video 01",
-                "path": "asfasfas/videos/development/development_01.mp4",
-                "file": "asfasfas/videos/development/development_01.mp4",
-                "tags": "",
-                "description": "A behind-the-scenes look at the game's development process and project progress."
-            },
-            {
-                "id": 6,
-                "name": "Development Video 02",
-                "title": "Development Video 02",
-                "path": "asfasfas/videos/development/development_02.mp4",
-                "file": "asfasfas/videos/development/development_02.mp4",
-                "tags": "",
-                "description": "A development recording showcasing additional work, improvements, and changes made to the project."
-            },
-            {
-                "id": 5,
-                "name": "Development Video 01",
-                "title": "Development Video 01",
-                "path": "asfasfas/videos/development/development_01.mp4",
-                "file": "asfasfas/videos/development/development_01.mp4",
-                "tags": "",
-                "description": "A behind-the-scenes look at the game's development process and project progress."
-            },
-            {
-                "id": 6,
-                "name": "Development Video 02",
-                "title": "Development Video 02",
-                "path": "asfasfas/videos/development/development_02.mp4",
-                "file": "asfasfas/videos/development/development_02.mp4",
-                "tags": "",
-                "description": "A development recording showcasing additional work, improvements, and changes made to the project."
-            }
-        ],
-        "technicalDemonstrations": [
-            {
-                "id": 7,
-                "name": "Technical Demonstration 01",
-                "title": "Technical Demonstration 01",
-                "path": "asfasfas/videos/technical/technical_01.mp4",
-                "file": "asfasfas/videos/technical/technical_01.mp4",
-                "tags": "",
-                "description": "A technical demonstration showcasing the systems, tools, and functionality used in the project."
-            },
-            {
-                "id": 8,
-                "name": "Technical Demonstration 02",
-                "title": "Technical Demonstration 02",
-                "path": "asfasfas/videos/technical/technical_02.mp4",
-                "file": "asfasfas/videos/technical/technical_02.mp4",
-                "tags": "",
-                "description": "A technical demonstration highlighting additional programming features and technical implementations."
-            },
-            {
-                "id": 7,
-                "name": "Technical Demonstration 01",
-                "title": "Technical Demonstration 01",
-                "path": "asfasfas/videos/technical/technical_01.mp4",
-                "file": "asfasfas/videos/technical/technical_01.mp4",
-                "tags": "",
-                "description": "A technical demonstration showcasing the systems, tools, and functionality used in the project."
-            },
-            {
-                "id": 8,
-                "name": "Technical Demonstration 02",
-                "title": "Technical Demonstration 02",
-                "path": "asfasfas/videos/technical/technical_02.mp4",
-                "file": "asfasfas/videos/technical/technical_02.mp4",
-                "tags": "",
-                "description": "A technical demonstration highlighting additional programming features and technical implementations."
-            }
-        ],
-        "trailers": [
-            {
-                "id": 9,
-                "name": "Project Trailer 01",
-                "title": "Project Trailer 01",
-                "path": "asfasfas/videos/trailers/trailer_01.mp4",
-                "file": "asfasfas/videos/trailers/trailer_01.mp4",
-                "tags": "",
-                "description": "An introduction to the project, showcasing its gameplay, visuals, and main features."
-            },
-            {
-                "id": 10,
-                "name": "Project Trailer 02",
-                "title": "Project Trailer 02",
-                "path": "asfasfas/videos/trailers/trailer_02.mp4",
-                "file": "asfasfas/videos/trailers/trailer_02.mp4",
-                "tags": "",
-                "description": "A second project trailer highlighting additional content, features, and presentation."
-            },
-            {
-                "id": 9,
-                "name": "Project Trailer 01",
-                "title": "Project Trailer 01",
-                "path": "asfasfas/videos/trailers/trailer_01.mp4",
-                "file": "asfasfas/videos/trailers/trailer_01.mp4",
-                "tags": "",
-                "description": "An introduction to the project, showcasing its gameplay, visuals, and main features."
-            },
-            {
-                "id": 10,
-                "name": "Project Trailer 02",
-                "title": "Project Trailer 02",
-                "path": "asfasfas/videos/trailers/trailer_02.mp4",
-                "file": "asfasfas/videos/trailers/trailer_02.mp4",
-                "tags": "",
-                "description": "A second project trailer highlighting additional content, features, and presentation."
-            }
-        ],
+        "developmentVideos": [],
+        "technicalDemonstrations": [],
+        "trailers": [],
         "others": []
     },
-    "mainVideo": null,
+    "mainVideo": {
+        "id": "mainVideo",
+        "name": "qable-sample-720p-10s.webm",
+        "title": "",
+        "path": "videos/gameplayvideos/qable-sample-720p-10s.webm",
+        "tags": "",
+        "description": "",
+        "exportFullPath": "videos/gameplayvideos/qable-sample-720p-10s.webm"
+    },
     "formInformation": {
         "projectTitle": "asfasfas",
         "shortDescription": "Echoes of the Fallen is a third-person fantasy action RPG where players explore a forgotten kingdom, battle dangerous creatures, and uncover the secrets of an ancient civilization.",
@@ -2381,12 +1891,24 @@
         "mainVideoTags": "",
         "mainVideoDescription": ""
     },
-    "exportedAt": "2026-11-28T04:19:53.988Z",
+    "exportedAt": "2026-11-28T04:44:53.319Z",
     "projectDownloadLinks": [],
     "formFields": {
         "projectTitle": "asfasfas",
         "shortDescription": "Echoes of the Fallen is a third-person fantasy action RPG where players explore a forgotten kingdom, battle dangerous creatures, and uncover the secrets of an ancient civilization.",
         "longDescription": "Echoes of the Fallen is a fantasy action RPG set in the ruined kingdom of Eldoria. Players explore abandoned cities, enchanted forests, forgotten temples, and underground fortresses while fighting increasingly dangerous enemies. Discover ancient weapons, unlock magical abilities, complete quests, and uncover the truth behind the mysterious destruction of the kingdom.",
+        "unnamedField_3": "",
+        "unnamedField_4": "",
+        "unnamedField_5": "",
+        "unnamedField_6": "",
+        "unnamedField_7": "",
+        "unnamedField_8": "",
+        "unnamedField_9": "",
+        "unnamedField_10": "",
+        "unnamedField_11": "",
+        "unnamedField_12": "",
+        "unnamedField_13": "",
+        "unnamedField_14": "",
         "about": "Echoes of the Fallen is an exploration-focused fantasy action RPG combining challenging combat, environmental storytelling, character progression, and a large interconnected world.",
         "projectPurpose": "The purpose of this project is to create an immersive fantasy adventure that combines exploration, combat, storytelling, and character progression.",
         "projectGoals": "Create an engaging fantasy world, develop responsive combat, implement intelligent enemies, provide meaningful character progression, and deliver an enjoyable single-player experience.",
@@ -2481,157 +2003,167 @@
         "mainVideoTitle": "",
         "mainVideoTags": "",
         "mainVideoDescription": "",
-        "unnamedField_97": "Gameplay Video 01",
-        "unnamedField_98": "",
-        "unnamedField_99": "A gameplay recording showcasing the core gameplay mechanics and player interactions.",
-        "unnamedField_100": "Gameplay Video 02",
-        "unnamedField_101": "",
-        "unnamedField_102": "A gameplay recording demonstrating additional gameplay features and in-game activities.",
-        "unnamedField_103": "Gameplay Video 03",
-        "unnamedField_104": "",
-        "unnamedField_105": "A gameplay recording highlighting different situations, mechanics, and player experiences.",
-        "unnamedField_106": "Gameplay Video 04",
-        "unnamedField_107": "",
-        "unnamedField_108": "A gameplay recording showing further examples of the game's features and gameplay.",
-        "unnamedField_109": "Gameplay Video 01",
+        "unnamedField_109": "",
         "unnamedField_110": "",
-        "unnamedField_111": "A gameplay recording showcasing the core gameplay mechanics and player interactions.",
-        "unnamedField_112": "Gameplay Video 02",
-        "unnamedField_113": "",
-        "unnamedField_114": "A gameplay recording demonstrating additional gameplay features and in-game activities.",
-        "unnamedField_115": "Gameplay Video 03",
-        "unnamedField_116": "",
-        "unnamedField_117": "A gameplay recording highlighting different situations, mechanics, and player experiences.",
-        "unnamedField_118": "Gameplay Video 04",
-        "unnamedField_119": "",
-        "unnamedField_120": "A gameplay recording showing further examples of the game's features and gameplay.",
-        "unnamedField_121": "Development Video 01",
-        "unnamedField_122": "",
-        "unnamedField_123": "A behind-the-scenes look at the game's development process and project progress.",
-        "unnamedField_124": "Development Video 02",
-        "unnamedField_125": "",
-        "unnamedField_126": "A development recording showcasing additional work, improvements, and changes made to the project.",
-        "unnamedField_127": "Development Video 01",
-        "unnamedField_128": "",
-        "unnamedField_129": "A behind-the-scenes look at the game's development process and project progress.",
-        "unnamedField_130": "Development Video 02",
-        "unnamedField_131": "",
-        "unnamedField_132": "A development recording showcasing additional work, improvements, and changes made to the project.",
-        "unnamedField_133": "Technical Demonstration 01",
-        "unnamedField_134": "",
-        "unnamedField_135": "A technical demonstration showcasing the systems, tools, and functionality used in the project.",
-        "unnamedField_136": "Technical Demonstration 02",
-        "unnamedField_137": "",
-        "unnamedField_138": "A technical demonstration highlighting additional programming features and technical implementations.",
-        "unnamedField_139": "Technical Demonstration 01",
-        "unnamedField_140": "",
-        "unnamedField_141": "A technical demonstration showcasing the systems, tools, and functionality used in the project.",
-        "unnamedField_142": "Technical Demonstration 02",
-        "unnamedField_143": "",
-        "unnamedField_144": "A technical demonstration highlighting additional programming features and technical implementations.",
-        "unnamedField_145": "Project Trailer 01",
-        "unnamedField_146": "",
-        "unnamedField_147": "An introduction to the project, showcasing its gameplay, visuals, and main features.",
-        "unnamedField_148": "Project Trailer 02",
-        "unnamedField_149": "",
-        "unnamedField_150": "A second project trailer highlighting additional content, features, and presentation.",
-        "unnamedField_151": "Project Trailer 01",
-        "unnamedField_152": "",
-        "unnamedField_153": "An introduction to the project, showcasing its gameplay, visuals, and main features.",
-        "unnamedField_154": "Project Trailer 02",
-        "unnamedField_155": "",
-        "unnamedField_156": "A second project trailer highlighting additional content, features, and presentation."
+        "unnamedField_111": ""
     },
     "exportedFiles": {
-        "images": [],
-        "videos": [],
+        "images": [
+            {
+                "name": "Futuristic Mountain Portfolio Banner.png",
+                "path": "images/cover images/cover_1.png",
+                "size": 2542534,
+                "type": "image/png"
+            },
+            {
+                "name": "Epic Blue Mountain Portfolio Vista.png",
+                "path": "images/screenshots/screenshot_01.png",
+                "size": 2566231,
+                "type": "image/png"
+            },
+            {
+                "name": "CK3_Historical_Map_Maker.png",
+                "path": "images/screenshots/screenshot_02.png",
+                "size": 3005319,
+                "type": "image/png"
+            },
+            {
+                "name": "8d5c833c-0d81-4d27-b88e-a44a47b60069.png",
+                "path": "images/screenshots/screenshot_03.png",
+                "size": 3271220,
+                "type": "image/png"
+            },
+            {
+                "name": "Screenshot_27-10-2026_16558_127.0.0.1.jpeg",
+                "path": "images/screenshots/screenshot_04.jpeg",
+                "size": 92198,
+                "type": "image/jpeg"
+            }
+        ],
+        "videos": [
+            {
+                "name": "qable-sample-720p-10s.webm",
+                "path": "videos/mainVideo/qable-sample-720p-10s.webm",
+                "size": 1723374,
+                "type": "video/webm",
+                "videoTag": "",
+                "videoCategory": "",
+                "sourceKey": "mainVideo",
+                "isMainVideo": true,
+                "isAdditional": false
+            },
+            {
+                "name": "qable-sample-720p-10s.webm",
+                "path": "videos/gameplayvideos/qable-sample-720p-10s.webm",
+                "size": 1723374,
+                "type": "video/webm",
+                "videoTag": "",
+                "videoCategory": "gameplayVideos",
+                "sourceKey": "additionalVideos",
+                "isMainVideo": false,
+                "isAdditional": false
+            }
+        ],
         "downloads": []
     },
     "saveReport": {
         "status": "IN PROGRESS",
-        "startedAt": "2026-11-28T04:19:52.113Z",
+        "startedAt": "2026-11-28T04:44:34.255Z",
         "completedAt": null,
         "project": "asfasfas",
         "projectJSON": {
-            "attempted": true,
+            "attempted": false,
             "saved": false,
             "path": "",
             "error": ""
         },
         "totals": {
-            "imagesFound": 0,
-            "imagesUploaded": 0,
-            "videosFound": 10,
-            "videosUploaded": 0,
+            "imagesFound": 5,
+            "imagesUploaded": 5,
+            "videosFound": 2,
+            "videosUploaded": 2,
             "downloadsFound": 0,
             "downloadsUploaded": 0,
-            "skipped": 10,
+            "skipped": 0,
             "failed": 0,
-            "imagesCollected": 0
+            "imagesCollected": 5,
+            "missingImages": 0,
+            "imagesSaved": 0,
+            "imagePlaceholders": 0
         },
-        "uploaded": [],
-        "skipped": [
+        "uploaded": [
             {
-                "type": "VIDEO",
-                "name": "Gameplay Video 01",
-                "reason": "Original video file could not be found.",
-                "path": ""
+                "type": "IMAGE",
+                "name": "Futuristic Mountain Portfolio Banner.png",
+                "path": "images/cover images/cover_1.png",
+                "fullPath": "projects/asfasfas/images/cover images/cover_1.png",
+                "size": 2542534,
+                "sizeMB": 2.42,
+                "mimeType": "image/png",
+                "html_url": "https://github.com/bricemcrae2211/BriceMcRae-Development-Portfolio.io/blob/main/projects/asfasfas/images/cover%20images/cover_1.png"
+            },
+            {
+                "type": "IMAGE",
+                "name": "Epic Blue Mountain Portfolio Vista.png",
+                "path": "images/screenshots/screenshot_01.png",
+                "fullPath": "projects/asfasfas/images/screenshots/screenshot_01.png",
+                "size": 2566231,
+                "sizeMB": 2.45,
+                "mimeType": "image/png",
+                "html_url": "https://github.com/bricemcrae2211/BriceMcRae-Development-Portfolio.io/blob/main/projects/asfasfas/images/screenshots/screenshot_01.png"
+            },
+            {
+                "type": "IMAGE",
+                "name": "CK3_Historical_Map_Maker.png",
+                "path": "images/screenshots/screenshot_02.png",
+                "fullPath": "projects/asfasfas/images/screenshots/screenshot_02.png",
+                "size": 3005319,
+                "sizeMB": 2.87,
+                "mimeType": "image/png",
+                "html_url": "https://github.com/bricemcrae2211/BriceMcRae-Development-Portfolio.io/blob/main/projects/asfasfas/images/screenshots/screenshot_02.png"
+            },
+            {
+                "type": "IMAGE",
+                "name": "8d5c833c-0d81-4d27-b88e-a44a47b60069.png",
+                "path": "images/screenshots/screenshot_03.png",
+                "fullPath": "projects/asfasfas/images/screenshots/screenshot_03.png",
+                "size": 3271220,
+                "sizeMB": 3.12,
+                "mimeType": "image/png",
+                "html_url": "https://github.com/bricemcrae2211/BriceMcRae-Development-Portfolio.io/blob/main/projects/asfasfas/images/screenshots/screenshot_03.png"
+            },
+            {
+                "type": "IMAGE",
+                "name": "Screenshot_27-10-2026_16558_127.0.0.1.jpeg",
+                "path": "images/screenshots/screenshot_04.jpeg",
+                "fullPath": "projects/asfasfas/images/screenshots/screenshot_04.jpeg",
+                "size": 92198,
+                "sizeMB": 0.09,
+                "mimeType": "image/jpeg",
+                "html_url": "https://github.com/bricemcrae2211/BriceMcRae-Development-Portfolio.io/blob/main/projects/asfasfas/images/screenshots/screenshot_04.jpeg"
             },
             {
                 "type": "VIDEO",
-                "name": "Gameplay Video 02",
-                "reason": "Original video file could not be found.",
-                "path": ""
+                "name": "qable-sample-720p-10s.webm",
+                "path": "videos/mainVideo/qable-sample-720p-10s.webm",
+                "fullPath": "projects/asfasfas/videos/mainVideo/qable-sample-720p-10s.webm",
+                "size": 1723374,
+                "sizeMB": 1.64,
+                "mimeType": "video/webm",
+                "html_url": "https://github.com/bricemcrae2211/BriceMcRae-Development-Portfolio.io/blob/main/projects/asfasfas/videos/mainVideo/qable-sample-720p-10s.webm"
             },
             {
                 "type": "VIDEO",
-                "name": "Gameplay Video 03",
-                "reason": "Original video file could not be found.",
-                "path": ""
-            },
-            {
-                "type": "VIDEO",
-                "name": "Gameplay Video 04",
-                "reason": "Original video file could not be found.",
-                "path": ""
-            },
-            {
-                "type": "VIDEO",
-                "name": "Development Video 01",
-                "reason": "Original video file could not be found.",
-                "path": ""
-            },
-            {
-                "type": "VIDEO",
-                "name": "Development Video 02",
-                "reason": "Original video file could not be found.",
-                "path": ""
-            },
-            {
-                "type": "VIDEO",
-                "name": "Technical Demonstration 01",
-                "reason": "Original video file could not be found.",
-                "path": ""
-            },
-            {
-                "type": "VIDEO",
-                "name": "Technical Demonstration 02",
-                "reason": "Original video file could not be found.",
-                "path": ""
-            },
-            {
-                "type": "VIDEO",
-                "name": "Project Trailer 01",
-                "reason": "Original video file could not be found.",
-                "path": ""
-            },
-            {
-                "type": "VIDEO",
-                "name": "Project Trailer 02",
-                "reason": "Original video file could not be found.",
-                "path": ""
+                "name": "qable-sample-720p-10s.webm",
+                "path": "videos/gameplayvideos/qable-sample-720p-10s.webm",
+                "fullPath": "projects/asfasfas/videos/gameplayvideos/qable-sample-720p-10s.webm",
+                "size": 1723374,
+                "sizeMB": 1.64,
+                "mimeType": "video/webm",
+                "html_url": "https://github.com/bricemcrae2211/BriceMcRae-Development-Portfolio.io/blob/main/projects/asfasfas/videos/gameplayvideos/qable-sample-720p-10s.webm"
             }
         ],
+        "skipped": [],
         "failed": [],
         "warnings": []
     }
