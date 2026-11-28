@@ -139,7 +139,7 @@
         "extra": []
     },
     "exportFormat": "GitHub Project Folder",
-    "exportedAt": "2026-11-28T04:10:27.217Z",
+    "exportedAt": "2026-11-28T04:42:00.072Z",
     "projectDownloadLinks": [],
     "formFields": {
         "projectTitle": "",
@@ -247,11 +247,11 @@
     },
     "saveReport": {
         "status": "IN PROGRESS",
-        "startedAt": "2026-11-28T04:10:19.527Z",
+        "startedAt": "2026-11-28T04:41:52.554Z",
         "completedAt": null,
         "project": "Untitled Project",
         "projectJSON": {
-            "attempted": true,
+            "attempted": false,
             "saved": false,
             "path": "",
             "error": ""
@@ -264,7 +264,11 @@
             "downloadsFound": 0,
             "downloadsUploaded": 0,
             "skipped": 0,
-            "failed": 0
+            "failed": 0,
+            "imagesCollected": 0,
+            "missingImages": 0,
+            "imagesSaved": 0,
+            "imagePlaceholders": 0
         },
         "uploaded": [],
         "skipped": [],
