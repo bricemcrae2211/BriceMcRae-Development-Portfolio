@@ -89,7 +89,9 @@
         "character": [],
         "ui": [],
         "technical": [],
-        "extra": []
+        "extra": [
+            "images/extra/Futuristic Mountain Portfolio Banner.png"
+        ]
     },
     "projectVideos": {
         "gameplayVideos": [
@@ -1887,11 +1889,14 @@
         "mainVideoTags": "SFAFASFAS",
         "mainVideoDescription": ""
     },
-    "exportedAt": "2026-11-28T02:50:12.772Z",
+    "exportedAt": "2026-11-28T02:51:39.414Z",
     "formFields": {
         "projectTitle": "asfasfasSAFASFASFAS",
         "shortDescription": "Echoes of the Fallen is a third-person fantasy action RPG where players explore a forgotten kingdom, battle dangerous creatures, and uncover the secrets of an ancient civilization.",
         "longDescription": "Echoes of the Fallen is a fantasy action RPG set in the ruined kingdom of Eldoria. Players explore abandoned cities, enchanted forests, forgotten temples, and underground fortresses while fighting increasingly dangerous enemies. Discover ancient weapons, unlock magical abilities, complete quests, and uncover the truth behind the mysterious destruction of the kingdom.",
+        "unnamedField_3": "",
+        "unnamedField_4": "",
+        "unnamedField_5": "",
         "about": "Echoes of the Fallen is an exploration-focused fantasy action RPG combining challenging combat, environmental storytelling, character progression, and a large interconnected world.",
         "projectPurpose": "The purpose of this project is to create an immersive fantasy adventure that combines exploration, combat, storytelling, and character progression.",
         "projectGoals": "Create an engaging fantasy world, develop responsive combat, implement intelligent enemies, provide meaningful character progression, and deliver an enjoyable single-player experience.",
@@ -1986,12 +1991,19 @@
         "mainVideoTitle": "FSAAS",
         "mainVideoTags": "SFAFASFAS",
         "mainVideoDescription": "",
-        "unnamedField_97": "ASFASFAS",
-        "unnamedField_98": "DADASFAS",
-        "unnamedField_99": ""
+        "unnamedField_100": "ASFASFAS",
+        "unnamedField_101": "DADASFAS",
+        "unnamedField_102": ""
     },
     "exportedFiles": {
-        "images": [],
+        "images": [
+            {
+                "name": "Futuristic Mountain Portfolio Banner.png",
+                "path": "images/extra/Futuristic Mountain Portfolio Banner.png",
+                "size": 2542534,
+                "type": "image/png"
+            }
+        ],
         "videos": [
             {
                 "name": "qable-sample-720p-10s.webm",
