@@ -60,6 +60,17 @@
     "knownIssues": "Some enemy animations may occasionally fail to transition correctly. Certain environmental objects require additional collision testing. Performance may decrease in scenes containing large numbers of enemies.",
     "minimumRequirements": "OS: Windows 10 64-bit; CPU: Intel Core i5-8400 or AMD Ryzen 5 2600; RAM: 8 GB; GPU: NVIDIA GTX 1060 or AMD RX 580; Storage: 25 GB available space.",
     "recommendedRequirements": "OS: Windows 11 64-bit; CPU: Intel Core i7-10700 or AMD Ryzen 7 3700X; RAM: 16 GB; GPU: NVIDIA RTX 3060 or AMD RX 6700 XT; Storage: 25 GB SSD space.",
+    "githubURL[]": "https://github.com/example/echoes-of-the-fallen",
+    "itchioURL[]": "https://store.steampowered.com/app/0000000/Echoes_of_the_Fallen/",
+    "customLinkTitle[]": "asfassafasfasfasfasfas",
+    "customLinkURLTitle[]": "http://127.0.0.1:5502/add-project/add-project.html",
+    "customLinkURL[]": [
+        "fasfasfasfas",
+        "http://127.0.0.1:5502/add-project/add-project.html",
+        "http://127.0.0.1:5502/add-project/add-project.html",
+        "http://127.0.0.1:5502/add-project/add-project.html",
+        "http://127.0.0.1:5502/add-project/add-project.html"
+    ],
     "credits": "Echoes of the Fallen is a fictional testing project. All developer and contributor credits are placeholder information.",
     "musicCredits": "Alex Rivers - Original Soundtrack. Fictional test credit.",
     "assetCredits": "Fallen Kingdom Asset Collection. Fictional placeholder environment, character, and interface assets.",
@@ -128,6 +139,17 @@
         "knownIssues": "Some enemy animations may occasionally fail to transition correctly. Certain environmental objects require additional collision testing. Performance may decrease in scenes containing large numbers of enemies.",
         "minimumRequirements": "OS: Windows 10 64-bit; CPU: Intel Core i5-8400 or AMD Ryzen 5 2600; RAM: 8 GB; GPU: NVIDIA GTX 1060 or AMD RX 580; Storage: 25 GB available space.",
         "recommendedRequirements": "OS: Windows 11 64-bit; CPU: Intel Core i7-10700 or AMD Ryzen 7 3700X; RAM: 16 GB; GPU: NVIDIA RTX 3060 or AMD RX 6700 XT; Storage: 25 GB SSD space.",
+        "githubURL[]": "https://github.com/example/echoes-of-the-fallen",
+        "itchioURL[]": "https://store.steampowered.com/app/0000000/Echoes_of_the_Fallen/",
+        "customLinkTitle[]": "asfassafasfasfasfasfas",
+        "customLinkURLTitle[]": "http://127.0.0.1:5502/add-project/add-project.html",
+        "customLinkURL[]": [
+            "fasfasfasfas",
+            "http://127.0.0.1:5502/add-project/add-project.html",
+            "http://127.0.0.1:5502/add-project/add-project.html",
+            "http://127.0.0.1:5502/add-project/add-project.html",
+            "http://127.0.0.1:5502/add-project/add-project.html"
+        ],
         "credits": "Echoes of the Fallen is a fictional testing project. All developer and contributor credits are placeholder information.",
         "musicCredits": "Alex Rivers - Original Soundtrack. Fictional test credit.",
         "assetCredits": "Fallen Kingdom Asset Collection. Fictional placeholder environment, character, and interface assets.",
@@ -157,10 +179,10 @@
         "total": 0
     },
     "exportFormat": "GitHub Project Folder",
-    "exportedAt": "2026-11-28T06:35:51.991Z",
+    "exportedAt": "2026-11-28T07:15:33.497Z",
     "saveReport": {
         "status": "IN PROGRESS",
-        "startedAt": "2026-11-28T06:35:46.483Z",
+        "startedAt": "2026-11-28T07:15:27.862Z",
         "completedAt": null,
         "project": "asfasfas",
         "projectJSON": {
