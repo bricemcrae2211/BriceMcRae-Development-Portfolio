@@ -60,23 +60,21 @@
     "knownIssues": "Some enemy animations may occasionally fail to transition correctly. Certain environmental objects require additional collision testing. Performance may decrease in scenes containing large numbers of enemies.",
     "minimumRequirements": "OS: Windows 10 64-bit; CPU: Intel Core i5-8400 or AMD Ryzen 5 2600; RAM: 8 GB; GPU: NVIDIA GTX 1060 or AMD RX 580; Storage: 25 GB available space.",
     "recommendedRequirements": "OS: Windows 11 64-bit; CPU: Intel Core i7-10700 or AMD Ryzen 7 3700X; RAM: 16 GB; GPU: NVIDIA RTX 3060 or AMD RX 6700 XT; Storage: 25 GB SSD space.",
+    "githubTitle[]": "safasfasfsafdsa",
     "githubURL[]": "https://github.com/example/echoes-of-the-fallen",
+    "linkedinURL[]": "safasdgdsgasdfdfadsgasd",
+    "steamURL[]": "asdgdsgasdgdsfgsadgas",
+    "facebookURL[]": "asgdsgsdgadsgsdgasgasd",
     "itchioURL[]": "https://store.steampowered.com/app/0000000/Echoes_of_the_Fallen/",
-    "customLinkTitle[]": "asfassafasfasfasfasfas",
-    "customLinkURLTitle[]": "http://127.0.0.1:5502/add-project/add-project.html",
-    "customLinkURL[]": [
-        "fasfasfasfas",
-        "http://127.0.0.1:5502/add-project/add-project.html",
-        "http://127.0.0.1:5502/add-project/add-project.html",
-        "http://127.0.0.1:5502/add-project/add-project.html",
-        "http://127.0.0.1:5502/add-project/add-project.html"
-    ],
     "credits": "Echoes of the Fallen is a fictional testing project. All developer and contributor credits are placeholder information.",
     "musicCredits": "Alex Rivers - Original Soundtrack. Fictional test credit.",
     "assetCredits": "Fallen Kingdom Asset Collection. Fictional placeholder environment, character, and interface assets.",
     "supportedLanguages": "English, French, German, Spanish, Japanese",
     "additionalInformation": "This project contains fictional information intended to test project descriptions, information sections, links, technical details, development information, image galleries, and video galleries.",
     "additionalNotes": "All names, dates, URLs, credits, platforms, requirements, and development details are fictional test data. External links are placeholders and are not verified.",
+    "unnamedField_108": "qable-sample-720p-10s.webm",
+    "unnamedField_109": "gameplayVideos",
+    "unnamedField_113": "gameplayVideos",
     "formFields": {
         "projectTitle": "asfasfas",
         "shortDescription": "Echoes of the Fallen is a third-person fantasy action RPG where players explore a forgotten kingdom, battle dangerous creatures, and uncover the secrets of an ancient civilization.",
@@ -139,50 +137,140 @@
         "knownIssues": "Some enemy animations may occasionally fail to transition correctly. Certain environmental objects require additional collision testing. Performance may decrease in scenes containing large numbers of enemies.",
         "minimumRequirements": "OS: Windows 10 64-bit; CPU: Intel Core i5-8400 or AMD Ryzen 5 2600; RAM: 8 GB; GPU: NVIDIA GTX 1060 or AMD RX 580; Storage: 25 GB available space.",
         "recommendedRequirements": "OS: Windows 11 64-bit; CPU: Intel Core i7-10700 or AMD Ryzen 7 3700X; RAM: 16 GB; GPU: NVIDIA RTX 3060 or AMD RX 6700 XT; Storage: 25 GB SSD space.",
+        "githubTitle[]": "safasfasfsafdsa",
         "githubURL[]": "https://github.com/example/echoes-of-the-fallen",
+        "linkedinURL[]": "safasdgdsgasdfdfadsgasd",
+        "steamURL[]": "asdgdsgasdgdsfgsadgas",
+        "facebookURL[]": "asgdsgsdgadsgsdgasgasd",
         "itchioURL[]": "https://store.steampowered.com/app/0000000/Echoes_of_the_Fallen/",
-        "customLinkTitle[]": "asfassafasfasfasfasfas",
-        "customLinkURLTitle[]": "http://127.0.0.1:5502/add-project/add-project.html",
-        "customLinkURL[]": [
-            "fasfasfasfas",
-            "http://127.0.0.1:5502/add-project/add-project.html",
-            "http://127.0.0.1:5502/add-project/add-project.html",
-            "http://127.0.0.1:5502/add-project/add-project.html",
-            "http://127.0.0.1:5502/add-project/add-project.html"
-        ],
         "credits": "Echoes of the Fallen is a fictional testing project. All developer and contributor credits are placeholder information.",
         "musicCredits": "Alex Rivers - Original Soundtrack. Fictional test credit.",
         "assetCredits": "Fallen Kingdom Asset Collection. Fictional placeholder environment, character, and interface assets.",
         "supportedLanguages": "English, French, German, Spanish, Japanese",
         "additionalInformation": "This project contains fictional information intended to test project descriptions, information sections, links, technical details, development information, image galleries, and video galleries.",
-        "additionalNotes": "All names, dates, URLs, credits, platforms, requirements, and development details are fictional test data. External links are placeholders and are not verified."
+        "additionalNotes": "All names, dates, URLs, credits, platforms, requirements, and development details are fictional test data. External links are placeholders and are not verified.",
+        "unnamedField_108": "qable-sample-720p-10s.webm",
+        "unnamedField_109": "gameplayVideos",
+        "unnamedField_113": "gameplayVideos"
     },
     "projectImages": {
-        "cover": "",
-        "coverURL": "",
-        "screenshots": [],
-        "allImages": [],
-        "total": 0,
-        "totalScreenshots": 0
+        "cover": "images/cover images/cover_1.png",
+        "coverURL": "https://github.com/bricemcrae2211/BriceMcRae-Development-Portfolio.io/blob/main/projects/asfasfas/images/cover%20images/cover_1.png",
+        "screenshots": [
+            {
+                "name": "Screenshot 1.png",
+                "path": "images/screenshots/screenshot_01.png",
+                "url": "https://github.com/bricemcrae2211/BriceMcRae-Development-Portfolio.io/blob/main/projects/asfasfas/images/screenshots/screenshot_01.png",
+                "size": 2566231,
+                "type": "image/png"
+            },
+            {
+                "name": "Screenshot 2.png",
+                "path": "images/screenshots/screenshot_02.png",
+                "url": "https://github.com/bricemcrae2211/BriceMcRae-Development-Portfolio.io/blob/main/projects/asfasfas/images/screenshots/screenshot_02.png",
+                "size": 2542534,
+                "type": "image/png"
+            }
+        ],
+        "allImages": [
+            {
+                "index": 1,
+                "name": "cover.png",
+                "path": "images/cover images/cover_1.png",
+                "url": "https://github.com/bricemcrae2211/BriceMcRae-Development-Portfolio.io/blob/main/projects/asfasfas/images/cover%20images/cover_1.png",
+                "size": 2241014,
+                "type": "image/png",
+                "sha": "",
+                "uploadStatus": "UPLOADED"
+            },
+            {
+                "index": 2,
+                "name": "Screenshot 1.png",
+                "path": "images/screenshots/screenshot_01.png",
+                "url": "https://github.com/bricemcrae2211/BriceMcRae-Development-Portfolio.io/blob/main/projects/asfasfas/images/screenshots/screenshot_01.png",
+                "size": 2566231,
+                "type": "image/png",
+                "sha": "",
+                "uploadStatus": "UPLOADED"
+            },
+            {
+                "index": 3,
+                "name": "Screenshot 2.png",
+                "path": "images/screenshots/screenshot_02.png",
+                "url": "https://github.com/bricemcrae2211/BriceMcRae-Development-Portfolio.io/blob/main/projects/asfasfas/images/screenshots/screenshot_02.png",
+                "size": 2542534,
+                "type": "image/png",
+                "sha": "",
+                "uploadStatus": "UPLOADED"
+            }
+        ],
+        "total": 3,
+        "totalScreenshots": 2
     },
     "projectDownloads": [],
     "projectDownloadLinks": [],
     "exportedFiles": {
-        "images": [],
-        "videos": [],
+        "images": [
+            {
+                "index": 1,
+                "name": "cover.png",
+                "path": "images/cover images/cover_1.png",
+                "url": "https://github.com/bricemcrae2211/BriceMcRae-Development-Portfolio.io/blob/main/projects/asfasfas/images/cover%20images/cover_1.png",
+                "size": 2241014,
+                "type": "image/png",
+                "sha": "",
+                "uploadStatus": "UPLOADED"
+            },
+            {
+                "index": 2,
+                "name": "Screenshot 1.png",
+                "path": "images/screenshots/screenshot_01.png",
+                "url": "https://github.com/bricemcrae2211/BriceMcRae-Development-Portfolio.io/blob/main/projects/asfasfas/images/screenshots/screenshot_01.png",
+                "size": 2566231,
+                "type": "image/png",
+                "sha": "",
+                "uploadStatus": "UPLOADED"
+            },
+            {
+                "index": 3,
+                "name": "Screenshot 2.png",
+                "path": "images/screenshots/screenshot_02.png",
+                "url": "https://github.com/bricemcrae2211/BriceMcRae-Development-Portfolio.io/blob/main/projects/asfasfas/images/screenshots/screenshot_02.png",
+                "size": 2542534,
+                "type": "image/png",
+                "sha": "",
+                "uploadStatus": "UPLOADED"
+            }
+        ],
+        "videos": [
+            {
+                "index": 1,
+                "name": "qable-sample-720p-10s.webm",
+                "path": "videos/mainVideo/qable-sample-720p-10s.webm",
+                "url": "https://github.com/bricemcrae2211/BriceMcRae-Development-Portfolio.io/blob/main/projects/asfasfas/videos/mainVideo/qable-sample-720p-10s.webm",
+                "size": 1723374,
+                "type": "video/webm",
+                "videoTag": "",
+                "videoCategory": "mainVideo",
+                "sourceKey": "",
+                "isMainVideo": true,
+                "isAdditional": false,
+                "uploadStatus": "UPLOADED"
+            }
+        ],
         "downloads": []
     },
     "exportTotals": {
-        "images": 0,
-        "videos": 0,
+        "images": 3,
+        "videos": 1,
         "downloads": 0,
-        "total": 0
+        "total": 4
     },
     "exportFormat": "GitHub Project Folder",
-    "exportedAt": "2026-11-28T07:15:33.497Z",
+    "exportedAt": "2026-11-28T08:00:19.893Z",
     "saveReport": {
         "status": "IN PROGRESS",
-        "startedAt": "2026-11-28T07:15:27.862Z",
+        "startedAt": "2026-11-28T08:00:02.802Z",
         "completedAt": null,
         "project": "asfasfas",
         "projectJSON": {
@@ -192,20 +280,61 @@
             "error": ""
         },
         "totals": {
-            "imagesFound": 0,
-            "imagesUploaded": 0,
-            "videosFound": 0,
-            "videosUploaded": 0,
+            "imagesFound": 3,
+            "imagesUploaded": 3,
+            "videosFound": 1,
+            "videosUploaded": 1,
             "downloadsFound": 0,
             "downloadsUploaded": 0,
             "skipped": 0,
             "failed": 0,
-            "imagesCollected": 0,
+            "imagesCollected": 3,
             "missingImages": 0,
             "imagesSaved": 0,
             "imagePlaceholders": 0
         },
-        "uploaded": [],
+        "uploaded": [
+            {
+                "type": "IMAGE",
+                "name": "cover.png",
+                "path": "images/cover images/cover_1.png",
+                "fullPath": "projects/asfasfas/images/cover images/cover_1.png",
+                "size": 2241014,
+                "sizeMB": 2.14,
+                "mimeType": "image/png",
+                "html_url": "https://github.com/bricemcrae2211/BriceMcRae-Development-Portfolio.io/blob/main/projects/asfasfas/images/cover%20images/cover_1.png"
+            },
+            {
+                "type": "IMAGE",
+                "name": "Screenshot 1.png",
+                "path": "images/screenshots/screenshot_01.png",
+                "fullPath": "projects/asfasfas/images/screenshots/screenshot_01.png",
+                "size": 2566231,
+                "sizeMB": 2.45,
+                "mimeType": "image/png",
+                "html_url": "https://github.com/bricemcrae2211/BriceMcRae-Development-Portfolio.io/blob/main/projects/asfasfas/images/screenshots/screenshot_01.png"
+            },
+            {
+                "type": "IMAGE",
+                "name": "Screenshot 2.png",
+                "path": "images/screenshots/screenshot_02.png",
+                "fullPath": "projects/asfasfas/images/screenshots/screenshot_02.png",
+                "size": 2542534,
+                "sizeMB": 2.42,
+                "mimeType": "image/png",
+                "html_url": "https://github.com/bricemcrae2211/BriceMcRae-Development-Portfolio.io/blob/main/projects/asfasfas/images/screenshots/screenshot_02.png"
+            },
+            {
+                "type": "VIDEO",
+                "name": "qable-sample-720p-10s.webm",
+                "path": "videos/mainVideo/qable-sample-720p-10s.webm",
+                "fullPath": "projects/asfasfas/videos/mainVideo/qable-sample-720p-10s.webm",
+                "size": 1723374,
+                "sizeMB": 1.64,
+                "mimeType": "video/webm",
+                "html_url": "https://github.com/bricemcrae2211/BriceMcRae-Development-Portfolio.io/blob/main/projects/asfasfas/videos/mainVideo/qable-sample-720p-10s.webm"
+            }
+        ],
         "skipped": [],
         "failed": [],
         "warnings": []
